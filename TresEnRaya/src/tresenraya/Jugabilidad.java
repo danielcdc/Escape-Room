@@ -85,7 +85,8 @@ public class Jugabilidad {
 	}
 	public boolean comprobarRepetir(Util ut1, jugador listaJugadores[],int posicion,int numeroJugador) {
 		boolean repetir=false;
-		if(ut1.devolverUnaposicion(posicion)==listaJugadores[numeroJugador].getfichas()) {
+		int uno=1;
+		if(ut1.devolverUnaposicion(posicion-uno)==listaJugadores[numeroJugador].getfichas()) {
 			repetir=true;
 		}
 		return repetir;
