@@ -11,9 +11,8 @@ public class Imprimir {
 
 
 		
-		public void imprimirmapaVacio(){ //Imprime el mapa con la posicion del array que le digamos
+		public void imprimirmapaVacio(Util ut1){ //Imprime el mapa con la posicion del array que le digamos
 			int	uno=1,dos=2,tres=3,cuatro=4,cinco=5,seis=6,siete=7,ocho=8,cero=0;
-			Util ut1=new Util();
 			System.out.println("----------\n"
 					+ "|"+ut1.devolverUnaposicion(cero)+ut1.devolverUnaposicion(cero)+"|"+ut1.devolverUnaposicion(uno)+ut1.devolverUnaposicion(uno)+"|"+ut1.devolverUnaposicion(dos)+ut1.devolverUnaposicion(dos)+"|\n"
 					+ "|"+ut1.devolverUnaposicion(cero)+ut1.devolverUnaposicion(cero)+"|"+ut1.devolverUnaposicion(uno)+ut1.devolverUnaposicion(uno)+"|"+ut1.devolverUnaposicion(dos)+ut1.devolverUnaposicion(dos)+"|\n"
