@@ -62,7 +62,7 @@ public class Jugabilidad {
 	}
 	public void comprobarGanadorEnemigo(Util ut1,jugador listaJugadores[]) {
 		int cero=0,uno=1,dos=2,tres=3,cuatro=4,cinco=5,seis=6,siete=7,ocho=8;
-		if((ut1.devolverUnaposicion(cero)==listaJugadores[cero].getfichas() && ut1.devolverUnaposicion(uno)==listaJugadores[cero].getfichas() && ut1.devolverUnaposicion(dos)==listaJugadores[cero].getfichas())
+		if((ut1.devolverUnaposicion(cero)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(uno)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(dos)==listaJugadores[uno].getfichas())
 				|| (ut1.devolverUnaposicion(tres)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(cuatro)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(cinco)==listaJugadores[uno].getfichas()) 
 				|| (ut1.devolverUnaposicion(seis)==listaJugadores[uno].getfichas() &&  ut1.devolverUnaposicion(siete)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(ocho)==listaJugadores[uno].getfichas()) 
 				|| (ut1.devolverUnaposicion(cero)==listaJugadores[uno].getfichas() &&  ut1.devolverUnaposicion(tres)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(seis)==listaJugadores[uno].getfichas())
@@ -85,8 +85,7 @@ public class Jugabilidad {
 	}
 	public boolean comprobarRepetir(Util ut1, jugador listaJugadores[],int posicion,int numeroJugador) {
 		boolean repetir=false;
-		int uno=1;
-		if(ut1.devolverUnaposicion(posicion-uno)==listaJugadores[numeroJugador].getfichas()) {
+		if(ut1.devolverUnaposicion(posicion-1)==listaJugadores[numeroJugador].getfichas()) {
 			repetir=true;
 		}
 		return repetir;

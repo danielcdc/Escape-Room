@@ -6,7 +6,7 @@ public class Ppal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int numJugadores = 2, contadorTurnos = 0, turno = 0, elecciones = 0;
+		int numJugadores = 2, turno = 0, elecciones = 0;
 		int cero = 0, uno = 1;
 		boolean comprobacion = false;
 		char inicial, inicialEnemiga = 'X', inicialJugador = 'O';
@@ -31,9 +31,8 @@ public class Ppal {
 				imp1.imprimirmapaVacio(ut1);
 				comprobacion = false;
 				if (turno % 2 == cero) {// Si comenzamos nosotros tendremos los turnos pares
-					if (contadorTurnos < uno) {
+					if (turno < uno) {
 						System.out.println("Comenzarás tú");// La primera vez sale un mensaje diferente
-						contadorTurnos++;
 					} else {//Este else se ejecutará cada vez que no sea la primera vez que se ejecuta
 						System.out.println("Tu turno");// Se indica al usuario que empieza el
 					}
@@ -72,9 +71,8 @@ public class Ppal {
 				imp1.imprimirmapaVacio(ut1);
 				comprobacion = false;
 				if (turno % 2 == cero) { // Lo mismo pero empezando el enemigo
-					if (contadorTurnos < uno) {
+					if (turno < uno) {
 						System.out.println("Comenzará el enemigo");
-						contadorTurnos++;
 					} else {
 						System.out.println("Turno del enemigo");
 					}
@@ -82,7 +80,8 @@ public class Ppal {
 					while (comprobacion == false) {
 						elecciones = jb1.generarTurnoRival();
 						if (jb1.comprobarRepetir(ut1, listaJugadores, elecciones, uno)) {
-							System.out.println("Has impedido que el enemigo haga trampas");
+							System.out.println("Has impedido que el enemigo haga trampas y a elegido una nueva posicion");
+							elecciones = jb1.generarTurnoRival();
 						} else {
 							ut1.cambiarPosicion(elecciones, listaJugadores[1].getfichas());
 							jb1.comprobarGanadorEnemigo(ut1, listaJugadores);
@@ -92,7 +91,7 @@ public class Ppal {
 					}
 				} else {
 					System.out.println("Te toca");
-					while (comprobacion = false) {
+					while (comprobacion == false) {
 						System.out.println("Introduce una posicion del 1 al 9");
 						elecciones = Leer.datoInt();
 						if (jb1.comprobarRepetir(ut1, listaJugadores, elecciones, cero)) {
