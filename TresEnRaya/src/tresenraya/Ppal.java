@@ -40,13 +40,12 @@ public class Ppal {
 						System.out.println("Introduce una posicion del 1 al 9");// Se introduce donde debe ir la ficha
 						elecciones = Leer.datoInt();
 						if (jb1.comprobarRepetir(ut1, listaJugadores, elecciones, cero)) {//Se comprueba si ese sitio ya tiene una ficha
-							System.out.println("No hagas trampas debemos ganar limpiamente");//Mensaje si no se cumple
-						} else {
 							ut1.cambiarPosicion(elecciones, listaJugadores[0].getfichas());// Se cambia la posicion en el array inicial
-																							
 							jb1.comprobarGanadorJugador(ut1, listaJugadores); //Comprueba si hemos ganado
 							turno++;
 							comprobacion = true;//Si cumple las condiciones se pasa a true para que no se vuelva a repetir
+						} else {
+							System.out.println("No hagas trampas debemos ganar limpiamente");//Mensaje si no se cumple
 						}
 					}
 				} else {
@@ -55,12 +54,12 @@ public class Ppal {
 					while (comprobacion == false) {
 						elecciones = jb1.generarTurnoRival();//Genera un numero aleatorio que será la posicion
 						if (jb1.comprobarRepetir(ut1, listaJugadores, elecciones, uno)) {//Evita que se repita
-							System.out.println("El enemigo está intentando hacer trampas y no se lo has permitido");
-						} else {
 							ut1.cambiarPosicion(elecciones, listaJugadores[1].getfichas());//Cambia la array inicial
 							jb1.comprobarGanadorEnemigo(ut1, listaJugadores);//Comprueba si has ganado
 							turno++;
 							comprobacion = true;
+						} else {
+							System.out.println("El enemigo está intentando hacer trampas y no se lo has permitido");
 						}
 					}
 				}
@@ -80,13 +79,12 @@ public class Ppal {
 					while (comprobacion == false) {
 						elecciones = jb1.generarTurnoRival();
 						if (jb1.comprobarRepetir(ut1, listaJugadores, elecciones, uno)) {
-							System.out.println("Has impedido que el enemigo haga trampas y a elegido una nueva posicion");
-							elecciones = jb1.generarTurnoRival();
-						} else {
 							ut1.cambiarPosicion(elecciones, listaJugadores[1].getfichas());
 							jb1.comprobarGanadorEnemigo(ut1, listaJugadores);
 							turno++;
 							comprobacion = true;
+						} else {
+							System.out.println("Has impedido que el enemigo haga trampas y a elegido una nueva posicion");
 						}
 					}
 				} else {
@@ -95,12 +93,12 @@ public class Ppal {
 						System.out.println("Introduce una posicion del 1 al 9");
 						elecciones = Leer.datoInt();
 						if (jb1.comprobarRepetir(ut1, listaJugadores, elecciones, cero)) {
-							System.out.println("No hagas trampas debemos ganar limpiamente");
-						} else {
 							ut1.cambiarPosicion(elecciones, listaJugadores[0].getfichas());
 							jb1.comprobarGanadorJugador(ut1, listaJugadores);
 							turno++;
 							comprobacion=true;
+						} else {
+							System.out.println("No hagas trampas debemos ganar limpiamente");
 						}
 					}
 				}

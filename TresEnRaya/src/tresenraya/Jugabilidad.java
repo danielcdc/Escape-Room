@@ -52,7 +52,6 @@ public class Jugabilidad {
 				|| (ut1.devolverUnaposicion(seis)==listaJugadores[cero].getfichas() &&  ut1.devolverUnaposicion(siete)==listaJugadores[cero].getfichas() && ut1.devolverUnaposicion(ocho)==listaJugadores[cero].getfichas()) 
 				|| (ut1.devolverUnaposicion(cero)==listaJugadores[cero].getfichas() &&  ut1.devolverUnaposicion(tres)==listaJugadores[cero].getfichas() && ut1.devolverUnaposicion(seis)==listaJugadores[cero].getfichas())
 				|| (ut1.devolverUnaposicion(uno)==listaJugadores[cero].getfichas() &&  ut1.devolverUnaposicion(cuatro)==listaJugadores[cero].getfichas() && ut1.devolverUnaposicion(siete)==listaJugadores[cero].getfichas())
-				|| (ut1.devolverUnaposicion(cero)==listaJugadores[cero].getfichas() &&  ut1.devolverUnaposicion(tres)==listaJugadores[cero].getfichas() && ut1.devolverUnaposicion(seis)==listaJugadores[cero].getfichas())
 				|| (ut1.devolverUnaposicion(dos)==listaJugadores[cero].getfichas() &&  ut1.devolverUnaposicion(cinco)==listaJugadores[cero].getfichas() && ut1.devolverUnaposicion(ocho)==listaJugadores[cero].getfichas())
 				|| (ut1.devolverUnaposicion(cero)==listaJugadores[cero].getfichas() &&  ut1.devolverUnaposicion(cuatro)==listaJugadores[cero].getfichas() && ut1.devolverUnaposicion(ocho)==listaJugadores[cero].getfichas())
 				|| (ut1.devolverUnaposicion(seis)==listaJugadores[cero].getfichas() &&  ut1.devolverUnaposicion(cuatro)==listaJugadores[cero].getfichas() && ut1.devolverUnaposicion(dos)==listaJugadores[cero].getfichas())) {
@@ -67,7 +66,6 @@ public class Jugabilidad {
 				|| (ut1.devolverUnaposicion(seis)==listaJugadores[uno].getfichas() &&  ut1.devolverUnaposicion(siete)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(ocho)==listaJugadores[uno].getfichas()) 
 				|| (ut1.devolverUnaposicion(cero)==listaJugadores[uno].getfichas() &&  ut1.devolverUnaposicion(tres)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(seis)==listaJugadores[uno].getfichas())
 				|| (ut1.devolverUnaposicion(uno)==listaJugadores[uno].getfichas() &&  ut1.devolverUnaposicion(cuatro)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(siete)==listaJugadores[uno].getfichas())
-				|| (ut1.devolverUnaposicion(cero)==listaJugadores[uno].getfichas() &&  ut1.devolverUnaposicion(tres)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(seis)==listaJugadores[uno].getfichas())
 				|| (ut1.devolverUnaposicion(dos)==listaJugadores[uno].getfichas() &&  ut1.devolverUnaposicion(cinco)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(ocho)==listaJugadores[uno].getfichas())
 				|| (ut1.devolverUnaposicion(cero)==listaJugadores[uno].getfichas() &&  ut1.devolverUnaposicion(cuatro)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(ocho)==listaJugadores[uno].getfichas())
 				|| (ut1.devolverUnaposicion(seis)==listaJugadores[uno].getfichas() &&  ut1.devolverUnaposicion(cuatro)==listaJugadores[uno].getfichas() && ut1.devolverUnaposicion(dos)==listaJugadores[uno].getfichas())) {
@@ -84,11 +82,12 @@ public class Jugabilidad {
 		return felicitar;
 	}
 	public boolean comprobarRepetir(Util ut1, jugador listaJugadores[],int posicion,int numeroJugador) {
-		boolean repetir=false;
-		if(ut1.devolverUnaposicion(posicion-1)==listaJugadores[numeroJugador].getfichas()) {
-			repetir=true;
+		if(ut1.devolverUnaposicion(posicion-1)!=listaJugadores[numeroJugador].getfichas()) {
+			return true;
+		}else {
+			return false;
 		}
-		return repetir;
+		
 	}
 	
 }
