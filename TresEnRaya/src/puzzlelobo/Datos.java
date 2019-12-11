@@ -3,8 +3,8 @@ package puzzlelobo;
 import java.util.Arrays;
 
 public class Datos {
-		
-	private String orillaDerecha[]= {"lobo","oveja","lechuga"};
+	 	
+	private String orillaDerecha[];
 	private String orillaIzq[];
 	public Datos(String[] orillaDerecha, String[] orillaIzq) {
 		super();
