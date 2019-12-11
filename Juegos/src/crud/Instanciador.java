@@ -2,5 +2,5 @@ package crud;
 
 public class Instanciador {
 
-	private Objeto [];
+	private Instanciador ins [];
 }
