@@ -82,8 +82,19 @@ public class Jugabilidad {
 		return felicitar;
 	}
 	public boolean comprobarRepetir(Util ut1, jugador listaJugadores[],int posicion,int numeroJugador) {
-		if(ut1.devolverUnaposicion(posicion-1)!=listaJugadores[numeroJugador].getfichas()) {
+		int numeroJugador1=0;
+		
+		if(numeroJugador == 0) {
+			numeroJugador1=1;
+		}
+		
+		
+		if(ut1.getListaValores()[posicion-1]!=listaJugadores[numeroJugador].getfichas()) {
+			if(ut1.getListaValores()[posicion-1]!=listaJugadores[numeroJugador1].getfichas()) {
 			return true;
+			} else {
+			return false;
+			}
 		}else {
 			return false;
 		}

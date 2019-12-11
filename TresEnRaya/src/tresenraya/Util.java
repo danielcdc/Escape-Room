@@ -13,9 +13,11 @@ public class Util {
 	public Util() {
 		super();
 	}
+	
 	public char[] getListaValores() {
 		return listaValores;
 	}
+	
 	public void setListaValores(char[] listaValores) {
 		this.listaValores = listaValores;
 	}

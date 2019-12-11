@@ -14,7 +14,7 @@ public class Ppal {
 		Imprimir imp1 = new Imprimir();
 		Jugabilidad jb1 = new Jugabilidad();
 		Util ut1 = new Util();
-
+		
 		for (int i = 0; i < listaJugadores.length; i++) { // Crea una lista de jugadores
 			if (i < uno) {
 				inicial = inicialJugador;//Se eligen las iniciales
@@ -29,6 +29,10 @@ public class Ppal {
 		if (jb1.isTurno()) { // LLama al metodo para comprobar quien empieza
 			while (listaJugadores[0].getVictoria() == false && listaJugadores[1].getVictoria() == false) {//
 				imp1.imprimirmapaVacio(ut1);
+				for(int i=0; i<ut1.getListaValores().length;i++) {
+					System.out.println(ut1.getListaValores()[i]);
+				}
+				
 				comprobacion = false;
 				if (turno % 2 == cero) {// Si comenzamos nosotros tendremos los turnos pares
 					if (turno < uno) {
