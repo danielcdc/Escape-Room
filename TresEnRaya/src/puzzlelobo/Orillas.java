@@ -1,42 +1,48 @@
 package puzzlelobo;
 
 public class Orillas {
+		private Animales listaAnimales[];
+	
+		
+	public Orillas(Animales[] listaAnimales) {
+			super();
+			this.listaAnimales = listaAnimales;
+		}
 
 	
+	public Orillas() {
+		super();
+	}
 	
-	public void moverseIzq(Animales listaAnimales[],int posicion) {
-		if(listaAnimales[posicion].isMostrar()) {
-			listaAnimales[posicion].setMostrar(false);
+
+	public Animales[] getListaAnimales() {
+		return listaAnimales;
+	}
+
+
+	public void setListaAnimales(Animales[] listaAnimales) {
+		this.listaAnimales = listaAnimales;
+	}
+
+
+	public void movimientoDerAIzq(String animal,int numAnimal,Orillas listaOrillas[]) {
+		int cero=0,uno=1;
+		boolean mostrarD=false,mostrarI=true;
+		if(listaOrillas[cero].getListaAnimales()[numAnimal].getNombre().equalsIgnoreCase(animal)) {
+			listaOrillas[cero].getListaAnimales()[numAnimal].setMostrar(mostrarD);
+			listaOrillas[uno].getListaAnimales()[numAnimal].setMostrar(mostrarI);
 		}
 	}
 	
-	public void moverseDere(Animales listaAnimales[],int posicion) {
-		
-	}
-	
-	public void mostrarEnIzq(Animales listaAnimales[],int posicion,Orillas listaOrillas[]) {
-		int cero=0,uno=1,dos=2;
-		if(listaAnimales[cero].isMostrar()) {
-			System.out.println(listaAnimales[cero]);
-		}
-		if(listaAnimales[uno].isMostrar()) {
-			System.out.println(listaAnimales[uno]);
-		}
-		if(listaAnimales[dos].isMostrar()) {
-			System.out.println(listaAnimales[dos]);
+	public void movimientoIzqADer(String animal,int numAnimal,Orillas listaOrillas[]) {
+		int cero=0,uno=1;
+		boolean mostrarD=true,mostrarI=false;
+		if(listaOrillas[uno].getListaAnimales()[numAnimal].getNombre().equalsIgnoreCase(animal)) {
+			listaOrillas[uno].getListaAnimales()[numAnimal].setMostrar(mostrarI);
+			listaOrillas[cero].getListaAnimales()[numAnimal].setMostrar(mostrarD);
 		}
 	}
 	
-	public void mostrarEnDere(Animales listaAnimales[],int posicion,Orillas listaOrillas[]) {
-		int cero=0,uno=1,dos=2;
-		if(listaAnimales[cero].isMostrar()) {
-			System.out.println(listaAnimales[cero]);
-		}
-		if(listaAnimales[uno].isMostrar()) {
-			System.out.println(listaAnimales[uno]);
-		}
-		if(listaAnimales[dos].isMostrar()) {
-			System.out.println(listaAnimales[dos]);
-		}
-	}
+	
+	
 }
