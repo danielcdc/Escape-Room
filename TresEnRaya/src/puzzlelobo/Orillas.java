@@ -9,9 +9,11 @@ public class Orillas {
 			listaAnimales[posicion].setMostrar(false);
 		}
 	}
+	
 	public void moverseDere(Animales listaAnimales[],int posicion) {
 		
 	}
+	
 	public void mostrarEnIzq(Animales listaAnimales[],int posicion,Orillas listaOrillas[]) {
 		int cero=0,uno=1,dos=2;
 		if(listaAnimales[cero].isMostrar()) {
