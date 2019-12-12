@@ -15,23 +15,22 @@ public class Ppal {
 		Jugabilidad jb1 = new Jugabilidad();
 		Util ut1 = new Util();
 		
-		for (int i = 0; i < listaJugadores.length; i++) { // Crea una lista de jugadores
+		/*for (int i = 0; i < listaJugadores.length; i++) { // Crea una lista de jugadores
 			if (i < uno) {
 				inicial = inicialJugador;//Se eligen las iniciales
 			} else { 
 				inicial = inicialEnemiga;
 			}
 			listaJugadores[i] = new jugador3Raya(inicial, false);
-		}
+		}*/
+		
 		jb1.generarTurnoInicial();//Se genera el turno aleatoriamente si el número aleatorio >5 empezamos si no empieza el enemigo
 		System.out.println("Eligiendo aleatoriamente el primer turno");
 
 		if (jb1.isTurno()) { // LLama al metodo para comprobar quien empieza
 			while (listaJugadores[0].getVictoria() == false && listaJugadores[1].getVictoria() == false) {//
 				imp1.imprimirmapaVacio(ut1);
-				for(int i=0; i<ut1.getListaValores().length;i++) {
-					System.out.println(ut1.getListaValores()[i]);
-				}
+				
 				
 				comprobacion = false;
 				if (turno % 2 == cero) {// Si comenzamos nosotros tendremos los turnos pares
@@ -45,7 +44,7 @@ public class Ppal {
 						elecciones = Leer.datoInt();
 						if (jb1.comprobarRepetir(ut1, listaJugadores, elecciones, cero)) {//Se comprueba si ese sitio ya tiene una ficha
 							ut1.cambiarPosicion(elecciones, listaJugadores[0].getfichas());// Se cambia la posicion en el array inicial
-							jb1.comprobarGanadorJugador(ut1, listaJugadores); //Comprueba si hemos ganado
+							jb1.comprobarGanador(listaJugadores,cero); //Comprueba si hemos ganado
 							turno++;
 							comprobacion = true;//Si cumple las condiciones se pasa a true para que no se vuelva a repetir
 						} else {
@@ -59,7 +58,7 @@ public class Ppal {
 						elecciones = jb1.generarTurnoRival();//Genera un numero aleatorio que será la posicion
 						if (jb1.comprobarRepetir(ut1, listaJugadores, elecciones, uno)) {//Evita que se repita
 							ut1.cambiarPosicion(elecciones, listaJugadores[1].getfichas());//Cambia la array inicial
-							jb1.comprobarGanadorEnemigo(ut1, listaJugadores);//Comprueba si has ganado
+							jb1.comprobarGanador(listaJugadores, uno);//Comprueba si has ganado
 							turno++;
 							comprobacion = true;
 						} else {
@@ -84,7 +83,7 @@ public class Ppal {
 						elecciones = jb1.generarTurnoRival();
 						if (jb1.comprobarRepetir(ut1, listaJugadores, elecciones, uno)) {
 							ut1.cambiarPosicion(elecciones, listaJugadores[1].getfichas());
-							jb1.comprobarGanadorEnemigo(ut1, listaJugadores);
+							jb1.comprobarGanador(listaJugadores, uno);
 							turno++;
 							comprobacion = true;
 						} else {
@@ -98,7 +97,7 @@ public class Ppal {
 						elecciones = Leer.datoInt();
 						if (jb1.comprobarRepetir(ut1, listaJugadores, elecciones, cero)) {
 							ut1.cambiarPosicion(elecciones, listaJugadores[0].getfichas());
-							jb1.comprobarGanadorJugador(ut1, listaJugadores);
+							jb1.comprobarGanador(listaJugadores, cero);
 							turno++;
 							comprobacion=true;
 						} else {
