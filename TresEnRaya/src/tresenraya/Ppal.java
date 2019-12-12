@@ -23,8 +23,9 @@ public class Ppal {
 			}
 			listaJugadores[i] = new jugador(inicial, false);
 		}
-		jb1.generarTurnoInicial();//Se genera el turno aleatoriamente si el número aleatorio >5 empezamos si no empieza el enemigo
-		System.out.println("Eligiendo aleatoriamente el primer turno");
+		/*jb1.generarTurnoInicial();//Se genera el turno aleatoriamente si el número aleatorio >5 empezamos si no empieza el enemigo
+		System.out.println("Eligiendo aleatoriamente el primer turno");*/
+		
 
 		if (jb1.isTurno()) { // LLama al metodo para comprobar quien empieza
 			while (listaJugadores[0].getVictoria() == false && listaJugadores[1].getVictoria() == false) {//
