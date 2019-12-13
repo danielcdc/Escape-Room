@@ -33,6 +33,8 @@ public class Ppal {
 	Mapa m1 = new Mapa (mapaClase);
 	int cont = 0;
 	char mov= ' ';
+	int [] numeroSecreto = new int[3];
+	ModelJuegoPizarra m2 = new ModelJuegoPizarra(m1, numeroSecreto);
 	
 	do {
 	    
@@ -40,9 +42,11 @@ public class Ppal {
 	    System.out.println("\n\n[w] Delante, [s] Atras, [a] Izquierda, [d] Derecha");
 	    mov = Leer.datoChar();
 	    m1.moverJugador(mov);
-	    m1.cinematicasMapa1();
-	    cont++;
-	}while(cont!=35);
+	    m2.generarNumerosSecretos();
+	    if(m2.asignarNumeroConMesa(cont)) {
+	    	cont++;
+	    }
+	}while(cont!=5000);
 	
 	
 	

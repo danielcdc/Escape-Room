@@ -16,6 +16,14 @@ public class ModelJuegoPizarra {
 		this.j1 = j1;
 	}
 
+	public ModelJuegoPizarra(Mapa mapaJuego, int[] numeroSecreto) {
+		super();
+		this.mapaJuego = mapaJuego;
+		this.numeroSecreto = numeroSecreto;
+	}
+
+
+
 	public Mapa getMapaJuego() {
 		return mapaJuego;
 	}
@@ -58,7 +66,7 @@ public class ModelJuegoPizarra {
 
 	}
 
-	public void asignarNumeroConMesa(int contJuegoPizz) {
+	public boolean asignarNumeroConMesa(int contJuegoPizz) {
 
 		if (mapaJuego.getMapa()[6][7] == 'P' && contJuegoPizz == 0) {
 
@@ -67,74 +75,77 @@ public class ModelJuegoPizarra {
 			System.out.println("- - - - - - - - - - - - - - - - - - - - "
 					+ "-Don Bosco: Es el primer número, lo apuntaré" + "- - - - - - - - - - - - - - - - - - - - ");
 
-			System.out.println("╔═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╗"
-					+ "║                                               ║"
-					+ "                                                 "
-					+ "║                                               ║"
-					+ "                                                 " + "║                     " + numeroSecreto[0]
-					+ "                          ║" + "                     ----------                  "
-					+ "║                                               ║"
-					+ "╚═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╝"
-					+ "                      	▓▓▓                      "
-					+ "                      	▓▓▓                      "
-					+ "                      	▓▓▓                      "
-					+ "                     ▓▓▓▓▓▓▓▓▓▓▓                  ");
+			System.out.println("╔═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╗\n"
+					+ "║                                               ║\n"
+					+ "                                                 \n"
+					+ "║                                               ║\n"
+					+ "                                                 \n" + "║                       " + numeroSecreto[0]
+					+ "                      ║\n" + "                    ----------                   \n"
+					+ "║                                               ║\n"
+					+ "╚═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╝\n"
+					+ "                      	▓▓▓                      \n"
+					+ "                      	▓▓▓                      \n"
+					+ "                      	▓▓▓                      \n"
+					+ "                    ▓▓▓▓▓▓▓▓▓▓▓                  \n");
 
 			System.out.println("A: " + numeroSecreto[0]);
 
-			contJuegoPizz++;
+			return true;
 
 		}
 
-		if (mapaJuego.getMapa()[6][7] == 'P' && contJuegoPizz == 1) {
+		if (mapaJuego.getMapa()[12][7] == 'P' && contJuegoPizz == 1) {
 
 			System.out.println("- - - - - - - - - - - - - - - - - - - - " + "-Don Bosco: Otra pantalla encendida"
 					+ "- - - - - - - - - - - - - - - - - - - - ");
 			System.out.println("- - - - - - - - - - - - - - - - - - - - "
 					+ "-Don Bosco: Supongo que es el 2º, lo apuntaré" + "- - - - - - - - - - - - - - - - - - - - ");
 
-			System.out.println("╔═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╗"
-					+ "║                                               ║"
-					+ "                                                 "
-					+ "║                                               ║"
-					+ "                                                 " + "║                     " + numeroSecreto[1]
-					+ "                          ║" + "                     ----------                  "
-					+ "║                                               ║"
-					+ "╚═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╝"
-					+ "                      	▓▓▓                      "
-					+ "                      	▓▓▓                      "
-					+ "                      	▓▓▓                      "
-					+ "                     ▓▓▓▓▓▓▓▓▓▓▓                  ");
+			System.out.println("╔═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╗\n"
+					+ "║                                               ║\n"
+					+ "                                                 \n"
+					+ "║                                               ║\n"
+					+ "                                                 \n" + "║                        " + numeroSecreto[1]
+					+ "                      ║\n" + "                    ----------                   \n"
+					+ "║                                               ║\n"
+					+ "╚═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╝\n"
+					+ "                      	▓▓▓                      \n"
+					+ "                      	▓▓▓                      \n"
+					+ "                      	▓▓▓                      \n"
+					+ "                    ▓▓▓▓▓▓▓▓▓▓▓                  \n");
 
 			System.out.println("B: " + numeroSecreto[1]);
 
-			contJuegoPizz++;
+			return true;
+			
 
 		}
 		
-		if (mapaJuego.getMapa()[6][7] == 'P' && contJuegoPizz == 2) {
+		if (mapaJuego.getMapa()[16][2] == 'P' && contJuegoPizz == 2) {
 
 			System.out.println("- - - - - - - - - - - - - - - - - - - - " + "-Don Bosco: La ultima"
 					+ "- - - - - - - - - - - - - - - - - - - - ");
 
-			System.out.println("╔═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╗"
-					+ "║                                               ║"
-					+ "                                                 "
-					+ "║                                               ║"
-					+ "                                                 " + "║                     " + numeroSecreto[2]
-					+ "                          ║" + "                     ----------                  "
-					+ "║                                               ║"
-					+ "╚═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╝"
-					+ "                      	▓▓▓                      "
-					+ "                      	▓▓▓                      "
-					+ "                      	▓▓▓                      "
-					+ "                     ▓▓▓▓▓▓▓▓▓▓▓                  ");
+			System.out.println("╔═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╗\n"
+					+ "║            Deberias pensar en salir...        ║\n"
+					+ "                                                 \n"
+					+ "║                                               ║\n"
+					+ "                                                 \n" + "║                       " + numeroSecreto[2]
+					+ "                      ║\n" + "                    ----------                   \n"
+					+ "║                                               ║\n"
+					+ "╚═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═ ═╝\n"
+					+ "                      	▓▓▓                      \n"
+					+ "                      	▓▓▓                      \n"
+					+ "                      	▓▓▓                      \n"
+					+ "                    ▓▓▓▓▓▓▓▓▓▓▓                  \n");
 
 			System.out.println("C: " + numeroSecreto[2]);
 
-			contJuegoPizz++;
+			return true;
 
 		}
+		
+		return false;
 
 	}
 
