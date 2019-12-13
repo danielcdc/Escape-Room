@@ -31,10 +31,12 @@ public class Orillas {
 		if(listaOrillas[cero].getListaAnimales()[cero].getNombre().equalsIgnoreCase(animal)) {
 			listaOrillas[cero].getListaAnimales()[cero].setMostrar(mostrarD);
 			listaOrillas[uno].getListaAnimales()[cero].setMostrar(mostrarI);
-		}else if(listaOrillas[cero].getListaAnimales()[uno].getNombre().equalsIgnoreCase(animal)){
+		}
+		if(listaOrillas[cero].getListaAnimales()[uno].getNombre().equalsIgnoreCase(animal)){
 			listaOrillas[cero].getListaAnimales()[uno].setMostrar(mostrarD);
 			listaOrillas[uno].getListaAnimales()[uno].setMostrar(mostrarI);
-		}else if(listaOrillas[uno].getListaAnimales()[dos].getNombre().equalsIgnoreCase(animal)){
+		}
+		if(listaOrillas[uno].getListaAnimales()[dos].getNombre().equalsIgnoreCase(animal)){
 			listaOrillas[cero].getListaAnimales()[dos].setMostrar(mostrarD);
 			listaOrillas[uno].getListaAnimales()[dos].setMostrar(mostrarI);
 		}
@@ -46,10 +48,12 @@ public class Orillas {
 		if(listaOrillas[uno].getListaAnimales()[cero].getNombre().equalsIgnoreCase(animal)) {
 			listaOrillas[uno].getListaAnimales()[cero].setMostrar(mostrarI);
 			listaOrillas[cero].getListaAnimales()[cero].setMostrar(mostrarD);
-		}else if(listaOrillas[uno].getListaAnimales()[uno].getNombre().equalsIgnoreCase(animal)) {
+		} 
+		if(listaOrillas[uno].getListaAnimales()[uno].getNombre().equalsIgnoreCase(animal)) {
 			listaOrillas[uno].getListaAnimales()[uno].setMostrar(mostrarI);
 			listaOrillas[cero].getListaAnimales()[uno].setMostrar(mostrarD);
-		}else if (listaOrillas[uno].getListaAnimales()[dos].getNombre().equalsIgnoreCase(animal)){
+		}
+		if (listaOrillas[uno].getListaAnimales()[dos].getNombre().equalsIgnoreCase(animal)){
 			listaOrillas[uno].getListaAnimales()[dos].setMostrar(mostrarI);
 			listaOrillas[cero].getListaAnimales()[dos].setMostrar(mostrarD);
 		}
