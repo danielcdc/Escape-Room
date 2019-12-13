@@ -14,7 +14,7 @@ public class Ppal {
 				new Animales(lechuga, false) };
 		Orillas listaOrillas[] = { new Orillas(listaAnimales), new Orillas(listaAnimales) };
 
-		System.out.println("Comenzaremos en la orilla derecha");
+		System.out.println("Nos encontramos en la orilla derecha");
 		listaOrillas[cero].getListaAnimales()[0].setMostrar(true);
 		listaOrillas[cero].getListaAnimales()[1].setMostrar(true);
 		listaOrillas[cero].getListaAnimales()[2].setMostrar(true);
@@ -27,9 +27,17 @@ public class Ppal {
 				}
 				System.out.println("¿Que quieres mover a la otra orilla?");
 				animal=Leer.dato();
-				
+				listaOrillas[cero].movimientoDerAIzq(animal, listaOrillas);
 			}else {
-				System.out.println();
+				System.out.println("Nos encontramos en la orilla izquierda");
+				for(int i=0;i<tres;i++) {
+					if(listaOrillas[cero].getListaAnimales()[i].isMostrar()){
+						System.out.println(listaOrillas[cero].getListaAnimales()[i].getNombre());
+					}
+				}
+				System.out.println("¿Que quieres mover a la otra orilla?");
+				animal=Leer.dato();
+				listaOrillas[cero].movimientoDerAIzq(animal, listaOrillas);
 			}
 		}
 	}
