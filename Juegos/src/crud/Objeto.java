@@ -12,6 +12,11 @@ public class Objeto {
 		this.instanciado = instanciado;
 	}
 
+	@Override
+	public String toString() {
+		return "Objeto [nombre=" + nombre + ", descripcion=" + descripcion + ", instanciado=" + instanciado + "]";
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
