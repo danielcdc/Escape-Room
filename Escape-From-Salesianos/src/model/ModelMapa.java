@@ -1,28 +1,18 @@
 package model;
 
-public class Mapa {
+import datos.Datos;
 
-    private char[][] mapa;
-    private ModelJugador j1;
+public class ModelMapa {
 
-    public Mapa(char[][] mapa, ModelJugador j1) {
+    Datos d;
 
-	this.mapa = mapa;
-	this.j1 = j1;
-    }
+    public Datos getD() {
+		return d;
+	}
 
-    public Mapa(char[][] mapa) {
-
-	this.mapa = mapa;
-    }
-
-    public char[][] getMapa() {
-	return mapa;
-    }
-
-    public void setMapa(char[][] mapa) {
-	this.mapa = mapa;
-    }
+	public void setD(Datos d) {
+		this.d = d;
+	}
 
     public ModelJugador getJ1() {
 	return j1;
@@ -32,59 +22,7 @@ public class Mapa {
 	this.j1 = j1;
     }
 
-    public char[][] moverJugador(char mov) {
-	int horiz = 0, vertic = 0;
-	char izq = 'a', derech = 'd', delant = 'w', atras = 's', mes = '▄', paredVert='║', paredHoriz='═', puert = '/', pizz='▓';
-
-	for (int i = 0; i < mapa.length; i++) {
-	    for (int j = 0; j < mapa[i].length; j++) {
-		if (mapa[i][j] == 'P') {
-		    vertic = i;
-		    horiz = j;
-		}
-	    }
-	}
-
-	if (mov == izq) {
-	    if (mapa[vertic][horiz - 1] != paredVert && mapa[vertic][horiz - 1] != paredHoriz &&
-		    mapa[vertic][horiz - 1] != mes &&  mapa[vertic][horiz - 1] != puert) {
-		mapa[vertic][horiz - 1] = 'P';
-		mapa[vertic][horiz] = ' ';
-		horiz--;
-
-	    }
-	}
-
-	if (mov == derech) {
-	    if (mapa[vertic][horiz + 1] != paredVert && mapa[vertic][horiz + 1] != paredHoriz &&
-		    mapa[vertic][horiz + 1] != mes &&  mapa[vertic][horiz + 1] != puert) {
-		mapa[vertic][horiz + 1] = 'P';
-		mapa[vertic][horiz] = ' ';
-		horiz++;
-	    }
-	}
-
-	if (mov == delant) {
-	    if (mapa[vertic-1][horiz] != paredVert && mapa[vertic-1][horiz] != paredHoriz &&
-		    mapa[vertic-1][horiz] != mes &&  mapa[vertic-1][horiz] != puert && mapa[vertic-1][horiz] != pizz) {
-		mapa[vertic - 1][horiz] = 'P';
-		mapa[vertic][horiz] = ' ';
-		vertic++;
-	    }
-	}
-
-	if (mov == atras) {
-	    if (mapa[vertic+1][horiz] != paredVert && mapa[vertic+1][horiz] != paredHoriz &&
-		    mapa[vertic+1][horiz] != mes &&  mapa[vertic+1][horiz] != puert) {
-		mapa[vertic + 1][horiz] = 'P';
-		mapa[vertic][horiz] = ' ';
-		vertic--;
-	    }
-	}
-
-	return mapa;
-
-    }
+   
 
     public void imprimirMapa() {
 	for (int i = 0; i < mapa.length; i++) {

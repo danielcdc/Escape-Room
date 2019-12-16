@@ -5,18 +5,18 @@ import java.util.Random;
 
 public class ModelJuegoPizarra {
 
-	private Mapa mapaJuego;
+	private ModelMapa mapaJuego;
 	private int[] numeroSecreto;
 	private ModelJugador j1;
 
-	public ModelJuegoPizarra(Mapa mapaJuego, int[] numeroSecreto, ModelJugador j1) {
+	public ModelJuegoPizarra(ModelMapa mapaJuego, int[] numeroSecreto, ModelJugador j1) {
 
 		this.mapaJuego = mapaJuego;
 		this.numeroSecreto = numeroSecreto;
 		this.j1 = j1;
 	}
 
-	public ModelJuegoPizarra(Mapa mapaJuego, int[] numeroSecreto) {
+	public ModelJuegoPizarra(ModelMapa mapaJuego, int[] numeroSecreto) {
 		super();
 		this.mapaJuego = mapaJuego;
 		this.numeroSecreto = numeroSecreto;
@@ -24,11 +24,11 @@ public class ModelJuegoPizarra {
 
 
 
-	public Mapa getMapaJuego() {
+	public ModelMapa getMapaJuego() {
 		return mapaJuego;
 	}
 
-	public void setMapaJuego(Mapa mapaJuego) {
+	public void setMapaJuego(ModelMapa mapaJuego) {
 		this.mapaJuego = mapaJuego;
 	}
 

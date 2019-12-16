@@ -4,10 +4,10 @@ import datos.Datos;
 
 public class Model3Raya {
 
-	Datos d;
+	private Datos d;
 
 	public Model3Raya(Datos d) {
-		super();
+	
 		this.d = d;
 	}
 

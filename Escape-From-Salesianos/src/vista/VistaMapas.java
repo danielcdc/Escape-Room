@@ -1,5 +1,6 @@
 package vista;
 
+import model.Mapa;
 import model.Model3Raya;
 
 public class VistaMapas {
@@ -23,6 +24,15 @@ public class VistaMapas {
 				+ m1.devolverUnaposicion(seis) + m1.devolverUnaposicion(seis) + "|" + m1.devolverUnaposicion(siete)
 				+ m1.devolverUnaposicion(siete) + "|" + m1.devolverUnaposicion(ocho) + m1.devolverUnaposicion(ocho)
 				+ "|\n" + "----------");
+	}
+	
+	public void imprimirMapa(Mapa m1) {
+		for (int i = 0; i < mapa.length; i++) {
+		    System.out.println();
+		    for (int j = 0; j < mapa[i].length; j++) {
+
+			System.out.print(mapa[i][j]);
+		    }}
 	}
 
 }

@@ -21,7 +21,7 @@ public class Datos {
 	
 	char[][] mapaClase = { 
 			{  '╔', '═', '═','═', '═', '═', '═', '═', '═','═', '═', '═', '═', '═', '▓','▓', '▓', '▓', '▓', '╗' },
-			{  '║', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', '║' },
+			{  '║', '▄', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', '║' },
 			{  '║', ' ', '▄','▄', '▄', '▄', '▄', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', '║' },
 			{  '║', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', '║' },
 			{  '║', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', '║' },
@@ -42,7 +42,7 @@ public class Datos {
 	
 	char[][] mapaClase1 = { 
 			{  '╔', '═', '═','═', '═', '═', '═', '═', '═','═', '═', '═', '═', '═', '▓','▓', '▓', '▓', '▓', '╗' },
-			{  '║', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', 'P', '║' },
+			{  '║', '▄', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', 'P', '║' },
 			{  '║', ' ', '▄','▄', '▄', '▄', '▄', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', '║' },
 			{  '║', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', '║' },
 			{  '║', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', '║' },
@@ -62,11 +62,29 @@ public class Datos {
 			};
 	
 	//Getters and setters
+	
+	
 
 	public void setListaValores3Raya(char[] listaValores3Raya) {
 		this.listaValores3Raya = listaValores3Raya;
 	}
 	
+	public char[][] getMapaClase() {
+		return mapaClase;
+	}
+
+	public void setMapaClase(char[][] mapaClase) {
+		this.mapaClase = mapaClase;
+	}
+
+	public char[][] getMapaClase1() {
+		return mapaClase1;
+	}
+
+	public void setMapaClase1(char[][] mapaClase1) {
+		this.mapaClase1 = mapaClase1;
+	}
+
 	public void setPosicionListaValores3Raya(char ficha, int i) {
 		this.listaValores3Raya[i] = ficha;
 	}
