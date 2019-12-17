@@ -4,9 +4,9 @@ import model.*;
 
 public class DatosInventario {
 	
-	public Herramientas soplete=new Herramientas("Soplete", "Quema cosas");
-	public Herramientas cdrom=new Herramientas("CD-ROM", "Un disco");
-	public Herramientas lupa=new Herramientas("Lupa", "Ver mejor");
+	public Herramientas soplete=new Herramientas("Soplete", "Un soplete normal y corriente. Tiene un conejo blanco impreso en él y una frase de advertencia: NO funde adamantiun. Inflamable significa flamable");
+	public Herramientas cdrom=new Herramientas("CD-ROM", "El título impreso en la carcasa reza lo siguiente: “Juego de ajedrez sencillito para Dummies. Edad recomendada de 2 a 5 años mentales");
+	public Herramientas lupa=new Herramientas("Lupa", "Para usarla presiona la tecla del logotipo de Windows (⊞ Win) + signo más (+)");
 	
 	public DatosInventario() {
 		super();
