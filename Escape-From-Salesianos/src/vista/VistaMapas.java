@@ -1,6 +1,5 @@
 package vista;
 
-import model.Mapa;
 import model.Model3Raya;
 
 public class VistaMapas {
@@ -26,7 +25,7 @@ public class VistaMapas {
 				+ "|\n" + "----------");
 	}
 	
-	public void imprimirMapa(Mapa m1) {
+	public void imprimirMapa(char[][] mapa) {
 		for (int i = 0; i < mapa.length; i++) {
 		    System.out.println();
 		    for (int j = 0; j < mapa[i].length; j++) {

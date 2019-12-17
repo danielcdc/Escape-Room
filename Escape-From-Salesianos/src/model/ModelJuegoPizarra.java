@@ -3,56 +3,30 @@ package model;
 import java.util.Arrays;
 import java.util.Random;
 
+import datos.Datos;
+
 public class ModelJuegoPizarra {
 
-	private ModelMapa mapaJuego;
-	private int[] numeroSecreto;
-	private ModelJugador j1;
+	private Datos d;
 
-	public ModelJuegoPizarra(ModelMapa mapaJuego, int[] numeroSecreto, ModelJugador j1) {
 
-		this.mapaJuego = mapaJuego;
-		this.numeroSecreto = numeroSecreto;
-		this.j1 = j1;
-	}
-
-	public ModelJuegoPizarra(ModelMapa mapaJuego, int[] numeroSecreto) {
+	public ModelJuegoPizarra(Datos d) {
 		super();
-		this.mapaJuego = mapaJuego;
-		this.numeroSecreto = numeroSecreto;
+		this.d = d;
+	}
+
+	public Datos getD() {
+		return d;
 	}
 
 
 
-	public ModelMapa getMapaJuego() {
-		return mapaJuego;
+	public void setD(Datos d) {
+		this.d = d;
 	}
 
-	public void setMapaJuego(ModelMapa mapaJuego) {
-		this.mapaJuego = mapaJuego;
-	}
-
-	public int[] getNumeroSecreto() {
-		return numeroSecreto;
-	}
-
-	public void setNumeroSecreto(int[] numeroSecreto) {
-		this.numeroSecreto = numeroSecreto;
-	}
-
-	public ModelJugador getJ1() {
-		return j1;
-	}
-
-	public void setJ1(ModelJugador j1) {
-		this.j1 = j1;
-	}
-
-	@Override
-	public String toString() {
-		return "ModelJuegoPizarra [mapaJuego=" + mapaJuego + ", numeroSecreto=" + Arrays.toString(numeroSecreto)
-				+ ", j1=" + j1 + "]";
-	}
+	
+	
 
 	public int[] generarNumerosSecretos() {
 		Random rnd = new Random(System.nanoTime());
@@ -64,6 +38,11 @@ public class ModelJuegoPizarra {
 
 		return numeroSecreto;
 
+	}
+
+	@Override
+	public String toString() {
+		return "ModelJuegoPizarra [d=" + d + "]";
 	}
 
 	public boolean asignarNumeroConMesa(int contJuegoPizz) {
