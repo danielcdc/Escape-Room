@@ -1,6 +1,8 @@
 package escape_from_salesianos;
 
 import controller.Controller3Raya;
+import controller.ControllerHistoria;
+import controller.ControllerJuegoPizarra;
 import controller.ControllerMapa;
 import datos.Datos;
 import model.Model3Raya;
@@ -22,9 +24,13 @@ public class Ppal {
 		VistaMapas vMapa = new VistaMapas();
 		ModelMapa mapaHistoria = new ModelMapa(d);
 		ControllerMapa cMapa = new ControllerMapa();
+		ControllerJuegoPizarra cJP = new ControllerJuegoPizarra();
+		
 		int opt = 0;
-		char mov=' ';
+		String mov= "";
 		String opt1 = "";
+		String intro= "";
+		ControllerHistoria cHistory = new ControllerHistoria();
 		/*VA CON ESTO LA OPT1 COMO PRUEBA PARA LEER SOLO DANDO INTRO
 		 * opt1 = Leer.dato();
 		if(opt1.equalsIgnoreCase("")) {
@@ -45,10 +51,13 @@ public class Ppal {
 				
 				do {
 					vMapa.imprimirMapa(mapaHistoria.getD().getMapaClase());
-					vM.imprimirMenuMapa();
-					mov = Leer.datoChar();
+					vM.imprimirMenuMapa(mapaHistoria);
+					mov = Leer.dato();
 					cMapa.moverJugador( mov, mapaHistoria.getD().getMapaClase(), mapaHistoria);
-				
+					cHistory.ejecutarEasterEgg(mov, mapaHistoria.getD().getMapaClase(), mapaHistoria.getD().getFase());
+					cHistory.comprobarPruebas(mapaHistoria.getD().getMapaClase(), mapaHistoria.getD().getFase());
+					cHistory.ejecutarPrueba(mov,mapaHistoria.getD().getMapaClase(), mapaHistoria.getD().getFase(), d, cMapa, vM, vMapa, mapaHistoria, cJP, intro);
+					
 					
 				}while(!d.getJugador1().isVictoria());
 				

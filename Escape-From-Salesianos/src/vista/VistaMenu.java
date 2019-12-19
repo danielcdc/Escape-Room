@@ -1,5 +1,8 @@
 package vista;
 
+import controller.ControllerMapa;
+import model.ModelMapa;
+
 public class VistaMenu {
 									//Al metodo que quieras le añades esto
 	public void cargarBarra() throws InterruptedException {
@@ -102,11 +105,18 @@ public class VistaMenu {
 				+   "\t\t|_______________________________________________________|");
 	}
 	
-	public void imprimirMenuMapa() {
+	public void imprimirMenuMapa(ModelMapa m1) {
+		ControllerMapa cm = new ControllerMapa();
+		
+		cm.encontrarP(m1.getD().getMapaClase(), m1);
+		
 		System.out.println("\n\n[w] Delante, [s] Atras, [a] Izquierda, [d] Derecha");
-		/*if() {
-			
-		}*/
+		if(m1.getD().getMapaClase()[m1.getD().getVertic()][m1.getD().getHoriz()] == '?' || 
+				m1.getD().getMapaClase()[m1.getD().getVertic()][m1.getD().getHoriz()] == '!') {
+			System.out.println("┌────────────────────┐\n"
+					+ 		   "|  [I] Interactuar   |\n"
+					+          "└────────────────────┘\n");
+		}
 	}
 
 }
