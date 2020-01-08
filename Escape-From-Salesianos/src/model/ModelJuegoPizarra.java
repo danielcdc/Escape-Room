@@ -47,8 +47,10 @@ public class ModelJuegoPizarra {
 	public void iniciarJuegoPizarra(ModelMapa m1, VistaMapas vm, VistaMenu vMenu, String mov, ControllerMapa cMapa,
 			ControllerJuegoPizarra cJP, String intro) {
 		boolean ganad1 = false;
-		int cont = 0;
+		int cont = 0, num1 = 0;
 		VistaPruebas vp = new VistaPruebas();
+		
+		generarNumerosSecretos();
 
 		do {
 			vp.imprimirLetreroMapaPrueba();
@@ -57,9 +59,27 @@ public class ModelJuegoPizarra {
 			vMenu.imprimirMenuMapa(m1);
 			mov = Leer.dato();
 			cMapa.moverJugador(mov, m1.getD().getMapaClase1(), m1);
-			generarNumerosSecretos();
 			if (cJP.asignarNumeroConMesa(cont, m1, d, intro)) {
 				cont++;
+			}
+			
+			if(d.getMapaClase1()[13][16] == 'P' && cont == 3) {
+				do {
+					
+					cJP.resetearNumeros(d.getNumerosIntroduz());
+					
+					for(int i=0; i < d.getNumeroSecreto().length;i++) {
+					
+						vp.imprimirCodigo(d.getNumerosIntroduz(), i);
+						cJP.guardarPuerta(d, i, num1 = Leer.datoInt());
+					}
+					
+					}while(!cJP.comprobarPuerta(d.getNumeroSecreto(), d.getNumerosIntroduz()));
+				
+				ganad1=true;
+					
+				
+				
 			}
 
 		} while (!ganad1);

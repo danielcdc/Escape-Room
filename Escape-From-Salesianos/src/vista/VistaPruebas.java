@@ -9,22 +9,22 @@ public class VistaPruebas {
 								" en 10110 encontró una zanahoria y en 11011 se encontró con el zorro");
 	}
 	
-	private void imprimirCodigo(int [] num, int i) {
+	public void imprimirCodigo(int [] num, int i) {
 		
 		if(i == 0) {
 			
 		
-		System.out.println(" +------------------------------------------------+\r\n" + 
+		System.out.print(" +------------------------------------------------+\r\n" + 
 				" |+----------------------------------------------+|\r\n" + 
 				" ||                                              ||\r\n" + 
-				" ||           " +num[0]);
+				" ||                " +num[0]);
 		
 		if(num[i] < 10 && num[i] >= 0){
-			System.out.println(" ");
+			System.out.print(" ");
 		}
 						
 						
-		System.out.println("                                  ||\r\n" + 
+		System.out.print("                            ||\r\n" + 
 				" ||                                              ||\r\n" + 
 				" ||                                              ||\r\n" + 
 				" |+----------------------------------------------+|\r\n" + 
@@ -57,24 +57,24 @@ public class VistaPruebas {
 		if(i == 1) {
 			
 			
-			System.out.println(" +------------------------------------------------+\r\n" + 
+			System.out.print(" +------------------------------------------------+\r\n" + 
 					" |+----------------------------------------------+|\r\n" + 
 					" ||                                              ||\r\n" + 
-					" ||           " +num[i-1]);
+					" ||               " +num[i-1]);
 			
 			if(num[i-1] < 10 && num[i-1] >= 0){
-				System.out.println(" ");
+				System.out.print(" ");
 			}
 							
 							
 			System.out.print("   " +num[i]); 
 					
 			if(num[i] < 10 && num[i] >= 0){
-				System.out.println(" ");
+				System.out.print(" ");
 			}		
 							
 					
-			System.out.println("                              ||\r\n" + 
+			System.out.print("                        ||\r\n" + 
 					" ||                                              ||\r\n" + 
 					" ||                                              ||\r\n" + 
 					" |+----------------------------------------------+|\r\n" + 
@@ -108,30 +108,30 @@ public class VistaPruebas {
 if(i == 2) {
 			
 			
-			System.out.println(" +------------------------------------------------+\r\n" + 
+			System.out.print(" +------------------------------------------------+\r\n" + 
 					" |+----------------------------------------------+|\r\n" + 
 					" ||                                              ||\r\n" + 
-					" ||           " +num[i-1]);
+					" ||               " +num[i-2]);
 			
 			if(num[i-2] < 10 && num[i-2] >= 0){
-				System.out.println(" ");
+				System.out.print(" ");
 			}
 							
 							
-			System.out.print("   " +num[i]); 
+			System.out.print("   " +num[i-1]); 
 					
 			if(num[i-1] < 10 && num[i-1] >= 0){
-				System.out.println(" ");
+				System.out.print(" ");
 			}		
 							
 					
-			System.out.println("   " +num[i]);
+			System.out.print("   " +num[i]);
 					
 			if(num[i] < 10 && num[i] >= 0){
-				System.out.println(" ");
+				System.out.print(" ");
 			}		
 					
-			System.out.println("                         ||\r\n" + 
+			System.out.print("                   ||\r\n" + 
 					" ||                                              ||\r\n" + 
 					" ||                                              ||\r\n" + 
 					" |+----------------------------------------------+|\r\n" + 
@@ -183,6 +183,106 @@ if(i == 2) {
 		Thread.sleep(4000);
 		
 		Thread.sleep(1000);
+		
+	}
+	
+	public void imprimirFinPrueba1() throws InterruptedException{
+		
+		System.out.print("      ███████████████\r\n");
+		Thread.sleep(300);
+		System.out.print("     ████████████████\r\n");
+		Thread.sleep(300);
+		System.out.print("    ██████████████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"   ████████████████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"   ████████████████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"  ██████████████████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"  █   █   █    █   █   █\r\n");
+		Thread.sleep(300);
+		System.out.print(		"  █   █████    █████   █\r\n");
+		Thread.sleep(300);
+		System.out.print(		"  ██████████████████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"   ████████████████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"   ████████████████████\r\n"); 
+		Thread.sleep(300);
+		System.out.print(		"   █  ▄ ▄ ▄ ▄ ▄ ▄ ▄   █\r\n");
+		Thread.sleep(300);
+		System.out.print(		"    █ ▄ ▄ ▄ ▄ ▄ ▄ ▄  █\r\n");
+		Thread.sleep(300);
+		System.out.print(		"     ████████████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"          ███████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"          ███████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"         █████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"        ███████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"      ███████████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"    ███████████████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"███████████████████████████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"████ █████████████████ ████\r\n");
+		Thread.sleep(300);
+		System.out.print(		"████ █████████████████ ████\r\n"); 
+		Thread.sleep(300);
+		System.out.print(		"████ █████████████████ ████\r\n");
+		Thread.sleep(300);
+		System.out.println(		"████ █████████████████ ████");
+		
+		System.out.println("\n\n\n"+
+								"\t\t\t┌────────────────────────────────────────────────────────┐");
+		System.out.println(		"\t\t\t|    Voz anónima:                                        |");
+		System.out.println(		"\t\t\t|                                                        |");
+		System.out.println(		"\t\t\t|       ~No pensaba que fueses capaz de lograrlo..~      |");
+		System.out.println(		"\t\t\t|                                                        |");
+		System.out.println(     "\t\t\t└────────────────────────────────────────────────────────┘");
+		Thread.sleep(3000);
+		System.out.println(	    "\t\t\t...");
+		Thread.sleep(3000);
+		System.out.println("      ███████████████\r\n" + 
+				"     ████████████████\r\n" + 
+				"    ██████████████████\r\n" + 
+				"   ████████████████████\r\n" + 
+				"   ████████████████████\r\n" + 
+				"  ██████████████████████\r\n" + 
+				"  █   █   █    █   █   █\r\n" + 
+				"  █   █████    █████   █\r\n" + 
+				"  ██████████████████████\r\n" + 
+				"   ████████████████████\r\n" + 
+				"   ████████████████████\r\n" + 
+				"   █  ▄ ▄ ▄ ▄ ▄ ▄ ▄   █\r\n" + 
+				"    █ ▄ ▄ ▄ ▄ ▄ ▄ ▄  █\r\n" + 
+				"     ████████████████\r\n" + 
+				"          ███████\r\n" + 
+				"          ███████\r\n" + 
+				"         █████████\r\n" + 
+				"        ███████████\r\n" + 
+				"      ███████████████\r\n" + 
+				"    ███████████████████\r\n" + 
+				"███████████████████████████\r\n" + 
+				"████ █████████████████ ████\r\n" + 
+				"████ █████████████████ ████\r\n" + 
+				"████ █████████████████ ████\r\n" + 
+				"████ █████████████████ ████");
+		System.out.println("\n\n\n"+
+								"\t\t\t┌────────────────────────────────────────────────────────┐");
+		System.out.println(		"\t\t\t|    Voz anónima:                                        |");
+		System.out.println(		"\t\t\t|                                                        |");
+		System.out.println(		"\t\t\t|       ~Pero si pensabas que este era el final, solo    |");
+		System.out.println(		"\t\t\t|        es el comienzo del juego~                       |");
+		System.out.println(     "\t\t\t└────────────────────────────────────────────────────────┘");
+		Thread.sleep(3000);
+		System.out.println(	    "\t\t\t...");
+		Thread.sleep(3000);
 		
 	}
 	

@@ -43,9 +43,16 @@ public class ControllerJuegoPizarra {
 
 	}
 	
-	private void guardarPuerta(Datos d, int i, int num1) {
+	public void guardarPuerta(Datos d, int i, int num1) {
 		
 			d.getNumerosIntroduz()[i] = num1;
+	}
+	
+	public void resetearNumeros(int [] nums) {
+			
+		for(int i=0; i<nums.length;i++) {
+			nums[i] = 0;
+		}
 	}
 	
 	public boolean comprobarPuerta(int [] num, int [] num1) {

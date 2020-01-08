@@ -41,8 +41,9 @@ public class Ppal {
 		
 		do {
 			
-			vM.cargarBarra();
+			/*vM.cargarBarra();
 			vM.imprimirPortada();
+			*/
 			vM.imprimirMenu();
 			opt = Leer.datoInt();
 			switch(opt) {
@@ -63,6 +64,18 @@ public class Ppal {
 				
 				break;
 			
+			case 2:
+				System.out.println("Proximamente..\n\n");
+				break;
+			
+			case 3:
+				System.out.println("Proximamente..\n\n");
+				break;
+			
+			case 0:
+				System.out.println("¡Hasta luego!");
+				break;
+			
 			
 			
 			
@@ -75,7 +88,7 @@ public class Ppal {
 			    
 			
 
-		} while (ganad);
+		} while (!ganad);
 
 	}
 

@@ -54,11 +54,16 @@ public class ControllerHistoria {
 
 		if (mov.equalsIgnoreCase("I")) {// Si no coincide la letra, no hace nada.
 			if (mapa[2][17] == '!' && fase == 1) {
+				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				vp.imprimirIntroPrueba1();
 				mPizarra.iniciarJuegoPizarra(m1, vm, vMenu, mov, cMapa, cJP, intro);
+				vp.imprimirFinPrueba1();
+				fase++;
 			}
 		}
 	}
+	
+	
 	
 	
 

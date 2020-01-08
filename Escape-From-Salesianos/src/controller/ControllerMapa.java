@@ -9,7 +9,7 @@ public class ControllerMapa {
 	 public void encontrarP(char[][] mapa, ModelMapa m1) {
 		 for (int i = 0; i < mapa.length; i++) {
 			    for (int j = 0; j < mapa[i].length; j++) {
-				if (mapa[i][j] == 'P' || mapa[i][j] == '?') {
+				if (mapa[i][j] == 'P' || mapa[i][j] == '?' || mapa[i][j] == '!') {
 				    m1.getD().setVertic(i);
 				    m1.getD().setHoriz(j);
 				}
@@ -66,7 +66,7 @@ public class ControllerMapa {
 			
 			}
 			
-			if(mapa[m1.getD().getVertic()][m1.getD().getHoriz()] == '?') {
+			if(mapa[m1.getD().getVertic()][m1.getD().getHoriz()] == '?' || mapa[m1.getD().getVertic()][m1.getD().getHoriz()] == '!') {
 				
 				if (mov.equalsIgnoreCase(izq)) {
 				    if (mapa[m1.getD().getVertic()][m1.getD().getHoriz() - 1] != paredVert && mapa[m1.getD().getVertic()][m1.getD().getHoriz() - 1] != paredHoriz &&
@@ -104,6 +104,8 @@ public class ControllerMapa {
 					m1.getD().setVertic(m1.getD().getVertic()-1);
 				    }
 				}
+				
+				
 				
 				
 			}
