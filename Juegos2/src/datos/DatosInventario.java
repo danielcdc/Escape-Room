@@ -3,43 +3,38 @@ package datos;
 import model.*;
 
 public class DatosInventario {
-	
-	public Herramientas soplete=new Herramientas("Soplete", "Un soplete normal y corriente. Tiene un conejo blanco impreso en él y una frase de advertencia: NO funde adamantiun. Inflamable significa flamable");
-	public Herramientas cdrom=new Herramientas("CD-ROM", "El título impreso en la carcasa reza lo siguiente: “Juego de ajedrez sencillito para Dummies. Edad recomendada de 2 a 5 años mentales");
-	public Herramientas lupa=new Herramientas("Lupa", "Para usarla presiona la tecla del logotipo de Windows (⊞ Win) + signo más (+)");
-	
+	public ModelHerramientas soplete=new ModelHerramientas("Soplete", "Un soplete normal y corriente. Tiene un conejo blanco impreso en él y una frase de advertencia: NO funde adamantiun. Inflamable significa flamable");
+	public ModelHerramientas cdrom=new ModelHerramientas("CD-ROM", "El título impreso en la carcasa reza lo siguiente: “Juego de ajedrez sencillito para Dummies. Edad recomendada de 2 a 5 años mentales");
+	public ModelHerramientas lupa=new ModelHerramientas("Lupa", "Para usarla presiona la tecla del logotipo de Windows (⊞ Win) + signo más (+)");
 	public DatosInventario() {
 		super();
 	}
-	public DatosInventario(Herramientas soplete, Herramientas cdrom, Herramientas lupa) {
+	public DatosInventario(ModelHerramientas soplete, ModelHerramientas cdrom, ModelHerramientas lupa) {
 		super();
 		this.soplete = soplete;
 		this.cdrom = cdrom;
 		this.lupa = lupa;
 	}
-	public Herramientas getSoplete() {
+	public ModelHerramientas getSoplete() {
 		return soplete;
 	}
-	public void setSoplete(Herramientas soplete) {
+	public void setSoplete(ModelHerramientas soplete) {
 		this.soplete = soplete;
 	}
-	public Herramientas getCdrom() {
+	public ModelHerramientas getCdrom() {
 		return cdrom;
 	}
-	public void setCdrom(Herramientas cdrom) {
+	public void setCdrom(ModelHerramientas cdrom) {
 		this.cdrom = cdrom;
 	}
-	public Herramientas getLupa() {
+	public ModelHerramientas getLupa() {
 		return lupa;
 	}
-	public void setLupa(Herramientas lupa) {
+	public void setLupa(ModelHerramientas lupa) {
 		this.lupa = lupa;
 	}
 	@Override
 	public String toString() {
 		return "DatosInventario [soplete=" + soplete + ", cdrom=" + cdrom + ", lupa=" + lupa + "]";
 	}
-	
-	
-
 }

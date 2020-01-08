@@ -1,4 +1,4 @@
-package vista;
+package utilidades;
 
 public class Limpiar {
 	public static void clear() {

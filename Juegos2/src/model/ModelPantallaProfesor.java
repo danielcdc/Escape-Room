@@ -1,9 +1,9 @@
 package model;
 
-public class PantallaProfesor {
+public class ModelPantallaProfesor {
 	boolean encendido;
 
-	public PantallaProfesor(boolean encendido) {
+	public ModelPantallaProfesor(boolean encendido) {
 		super();
 		this.encendido = encendido;
 	}

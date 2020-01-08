@@ -1,9 +1,9 @@
 package model;
 
-public class Archivador {
+public class ModelArchivador {
 	boolean abierto;
 
-	public Archivador(boolean abierto) {
+	public ModelArchivador(boolean abierto) {
 		super();
 		this.abierto = abierto;
 	}

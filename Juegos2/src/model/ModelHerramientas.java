@@ -1,10 +1,10 @@
 package model;
 
-public class Herramientas {
+public class ModelHerramientas {
 	private String nombre;
 	private String descripcion;
 	
-	public Herramientas(String nombre, String descripcion) {
+	public ModelHerramientas(String nombre, String descripcion) {
 		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
