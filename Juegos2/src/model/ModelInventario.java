@@ -2,32 +2,25 @@ package model;
 
 import java.util.Arrays;
 
+import datos.*;
+
 public class ModelInventario {
-	private ModelHerramientas listaDeHerramientas[];
+	Datos d;
 
-	public ModelInventario(ModelHerramientas[] listaDeHerramientas) {
-		super();
-		this.listaDeHerramientas = new ModelHerramientas[10];
+	public Datos getD() {
+		return d;
 	}
 
-	public ModelInventario(int tamInventario) {
-		// TODO Auto-generated constructor stub
-		this.listaDeHerramientas = new ModelHerramientas[tamInventario];
+	public void setD(Datos d) {
+		this.d = d;
 	}
 
-	public ModelHerramientas[] getListaDeHerramientas() {
-		return listaDeHerramientas;
-	}
-
-	public void setListaDeHerramientas(ModelHerramientas[] listaDeHerramientas) {
-		this.listaDeHerramientas = listaDeHerramientas;
+	@Override
+	public String toString() {
+		return "ModelInventario [d=" + d + "]";
 	}
 
 	
-	@Override
-	public String toString() {
-		return "Inventario [listaDeHerramientas=" + Arrays.toString(listaDeHerramientas) + "]";
-	}
 	
 
 }

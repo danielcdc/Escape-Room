@@ -100,5 +100,66 @@ public class VistaIntroduccion {
 				+ "estaba ocurriendo lo imposible: no puedes desconectarte del VOP.");
 		Thread.sleep(esperaLinea);
 		EsperaDeLectura.esperaDeLectura();
+		//La clase huele mal
+		Limpiar.clear();
+		System.out.println("Vuelves a dar gracias nuevamente a que el VOP no es capaz todavía de virtualizar los olores");
+		EsperaDeLectura.esperaDeLectura();
+		//Párrafo 4
+		Limpiar.clear();
+		System.out.println("te giras en dirección hacia la pizarra y te encuentras con una siniestra imagen: tu profesor de programación, Ángel, está de pie, con un traje");
+		Thread.sleep(esperaLinea);
+		Limpiar.clear();
+		System.out.println("te giras en dirección hacia la pizarra y te encuentras con una siniestra imagen: tu profesor de programación, Ángel, está de pie, con un traje\n"
+				+ "blanco impecable, corbata negra y unas ridículas gafas de sol negras sin patillas mirándote impasible.");
+		EsperaDeLectura.esperaDeLectura();
+	}
+	public static void mostrarconversación () throws  InterruptedException{
+		Limpiar.clear();
+		System.out.println("-	¿?: Saludos Jugador, veo que estás un poco desorientado, por no decir que te has quedado como tonto.");
+		Thread.sleep(esperaLinea);
+		EsperaDeLectura.esperaDeLectura();
+		
+		Limpiar.clear();
+		System.out.println("-	Jugador: ¿Ángel? ¿Qué está pasando aquí? ¿Qué hago aquí? ¿Dónde está mi madre?");
+		Thread.sleep(esperaLinea);
+		EsperaDeLectura.esperaDeLectura();
+		
+		Limpiar.clear();
+		System.out.println("-	¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”");
+		Thread.sleep(esperaLinea);
+		Limpiar.clear();
+		System.out.println("-	¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”\n"
+				+ "de todo lo que ocurre en este lugar. Pero no sufras, estoy aquí para echarte un cable a salir de aquí para que… puedas volver con tu madre (deja entrever");
+		Thread.sleep(esperaLinea);
+		Limpiar.clear();
+		System.out.println("-	¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”\n"
+				+ "de todo lo que ocurre en este lugar. Pero no sufras, estoy aquí para echarte un cable a salir de aquí para que… puedas volver con tu madre (deja entrever\n"
+				+ "una leve y casi imperceptible sonrisita burlona) 乁(￣∇￣).");
+		Thread.sleep(esperaLinea);
+		EsperaDeLectura.esperaDeLectura();
+		Limpiar.clear();
+		System.out.println("-	Jugador: Vale muy bien, ¿Eres un virus o qué? ¿Has venido de regalo con el último parche o qué Repeticion de o qué?  ");
+		Thread.sleep(esperaLinea);
+		EsperaDeLectura.esperaDeLectura();
+		Limpiar.clear();
+		System.out.println("-	El Ángel: Como puedes ver las puertas y ventanas están cerradas a cal y canto y ni aun suponiendo que estuvieses en buena forma física, no");
+		Thread.sleep(esperaLinea);
+		Limpiar.clear();
+		System.out.println("-	El Ángel: Como puedes ver las puertas y ventanas están cerradas a cal y canto y ni aun suponiendo que estuvieses en buena forma física, no\n"
+				+ "podrías forzarla ni romperla. Debes ingeniártelas para salir de este sitio. Para ello, tienes en tu bolsillo derecho un regalito.");
+		Thread.sleep(esperaLinea);
+		EsperaDeLectura.esperaDeLectura();
+		Limpiar.clear();
+		System.out.println("-	Jugador: ⊙▂⊙ ¡!! ¿Qué es esta cosa? ¿Un smartphone?");
+		Thread.sleep(esperaLinea);
+		EsperaDeLectura.esperaDeLectura();
+		Limpiar.clear();
+		System.out.println("-	El Ángel: Es un Instanciador. Crea instancias u objetos de aquellos elementos que hayas escaneado con la cámara que viene detrás. Cuándo");
+		Thread.sleep(esperaLinea);
+		Limpiar.clear();
+		System.out.println("-	El Ángel: Es un Instanciador. Crea instancias u objetos de aquellos elementos que hayas escaneado con la cámara que viene detrás. Cuándo"
+				+ "encuentres algo que consideres de interés, prueba a intentar escanearlo: quizás obtengas un código que te permita instanciar.");
+		Thread.sleep(esperaLinea);
+		EsperaDeLectura.esperaDeLectura();
 	}
 }

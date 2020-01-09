@@ -3,11 +3,12 @@ package model;
 public class ModelHerramientas {
 	private String nombre;
 	private String descripcion;
-	
-	public ModelHerramientas(String nombre, String descripcion) {
+	private boolean guardado;
+	public ModelHerramientas(String nombre, String descripcion, boolean guardado) {
 		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
+		this.guardado = guardado;
 	}
 	public String getNombre() {
 		return nombre;
@@ -21,11 +22,17 @@ public class ModelHerramientas {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	
+	public boolean getGuardado() {
+		return guardado;
+	}
+	public void setGuardado(boolean guardado) {
+		this.guardado = guardado;
+	}
 	@Override
 	public String toString() {
-		return "Herramientas [nombre=" + nombre + ", descripcion=" + descripcion + "]";
+		return "Nombre: " + nombre + "\nDescripcion: " + descripcion + "\n\n";
 	}
+	
 	
 
 }
