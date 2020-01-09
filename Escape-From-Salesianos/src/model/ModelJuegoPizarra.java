@@ -49,7 +49,7 @@ public class ModelJuegoPizarra {
 		boolean ganad1 = false;
 		int cont = 0, num1 = 0;
 		VistaPruebas vp = new VistaPruebas();
-		
+
 		generarNumerosSecretos();
 
 		do {
@@ -62,27 +62,25 @@ public class ModelJuegoPizarra {
 			if (cJP.asignarNumeroConMesa(cont, m1, d, intro)) {
 				cont++;
 			}
-			
-			if(d.getMapaClase1()[13][16] == 'P' && cont == 3) {
+
+			if (d.getMapaClase1()[13][16] == 'P' && cont == 3) {
 				do {
-					
+
 					cJP.resetearNumeros(d.getNumerosIntroduz());
-					
-					for(int i=0; i < d.getNumeroSecreto().length;i++) {
-					
+
+					for (int i = 0; i < d.getNumeroSecreto().length; i++) {
+
 						do {
-						vp.imprimirCodigo(d.getNumerosIntroduz(), i);
-						num1 = Leer.datoInt();
-						}while(num1 >= 100 || num1 < 0);
+							vp.imprimirCodigo(d.getNumerosIntroduz(), i);
+							num1 = Leer.datoInt();
+						} while (num1 >= 100 || num1 < 0);
 						cJP.guardarPuerta(d, i, num1);
 					}
-					
-					}while(!cJP.comprobarPuerta(d.getNumeroSecreto(), d.getNumerosIntroduz()));
-				
-				ganad1=true;
-					
-				
-				
+
+				} while (!cJP.comprobarPuerta(d.getNumeroSecreto(), d.getNumerosIntroduz()));
+
+				ganad1 = true;
+
 			}
 
 		} while (!ganad1);

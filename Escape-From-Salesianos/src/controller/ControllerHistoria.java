@@ -1,6 +1,8 @@
 package controller;
 
+import crud.CrudAjedrez;
 import datos.Datos;
+import model.ModelAjedrez;
 import model.ModelJuegoPizarra;
 import model.ModelMapa;
 import vista.VistaMapas;
@@ -39,8 +41,12 @@ public class ControllerHistoria {
 	}
 	
 	public void comprobarPruebas(char[][] mapa, int fase) {
-		if (mapa[2][17] == 'P' && fase == 1) {
+		if ((mapa[2][17] == 'P' && fase == 1)) {
 			mapa[2][17] = '!';
+		}
+		
+		if((mapa[16][2] == 'P' && fase == 2)) {
+			mapa[16][2] = '!';
 		}
 		
 	}
@@ -49,9 +55,10 @@ public class ControllerHistoria {
 								ControllerMapa cMapa, VistaMenu vMenu, VistaMapas vm, ModelMapa m1, ControllerJuegoPizarra cJP, String intro) throws InterruptedException {
 		ModelJuegoPizarra mPizarra= new ModelJuegoPizarra(d);
 		VistaPruebas vp = new VistaPruebas();
-		
+		ModelAjedrez Aj1= new ModelAjedrez(d);
 		comprobarPEasterEgg(mapa, fase);
-
+		ControllerAjedrez cj1=new ControllerAjedrez();
+		CrudAjedrez c1=new CrudAjedrez();
 		if (mov.equalsIgnoreCase("I")) {// Si no coincide la letra, no hace nada.
 			if (mapa[2][17] == '!' && fase == 1) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
@@ -60,7 +67,16 @@ public class ControllerHistoria {
 				vp.imprimirFinPrueba1();
 				fase++;
 			}
+			
+			if (mapa[16][2]=='!' && fase==2) {
+				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
+				Aj1.iniciarJuegoAjedrez(vp, c1, cj1);
+				fase++;
+			}
+			
 		}
+		
+		
 	}
 	
 	
