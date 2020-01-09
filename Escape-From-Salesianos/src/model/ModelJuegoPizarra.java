@@ -70,8 +70,11 @@ public class ModelJuegoPizarra {
 					
 					for(int i=0; i < d.getNumeroSecreto().length;i++) {
 					
+						do {
 						vp.imprimirCodigo(d.getNumerosIntroduz(), i);
-						cJP.guardarPuerta(d, i, num1 = Leer.datoInt());
+						num1 = Leer.datoInt();
+						}while(num1 >= 100 || num1 < 0);
+						cJP.guardarPuerta(d, i, num1);
 					}
 					
 					}while(!cJP.comprobarPuerta(d.getNumeroSecreto(), d.getNumerosIntroduz()));
