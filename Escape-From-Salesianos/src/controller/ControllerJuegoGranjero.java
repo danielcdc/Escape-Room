@@ -9,10 +9,28 @@ public class ControllerJuegoGranjero {
 	
 	private Datos d;
 	
+	public ControllerJuegoGranjero(Datos d) {
+		super();
+		this.d = d;
+	}
+	
+	public Datos getD() {
+		return d;
+	}
+
+	public void setD(Datos d) {
+		this.d = d;
+	}
+	
+	@Override
+	public String toString() {
+		return "ControllerJuegoGranjero [d=" + d + "]";
+	}
+
 	public void empezarJuegoGranjero(CrudGranjero crg) {
 		boolean victoria=false;
-		while(!d.getListaAnimales()[d.getCero()].isMostrar() || d.getListaAnimales()[d.getUno()].isMostrar() || d.getListaAnimales()[d.getDos()].isMostrar()) {
-			if(d.getTurno() % d.getCero()==d.getCero()) {
+		while(d.getListaAnimales()[d.getCero()].isMostrar() || d.getListaAnimales()[d.getUno()].isMostrar() || d.getListaAnimales()[d.getDos()].isMostrar()) {
+			if(d.getTurno() % d.getDos()==d.getCero()) {
 				System.out.println("Estamos en la orilla derecha:");
 				for(int i=0;i<d.getTres();i++) {
 					if(d.getListaAnimales()[i].isMostrar()){

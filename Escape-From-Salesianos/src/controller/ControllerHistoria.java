@@ -60,8 +60,8 @@ public class ControllerHistoria {
 		comprobarPEasterEgg(mapa, fase);
 		ControllerAjedrez cj1=new ControllerAjedrez();
 		CrudAjedrez c1=new CrudAjedrez();
-		ControllerJuegoGranjero cr1= new ControllerJuegoGranjero();
-		CrudGranjero crudG=new CrudGranjero();
+		ControllerJuegoGranjero cr1= new ControllerJuegoGranjero(d);
+		CrudGranjero crudG=new CrudGranjero(d);
 		if (mov.equalsIgnoreCase("I")) {// Si no coincide la letra, no hace nada.
 			/*if (mapa[2][17] == '!' && fase == 1) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';

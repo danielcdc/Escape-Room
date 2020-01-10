@@ -389,10 +389,23 @@ public class Datos {
 
 	@Override
 	public String toString() {
-		return "Datos [listaValores3Raya=" + Arrays.toString(listaValores3Raya) + ", listaJugadores3Raya="
-				+ Arrays.toString(listaJugadores3Raya) + ", posTablero3Raya=" + posTablero3Raya + ", cero=" + cero
-				+ ", uno=" + uno + ", comprobacion=" + comprobacion + ", jugador1=" + jugador1 + ", mapaClase="
-				+ Arrays.toString(mapaClase) + ", mapaClase1=" + Arrays.toString(mapaClase1) + "]";
+		return "Datos [vertic=" + vertic + ", horiz=" + horiz + ", listaValores3Raya="
+				+ Arrays.toString(listaValores3Raya) + ", listaJugadores3Raya=" + Arrays.toString(listaJugadores3Raya)
+				+ ", posTablero3Raya=" + posTablero3Raya + ", cero=" + cero + ", uno=" + uno + ", dos=" + dos
+				+ ", fase=" + fase + ", tres=" + tres + ", cuatro=" + cuatro + ", cinco=" + cinco + ", seis=" + seis
+				+ ", siete=" + siete + ", ocho=" + ocho + ", nueve=" + nueve + ", comprobacion=" + comprobacion
+				+ ", jugador1=" + jugador1 + ", mapaClase=" + Arrays.toString(mapaClase) + ", mapaClase1="
+				+ Arrays.toString(mapaClase1) + ", numeroSecreto=" + Arrays.toString(numeroSecreto)
+				+ ", numerosIntroduz=" + Arrays.toString(numerosIntroduz) + ", nombre=" + Arrays.toString(nombre)
+				+ ", iniciales=" + Arrays.toString(iniciales) + ", inicialesEnemigas="
+				+ Arrays.toString(inicialesEnemigas) + ", posicionX=" + Arrays.toString(posicionX) + ", posicionY="
+				+ Arrays.toString(posicionY) + ", pul=" + pul + ", piezaEnX=" + piezaEnX + ", piezaEnY=" + piezaEnY
+				+ ", movimientoEnX=" + movimientoEnX + ", movimientoEnY=" + movimientoEnY + ", animal=" + animal
+				+ ", lobo=" + lobo + ", oveja=" + oveja + ", lechuga=" + lechuga + ", listaAnimales="
+				+ Arrays.toString(listaAnimales) + ", listaAnimales1=" + Arrays.toString(listaAnimales1) + ", turno="
+				+ turno + "]";
 	}
+
+	
 
 }
