@@ -68,12 +68,12 @@ public class ControllerHistoria {
 				fase++;
 			}
 			
-			if (mapa[16][2]=='!' && fase==2) {
+			/*if (mapa[16][2]=='!' && fase==2) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				Aj1.iniciarJuegoAjedrez(vp, c1, cj1);
 				fase++;
-			}
-			
+			}*/
+		
 		}
 		
 		
