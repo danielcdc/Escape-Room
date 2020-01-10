@@ -70,7 +70,7 @@ public class ControllerHistoria {
 				vp.imprimirFinPrueba1();
 				fase++;
 			}*/
-			if (mapa [2][17]=='!' ) {
+			if (mapa [2][17]=='!' && fase==1 ) {
 				
 				cr1.empezarJuegoGranjero(crudG);
 			}

@@ -67,9 +67,9 @@ public class ControllerJuegoGranjero {
 				}else {
 					victoria=true;
 				}
-				
+				d.setTurno(d.getTurno()+d.getUno());
 			}
-			d.setTurno(d.getTurno()+d.getUno());
+			
 		}
 		if(victoria==true) {
 			System.out.println("\n\n\n\nFelicidades has ganado");
