@@ -30,7 +30,7 @@ public class ModelHerramientas {
 	}
 	@Override
 	public String toString() {
-		return "Nombre: " + nombre + "\nDescripcion: " + descripcion + "\n\n";
+		return "║Nombre: " + nombre + "\n║Descripcion: " + descripcion + "\n";
 	}
 	
 	

@@ -2,7 +2,9 @@ package controller;
 
 import datos.Datos;
 import model.ModelMapa;
+import utilidades.EsperaAlJugador;
 import utilidades.Leer;
+import vista.VistaInventario;
 
 public class ControllerMapa {
 	
@@ -26,7 +28,7 @@ public class ControllerMapa {
 			encontrarP(mapa, m1);
 			
 			if(mapa[m1.getD().getVertic()][m1.getD().getHoriz()] == 'P') {
-				
+
 				if (mov.equalsIgnoreCase(izq)) {
 				    if (mapa[m1.getD().getVertic()][m1.getD().getHoriz() - 1] != paredVert && mapa[m1.getD().getVertic()][m1.getD().getHoriz() - 1] != paredHoriz &&
 					    mapa[m1.getD().getVertic()][m1.getD().getHoriz() - 1] != mes &&  mapa[m1.getD().getVertic()][m1.getD().getHoriz() - 1] != puert) {

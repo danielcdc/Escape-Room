@@ -1,5 +1,7 @@
 package vista;
 
+import datos.Datos;
+import model.ModelJugador;
 import utilidades.*;
 
 public class VistaIntroduccion {
@@ -113,51 +115,51 @@ public class VistaIntroduccion {
 				+ "blanco impecable, corbata negra y unas ridículas gafas de sol negras sin patillas mirándote impasible.");
 		EsperaDeLectura.esperaDeLectura();
 	}
-	public static void mostrarconversación () throws  InterruptedException{
+	public static void mostrarConversacion (String jugador) throws  InterruptedException{
 		Limpiar.clear();
-		System.out.println("-	¿?: Saludos Jugador, veo que estás un poco desorientado, por no decir que te has quedado como tonto.");
+		System.out.println("- ¿?: Saludos " + jugador +", veo que estás un poco desorientado, por no decir que te has quedado como tonto.");
 		Thread.sleep(esperaLinea);
 		EsperaDeLectura.esperaDeLectura();
 		
 		Limpiar.clear();
-		System.out.println("-	Jugador: ¿Ángel? ¿Qué está pasando aquí? ¿Qué hago aquí? ¿Dónde está mi madre?");
+		System.out.println("- " + jugador +": ¿Ángel? ¿Qué está pasando aquí? ¿Qué hago aquí? ¿Dónde está mi madre?");
 		Thread.sleep(esperaLinea);
 		EsperaDeLectura.esperaDeLectura();
 		
 		Limpiar.clear();
-		System.out.println("-	¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”");
+		System.out.println("- ¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”");
 		Thread.sleep(esperaLinea);
 		Limpiar.clear();
-		System.out.println("-	¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”\n"
+		System.out.println("- ¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”\n"
 				+ "de todo lo que ocurre en este lugar. Pero no sufras, estoy aquí para echarte un cable a salir de aquí para que… puedas volver con tu madre (deja entrever");
 		Thread.sleep(esperaLinea);
 		Limpiar.clear();
-		System.out.println("-	¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”\n"
+		System.out.println("- ¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”\n"
 				+ "de todo lo que ocurre en este lugar. Pero no sufras, estoy aquí para echarte un cable a salir de aquí para que… puedas volver con tu madre (deja entrever\n"
 				+ "una leve y casi imperceptible sonrisita burlona) 乁(￣∇￣).");
 		Thread.sleep(esperaLinea);
 		EsperaDeLectura.esperaDeLectura();
 		Limpiar.clear();
-		System.out.println("-	Jugador: Vale muy bien, ¿Eres un virus o qué? ¿Has venido de regalo con el último parche o qué Repeticion de o qué?  ");
+		System.out.println("- " + jugador +": Vale muy bien, ¿Eres un virus o qué? ¿Has venido de regalo con el último parche o qué Repeticion de o qué?  ");
 		Thread.sleep(esperaLinea);
 		EsperaDeLectura.esperaDeLectura();
 		Limpiar.clear();
-		System.out.println("-	El Ángel: Como puedes ver las puertas y ventanas están cerradas a cal y canto y ni aun suponiendo que estuvieses en buena forma física, no");
+		System.out.println("- El Ángel: Como puedes ver las puertas y ventanas están cerradas a cal y canto y ni aun suponiendo que estuvieses en buena forma física, no");
 		Thread.sleep(esperaLinea);
 		Limpiar.clear();
-		System.out.println("-	El Ángel: Como puedes ver las puertas y ventanas están cerradas a cal y canto y ni aun suponiendo que estuvieses en buena forma física, no\n"
+		System.out.println("- El Ángel: Como puedes ver las puertas y ventanas están cerradas a cal y canto y ni aun suponiendo que estuvieses en buena forma física, no\n"
 				+ "podrías forzarla ni romperla. Debes ingeniártelas para salir de este sitio. Para ello, tienes en tu bolsillo derecho un regalito.");
 		Thread.sleep(esperaLinea);
 		EsperaDeLectura.esperaDeLectura();
 		Limpiar.clear();
-		System.out.println("-	Jugador: ⊙▂⊙ ¡!! ¿Qué es esta cosa? ¿Un smartphone?");
+		System.out.println("- " + jugador +": ⊙▂⊙ ¡!! ¿Qué es esta cosa? ¿Un smartphone?");
 		Thread.sleep(esperaLinea);
 		EsperaDeLectura.esperaDeLectura();
 		Limpiar.clear();
-		System.out.println("-	El Ángel: Es un Instanciador. Crea instancias u objetos de aquellos elementos que hayas escaneado con la cámara que viene detrás. Cuándo");
+		System.out.println("- El Ángel: Es un Instanciador. Crea instancias u objetos de aquellos elementos que hayas escaneado con la cámara que viene detrás. Cuándo");
 		Thread.sleep(esperaLinea);
 		Limpiar.clear();
-		System.out.println("-	El Ángel: Es un Instanciador. Crea instancias u objetos de aquellos elementos que hayas escaneado con la cámara que viene detrás. Cuándo"
+		System.out.println("- El Ángel: Es un Instanciador. Crea instancias u objetos de aquellos elementos que hayas escaneado con la cámara que viene detrás. Cuándo"
 				+ "encuentres algo que consideres de interés, prueba a intentar escanearlo: quizás obtengas un código que te permita instanciar.");
 		Thread.sleep(esperaLinea);
 		EsperaDeLectura.esperaDeLectura();

@@ -8,7 +8,7 @@ public class TestAle {
 
 	public static void main(String[] args) throws InterruptedException {
 		//Introduccion.mostrarIntroduccion();
-		VistaIntroduccion.mostrarFase1();
+		VistaIntroduccion.mostrarIntroduccion();
 		
 	}
 

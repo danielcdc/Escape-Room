@@ -7,10 +7,11 @@ import model.ModelJugador;
 import model.ModelJugador3Raya;
 
 public class Datos {
+	//ale
 	private ModelHerramientas listaDeHerramientas[] = {new ModelHerramientas("Soplete", "Un soplete normal y corriente. Tiene un conejo blanco impreso en él y una frase de advertencia: NO funde adamantiun. Inflamable significa flamable", false), 
 			new ModelHerramientas("CD-ROM", "El título impreso en la carcasa reza lo siguiente: “Juego de ajedrez sencillito para Dummies. Edad recomendada de 2 a 5 años mentales", false),
 			new ModelHerramientas("Lupa", "Para usarla presiona la tecla del logotipo de Windows (⊞ Win) + signo más (+)", false)};
-
+	//f ale
 	private int vertic;
 
 	private int horiz;
