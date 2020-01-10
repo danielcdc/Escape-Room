@@ -2,8 +2,10 @@ package datos;
 
 import java.util.Arrays;
 
+import model.ModelAnimales;
 import model.ModelJugador;
 import model.ModelJugador3Raya;
+
 
 public class Datos {
 
@@ -68,6 +70,7 @@ public class Datos {
 	private int[] numeroSecreto = new int[3];
 	private int[] numerosIntroduz = new int[3];
 	
+	//Para juego ajedrez
 	private String nombre[]= {"Peon","Torre","Alfil","Caballo","Reina","Rey"};
 	private char iniciales[]= {'P','T','A','C','Y','R'};
 	private char inicialesEnemigas[]= {'p','t','a','c','y','r'};
@@ -76,6 +79,14 @@ public class Datos {
 	private int pul;
 	private char piezaEnX,piezaEnY,movimientoEnX,movimientoEnY;
 	
+	//Para juego granjero
+	String animal;
+	String lobo = "lobo", oveja = "oveja", lechuga = "lechuga";
+	ModelAnimales listaAnimales[] = { new ModelAnimales(lobo, true), new ModelAnimales(oveja, true),
+			new ModelAnimales(lechuga, true) };
+	ModelAnimales listaAnimales1[] = { new ModelAnimales(lobo, false), new ModelAnimales(oveja, false),
+			new ModelAnimales(lechuga, false) };
+	int turno;
 	// Getters and setters
 
 	public int getVertic() {
@@ -319,6 +330,63 @@ public class Datos {
 	public void setNueve(int nueve) {
 		this.nueve = nueve;
 	}
+	
+	public String getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(String animal) {
+		this.animal = animal;
+	}
+
+	public String getLobo() {
+		return lobo;
+	}
+
+	public void setLobo(String lobo) {
+		this.lobo = lobo;
+	}
+
+	public String getOveja() {
+		return oveja;
+	}
+
+	public void setOveja(String oveja) {
+		this.oveja = oveja;
+	}
+
+	public String getLechuga() {
+		return lechuga;
+	}
+
+	public void setLechuga(String lechuga) {
+		this.lechuga = lechuga;
+	}
+
+	public ModelAnimales[] getListaAnimales() {
+		return listaAnimales;
+	}
+
+	public void setListaAnimales(ModelAnimales[] listaAnimales) {
+		this.listaAnimales = listaAnimales;
+	}
+
+	public ModelAnimales[] getListaAnimales1() {
+		return listaAnimales1;
+	}
+
+	public void setListaAnimales1(ModelAnimales[] listaAnimales1) {
+		this.listaAnimales1 = listaAnimales1;
+	}
+
+	public int getTurno() {
+		return turno;
+	}
+
+	public void setTurno(int turno) {
+		this.turno = turno;
+	}
+
 	@Override
 	public String toString() {
 		return "Datos [listaValores3Raya=" + Arrays.toString(listaValores3Raya) + ", listaJugadores3Raya="

@@ -1,6 +1,7 @@
 package controller;
 
 import crud.CrudAjedrez;
+import crud.CrudGranjero;
 import datos.Datos;
 import model.ModelAjedrez;
 import model.ModelJuegoPizarra;
@@ -59,15 +60,20 @@ public class ControllerHistoria {
 		comprobarPEasterEgg(mapa, fase);
 		ControllerAjedrez cj1=new ControllerAjedrez();
 		CrudAjedrez c1=new CrudAjedrez();
+		ControllerJuegoGranjero cr1= new ControllerJuegoGranjero();
+		CrudGranjero crudG=new CrudGranjero();
 		if (mov.equalsIgnoreCase("I")) {// Si no coincide la letra, no hace nada.
-			if (mapa[2][17] == '!' && fase == 1) {
+			/*if (mapa[2][17] == '!' && fase == 1) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				vp.imprimirIntroPrueba1();
 				mPizarra.iniciarJuegoPizarra(m1, vm, vMenu, mov, cMapa, cJP, intro);
 				vp.imprimirFinPrueba1();
 				fase++;
+			}*/
+			if (mapa [2][17]=='!' ) {
+				
+				cr1.empezarJuegoGranjero(crudG);
 			}
-			
 			/*if (mapa[16][2]=='!' && fase==2) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				Aj1.iniciarJuegoAjedrez(vp, c1, cj1);
