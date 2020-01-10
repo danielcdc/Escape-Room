@@ -58,6 +58,7 @@ public class datos {
 	public void setNombre(String[] nombre) {
 		this.nombre = nombre;
 	}
+	
 	public char[] getIniciales() {
 		return iniciales;
 	}
