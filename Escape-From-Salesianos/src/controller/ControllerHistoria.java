@@ -46,8 +46,11 @@ public class ControllerHistoria {
 			mapa[2][17] = '!';
 		}
 		
-		if((mapa[16][2] == 'P' && fase == 2)) {
+		if((mapa[16][2] == 'P' && fase == 3)) {
 			mapa[16][2] = '!';
+		}
+		if(mapa[8][8]=='P' && fase ==3) {
+			mapa[8][8]='!';
 		}
 		
 	}
@@ -63,22 +66,22 @@ public class ControllerHistoria {
 		ControllerJuegoGranjero cr1= new ControllerJuegoGranjero(d);
 		CrudGranjero crudG=new CrudGranjero(d);
 		if (mov.equalsIgnoreCase("I")) {// Si no coincide la letra, no hace nada.
-			/*if (mapa[2][17] == '!' && fase == 1) {
+			if (mapa[2][17] == '!' && fase == 1) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				vp.imprimirIntroPrueba1();
 				mPizarra.iniciarJuegoPizarra(m1, vm, vMenu, mov, cMapa, cJP, intro);
 				vp.imprimirFinPrueba1();
 				fase++;
-			}*/
-			if (mapa [2][17]=='!' && fase==1 ) {
-				
-				cr1.empezarJuegoGranjero(crudG);
 			}
-			/*if (mapa[16][2]=='!' && fase==2) {
+			if (mapa [4][4]=='!' && fase==2 ) {
+				cr1.empezarJuegoGranjero(crudG);
+				fase++;
+			}
+			if (mapa[16][2]=='!' && fase==3) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				Aj1.iniciarJuegoAjedrez(vp, c1, cj1);
 				fase++;
-			}*/
+			}
 		
 		}
 		
