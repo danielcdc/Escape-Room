@@ -19,11 +19,9 @@ public class Principal {
 
 		do {
 
-			System.out.println("[" + botella10 + "]" + "[" + botella7 + "]" + "[" + botella3 
-					+ "]");
+			System.out.println("[" + botella10 + "]" + "[" + botella7 + "]" + "[" + botella3 + "]");
 
-			System.out.println("Pulsa cual quieres vertir 1.botella A, 2.Botella B y " 
-			+ "3.Botella C");
+			System.out.println("Pulsa cual quieres vertir 1.botella A, 2.Botella B y " + "3.Botella C");
 
 			op = Leer.datoInt();
 
@@ -33,18 +31,17 @@ public class Principal {
 
 			case 1:
 
-				System.out.println("¿En cual la quieres vertir? 1.Botella B , 2.Botella C " 
-				+ "3.Volver atras");
+				System.out.println("ï¿½En cual la quieres vertir? 1.Botella B , 2.Botella C " + "3.Volver atras");
 
 				op = Leer.datoInt();
 				switch (op) {
 
-				// vertir en botella 7
+				// vertir en botella B
 				case 1:
+					
+					if (botella10 >= botella7) {//Hay mÃ¡s agua en A que en B
 
-					if (botella10 >= botella7) {
-
-						if (botella10 + botella7 > limite7) {
+						if (botella10 + botella7 > limite7) {// Si la suma de A + B es superior al lÃ­mite de B.
 
 							botella10 = botella10 - (limite7 - botella7);
 
@@ -57,7 +54,7 @@ public class Principal {
 
 						}
 					}
-
+					// Corrige el desborde 
 					if (botella10 < botella7) {
 
 						if (botella10 + botella7 > limite7) {
@@ -121,16 +118,13 @@ public class Principal {
 			// empezamos con la botella 7
 			case 2:
 
-				System.out.println("¿En cual la quieres vertir? 1.Botella A , 2.Botella C " 
-				+ "3.Volver atras");
+				System.out.println("ï¿½En cual la quieres vertir? 1.Botella A , 2.Botella C " + "3.Volver atras");
 
 				op = Leer.datoInt();
 				switch (op) {
 
-				// vertir en botella 10
+				// vertir en botella A
 				case 1:
-					
-					
 
 					if (botella7 >= botella10) {
 
@@ -166,23 +160,17 @@ public class Principal {
 					break;
 
 				// vertir en botella c
-					
+
 				case 2:
-					
-					
 
 					if (botella7 >= botella3) {
-						
-						
 
 						if (botella7 + botella3 > limite3) {
-							
-							
 
 							botella7 = botella7 - (limite3 - botella3);
 
 							botella3 = limite3;
-							
+
 						} else {
 
 							botella3 = botella7 + botella3;
@@ -205,8 +193,6 @@ public class Principal {
 							botella7 = 0;
 						}
 					}
-					
-					
 
 					break;
 
@@ -221,8 +207,7 @@ public class Principal {
 
 			case 3:
 
-				System.out.println("¿En cual la quieres vertir? 1.Botella A , 2.Botella B " 
-				+ "3.Volver atras");
+				System.out.println("ï¿½En cual la quieres vertir? 1.Botella A , 2.Botella B " + "3.Volver atras");
 
 				op = Leer.datoInt();
 				switch (op) {
@@ -309,9 +294,9 @@ public class Principal {
 			}
 
 		} while (botella10 != 5 || botella7 != 5);
-		
+
 		System.out.println("Has ganado");
-		
+
 	}
 
 }

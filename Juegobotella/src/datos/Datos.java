@@ -1,6 +1,7 @@
 package datos;
 
 public class Datos {
+	public static int fase; //Representa la fase en la que se halla el juego.
 	// Representa el contenido inicial de las botellas.
 	private int botella10 = 10;
 	private int botella7 = 0;
