@@ -3,6 +3,7 @@ package datos;
 import java.util.Arrays;
 
 import model.ModelAnimales;
+import model.ModelHerramientas;
 import model.ModelJugador;
 import model.ModelJugador3Raya;
 
@@ -44,16 +45,16 @@ public class Datos {
 			{ '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '/' },
 			{ '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '/' },
 			{ '║', ' ', '█', '█', '█', '█', '█', '█', '█', '█', ' ', ' ', ' ', ' ', ' ', ' ', '█', '█', ' ', '║' },
-			{ '║', ' ', ' ', ' ', 'P', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '║' },
+			{ '║', ' ', ' ', ' ', ' ', 'P', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '║' },
 			{ '╚', '═', '/', '/', '═', '═', '═', '═', '═', '═', '═', '═', '═', '═', '═', '═', '═', '═', '═', '╝' } };
 
 	char[][] mapaClase1 = {
 			{ '╔', '═', '═', '═', '═', '═', '═', '═', '═', '═', '═', '═', '═', '═', '▓', '▓', '▓', '▓', '▓', '╗' },
-			{ '║', '█', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'P', '║' },
+			{ '║', '█', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '║' },
 			{ '║', ' ', '█', '█', '█', '█', '█', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '║' },
 			{ '║', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '║' },
 			{ '║', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '║' },
-			{ '║', ' ', '█', '█', ' ', ' ', '█', '█', ' ', ' ', ' ', '█', '█', ' ', ' ', ' ', '█', '█', ' ', '║' },
+			{ '║', ' ', '█', '█', ' ', 'P', '█', '█', ' ', ' ', ' ', '█', '█', ' ', ' ', ' ', '█', '█', ' ', '║' },
 			{ '║', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '║' },
 			{ '║', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '║' },
 			{ '║', ' ', '█', '█', ' ', ' ', '█', '█', ' ', ' ', ' ', '█', '█', ' ', ' ', ' ', '█', '█', ' ', '║' },
@@ -80,13 +81,21 @@ public class Datos {
 	private char piezaEnX,piezaEnY,movimientoEnX,movimientoEnY;
 	
 	//Para juego granjero
-	String animal;
-	String lobo = "lobo", oveja = "oveja", lechuga = "lechuga";
-	ModelAnimales listaAnimales[] = { new ModelAnimales(lobo, true), new ModelAnimales(oveja, true),
+	private String animal;
+	private String lobo = "lobo", oveja = "oveja", lechuga = "lechuga";
+	private ModelAnimales listaAnimales[] = { new ModelAnimales(lobo, true), new ModelAnimales(oveja, true),
 			new ModelAnimales(lechuga, true) };
-	ModelAnimales listaAnimales1[] = { new ModelAnimales(lobo, false), new ModelAnimales(oveja, false),
+	private ModelAnimales listaAnimales1[] = { new ModelAnimales(lobo, false), new ModelAnimales(oveja, false),
 			new ModelAnimales(lechuga, false) };
-	int turno;
+	private boolean victoriaAnimales = false; 
+	private int turno;
+	
+	//INVENTARIO
+	private ModelHerramientas listaDeHerramientas[] = {new ModelHerramientas("Soplete", "Un soplete normal y corriente. Tiene un conejo blanco impreso en él y una frase de advertencia: NO funde adamantiun. Inflamable significa flamable", false), 
+		new ModelHerramientas("CD-ROM", "El título impreso en la carcasa reza lo siguiente: “Juego de ajedrez sencillito para Dummies. Edad recomendada de 2 a 5 años mentales", false),
+		new ModelHerramientas("Lupa", "Para usarla presiona la tecla del logotipo de Windows (⊞ Win) + signo más (+)", false)};
+	
+	
 	// Getters and setters
 
 	public int getVertic() {
@@ -385,6 +394,23 @@ public class Datos {
 
 	public void setTurno(int turno) {
 		this.turno = turno;
+	}
+	
+
+	public boolean isVictoriaAnimales() {
+		return victoriaAnimales;
+	}
+
+	public void setVictoriaAnimales(boolean victoriaAnimales) {
+		this.victoriaAnimales = victoriaAnimales;
+	}
+
+	public ModelHerramientas[] getListaDeHerramientas() {
+		return listaDeHerramientas;
+	}
+
+	public void setListaDeHerramientas(ModelHerramientas[] listaDeHerramientas) {
+		this.listaDeHerramientas = listaDeHerramientas;
 	}
 
 	@Override
