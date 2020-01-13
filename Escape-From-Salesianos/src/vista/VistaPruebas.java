@@ -1,6 +1,8 @@
 package vista;
 
+import controller.ControllerAjedrez;
 import datos.Datos;
+import model.ModelAjedrez;
 
 public class VistaPruebas {
 	
@@ -372,5 +374,46 @@ if(i == 2) {
 		System.out.println("C: " + d.getNumeroSecreto()[2]);
 
 	}
+	
+	public void imprimirInstruccAjedrez() {
+		
+		System.out.println("\nBienvenidos en esta prueba encontrarás un tablero de ajedrez que se divide de A-H en la horizontal y de 1-8 en la vertical");
+		System.out.println("Usted deverá elegir en que posicion se encuentra la pieza que a de mover y hacia donde ha de moverse");
+		System.out.println("Ten en cuenta que las piesas que se muestran en mayúsculas son las tuyas y en minúsculas la del enemigo");
+		System.out.println("\nP: Peon\nT: Torre\nA: Alfil\nC: Caballo\nY: Reina\nR: Rey\n\n");
+		System.out.println("Solo tiene un movimiento, Buena suerte\n\n");
+		
+	}
+	
+	public void imprimirTableroAjedrez(ControllerAjedrez d1, Datos d) {
+		String lineaCierre="\n\n-----------------------------------------";
+		String lineaInter="|---------------------------------------|";
+		String lineaMedio="|    |    |    |    |    |    |    |    |";
+		
+		System.out.println(lineaCierre+"\n"
+							+"|"+d1.devolverPosicionX(d.getCero(), d)+"   |    |    |"+d1.devolverInicial(d.getTres(), d)+"  "+d1.devolverInicial(d.getTres(), d)+"|"+d1.devolverInicialEnemiga(d.getTres(), d)+"  "+d1.devolverInicialEnemiga(d.getTres(), d)+"|"+d1.devolverInicialEnemiga(d.getUno(), d)+"  "+d1.devolverInicialEnemiga(d.getUno(), d)+"|    |"+d1.devolverPosicionX(d.getSiete(), d)+"   |"+"\n"
+							+"|"+d1.devolverPosicionY(d.getCero(), d)+"   |    |    |"+d1.devolverInicial(d.getTres(), d)+"  "+d1.devolverInicial(d.getTres(), d)+"|"+d1.devolverInicialEnemiga(d.getTres(), d)+"  "+d1.devolverInicialEnemiga(d.getTres(), d)+"|"+d1.devolverInicialEnemiga(d.getUno(), d)+"  "+d1.devolverInicialEnemiga(d.getUno(), d)+"|    |    |"+"\n"
+							+lineaInter+"\n"
+							+"|"+d1.devolverInicial(d.getUno(), d)+"  "+d1.devolverInicial(d.getUno(), d)+"|    |    |"+d1.devolverInicial(d.getDos(),d)+"  "+d1.devolverInicial(d.getDos(),d)+"|"+d1.devolverInicialEnemiga(d.getCinco(),d)+"  "+d1.devolverInicialEnemiga(d.getCinco(),d)+"|"+d1.devolverInicial(d.getCero(), d)+"  "+d1.devolverInicial(d.getCero(), d)+"|    |    |"+"\n"
+							+"|"+d1.devolverInicial(d.getUno(), d)+"  "+d1.devolverInicial(d.getUno(), d)+"|    |    |"+d1.devolverInicial(d.getDos(),d)+"  "+d1.devolverInicial(d.getDos(),d)+"|"+d1.devolverInicialEnemiga(d.getCinco(),d)+"  "+d1.devolverInicialEnemiga(d.getCinco(),d)+"|"+d1.devolverInicial(d.getCero(), d)+"  "+d1.devolverInicial(d.getCero(), d)+"|    |    |"+"\n"
+							+lineaInter+"\n"
+							+"|    |    |    |    |"+d1.devolverInicialEnemiga(d.getCero(), d)+"  "+d1.devolverInicialEnemiga(d.getCero(), d)+"|    |    |    |"+"\n"
+							+"|    |    |    |    |"+d1.devolverInicialEnemiga(d.getCero(), d)+"  "+d1.devolverInicialEnemiga(d.getCero(), d)+"|    |    |    |"+"\n"
+							+lineaInter+"\n"
+							+lineaMedio+"\n"
+							+lineaMedio+"\n"
+							+lineaInter+"\n"
+							+lineaMedio+"\n"
+							+lineaMedio+"\n"
+							+lineaInter+"\n"
+							+"|    |    |    |    |"+d1.devolverInicial(d.getCinco(),d)+"  "+d1.devolverInicial(d.getCinco(),d)+"|    |    |    |"+"\n"
+							+"|    |    |    |    |"+d1.devolverInicial(d.getCinco(),d)+"  "+d1.devolverInicial(d.getCinco(),d)+"|    |    |    |"+"\n"
+							+lineaInter+"\n"
+							+lineaMedio+"\n"
+							+lineaMedio+"\n"
+							+lineaInter+"\n"
+							+"|"+d1.devolverPosicionY(d.getSiete(), d)+"   |    |    |"+d1.devolverInicial(d.getUno(), d)+"  "+d1.devolverInicial(d.getUno(), d)+"|    |    |    |    |"+"\n"
+							+"|    |    |    |"+d1.devolverInicial(d.getUno(), d)+"  "+d1.devolverInicial(d.getUno(), d)+"|    |    |    |    |"+"\n"
+							+lineaCierre+"\n");		}
 
 }

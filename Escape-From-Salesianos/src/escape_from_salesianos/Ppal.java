@@ -1,6 +1,7 @@
 package escape_from_salesianos;
 
 import controller.Controller3Raya;
+import controller.ControllerAjedrez;
 import controller.ControllerHistoria;
 import controller.ControllerJuegoPizarra;
 import controller.ControllerMapa;
@@ -11,6 +12,7 @@ import model.ModelMapa;
 import utilidades.Leer;
 import vista.VistaMapas;
 import vista.VistaMenu;
+import vista.VistaPruebas;
 
 public class Ppal {
 	/* d.listaValores3Raya, d.listaJugadores3Raya */
@@ -25,6 +27,8 @@ public class Ppal {
 		ModelMapa mapaHistoria = new ModelMapa(d);
 		ControllerMapa cMapa = new ControllerMapa();
 		ControllerJuegoPizarra cJP = new ControllerJuegoPizarra();
+		ControllerAjedrez cAj = new ControllerAjedrez(); 
+		VistaPruebas vP = new VistaPruebas();
 		
 		int opt = 0;
 		String mov= "";
@@ -58,7 +62,6 @@ public class Ppal {
 					cHistory.ejecutarEasterEgg(mov, mapaHistoria.getD().getMapaClase(), mapaHistoria.getD().getFase());
 					cHistory.comprobarPruebas(mapaHistoria.getD().getMapaClase(), mapaHistoria.getD().getFase());
 					cHistory.ejecutarPrueba(mov,mapaHistoria.getD().getMapaClase(), mapaHistoria.getD().getFase(), d, cMapa, vM, vMapa, mapaHistoria, cJP, intro);
-					
 					
 				}while(!d.getJugador1().isVictoria());
 				
