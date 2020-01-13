@@ -4,11 +4,12 @@ import crud.CrudJuegoBotella;
 import model.ModelJuegoBotella;
 import utilidades.Leer;
 import vista.VistaJuegoBotella;
+import vista.VistaPruebas;
 
 public class ControllerJuegoBotella {
 
 	// Selecciona la botella que desea vaciar y la devuelve.
-	public int chooseBottle(ModelJuegoBotella m, VistaJuegoBotella v) {
+	public int chooseBottle(ModelJuegoBotella m, VistaPruebas v) {
 		int op;
 		boolean out = false;
 		op = Leer.datoInt();
@@ -55,7 +56,7 @@ public class ControllerJuegoBotella {
 			return false;
 	}
 	// Seleccionar la botella donde se desea verter el agua.
-		public void pourWater(int choice, VistaJuegoBotella v, ModelJuegoBotella m, CrudJuegoBotella crud) {
+		public void pourWater(int choice, VistaPruebas v, ModelJuegoBotella m, CrudJuegoBotella crud) {
 			int op;
 			int uno = 1, dos = 2, tres = 3;
 			if (choice == uno) {

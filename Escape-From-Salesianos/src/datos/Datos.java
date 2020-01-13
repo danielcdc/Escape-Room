@@ -21,7 +21,7 @@ public class Datos {
 
 	private int posTablero3Raya = 0;
 
-	private int cero = 0, uno = 1, dos=2, fase = 1, tres=3, cuatro=4, cinco=5, seis=6, siete=7, ocho=8, nueve=9;
+	private int cero = 0, uno = 1, dos=2, fase = 5, tres=3, cuatro=4, cinco=5, seis=6, siete=7, ocho=8, nueve=9;
 
 
 	private boolean comprobacion = false;

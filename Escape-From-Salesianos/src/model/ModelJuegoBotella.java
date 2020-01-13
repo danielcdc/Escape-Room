@@ -4,6 +4,7 @@ import controller.ControllerJuegoBotella;
 import crud.CrudJuegoBotella;
 import datos.Datos;
 import vista.VistaJuegoBotella;
+import vista.VistaPruebas;
 
 public class ModelJuegoBotella {
 	// Atributos
@@ -13,9 +14,17 @@ public class ModelJuegoBotella {
 	public ModelJuegoBotella(Datos d) {
 		this.d = d;
 	}
+	
+	public Datos getD() {
+		return d;
+	}
+
+	public void setD(Datos d) {
+		this.d = d;
+	}
 
 	// Inicia el juego. Este finaliza cuando se cumple la condición.
-	public void ejecutarJuegoBotella(Datos d, ControllerJuegoBotella c, VistaJuegoBotella v, CrudJuegoBotella crud,
+	public void ejecutarJuegoBotella(Datos d, ControllerJuegoBotella c, VistaPruebas v, CrudJuegoBotella crud,
 			ModelJuegoBotella m) {
 		v.printInstructions();
 		do {
@@ -26,13 +35,5 @@ public class ModelJuegoBotella {
 		} while (d.getBotella10() != 5 || d.getBotella7() != 5);// Condición para ganar la partida
 		v.printVictory();
 		//Datos.fase += 1;// Pasa a la siguiente fase.
-	}
-
-	public Datos getD() {
-		return d;
-	}
-
-	public void setD(Datos d) {
-		this.d = d;
 	}
 }

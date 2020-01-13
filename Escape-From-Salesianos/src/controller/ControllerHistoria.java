@@ -2,10 +2,12 @@ package controller;
 
 import crud.CrudAjedrez;
 import crud.CrudGranjero;
+import crud.CrudJuegoBotella;
 import datos.Datos;
 import model.Model3Raya;
 import model.ModelAjedrez;
 import model.ModelAnimales;
+import model.ModelJuegoBotella;
 import model.ModelJuegoPizarra;
 import model.ModelMapa;
 import vista.VistaMapas;
@@ -57,8 +59,13 @@ public class ControllerHistoria {
 		if(mapa[16][2] == 'P' && fase ==3) {
 			mapa[16][2]='!';
 		}
-		if(mapa[4][2]=='P' && fase ==4) {
+		
+		if(mapa[4][2]=='P' && fase == 4) {
 			mapa[4][2]='!';
+		}
+		
+		if(mapa[4][4]=='P' && fase == 5) {
+			mapa[4][4]='!';
 		}
 		
 	}
@@ -73,9 +80,12 @@ public class ControllerHistoria {
 		ControllerAjedrez cj1=new ControllerAjedrez();
 		CrudAjedrez c1=new CrudAjedrez();
 		ControllerJuegoGranjero cr1= new ControllerJuegoGranjero();
+		ControllerJuegoBotella cJb = new ControllerJuegoBotella();
 		CrudGranjero crudG=new CrudGranjero(d);
 		ModelAnimales mAnimal = new ModelAnimales(d);
 		Model3Raya m3Raya = new Model3Raya(d);
+		ModelJuegoBotella mJb = new ModelJuegoBotella(d);
+		CrudJuegoBotella crudB = new CrudJuegoBotella();
 		
 		if (mov.equalsIgnoreCase("I")) {// Si no coincide la letra, no hace nada.
 			if (mapa[2][17] == '!' && fase == d.getUno()) {
@@ -102,6 +112,12 @@ public class ControllerHistoria {
 			if (mapa[4][2]=='!' && fase == d.getCuatro()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				m3Raya.iniciarJuego3Raya();
+				d.setFase(d.getFase()+d.getUno());
+			}
+			
+			if (mapa[4][4]=='!' && fase == d.getCinco()) {
+				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
+				mJb.ejecutarJuegoBotella(d, cJb, vp, crudB, mJb);
 				d.setFase(d.getFase()+d.getUno());
 			}
 		
