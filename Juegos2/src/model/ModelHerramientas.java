@@ -29,8 +29,8 @@ public class ModelHerramientas {
 		this.guardado = guardado;
 	}
 	@Override
-	public String toString() {
-		return "║Nombre: " + nombre + "\n║Descripcion: " + descripcion + "\n";
+	public String toString() {//toString modificado para mostrar el inventario
+		return "║Nombre: " + nombre + "\n║Descripcion: " + descripcion;
 	}
 	
 	

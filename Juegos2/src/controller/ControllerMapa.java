@@ -2,7 +2,6 @@ package controller;
 
 import datos.Datos;
 import model.ModelMapa;
-import utilidades.EsperaAlJugador;
 import utilidades.Leer;
 import vista.VistaInventario;
 

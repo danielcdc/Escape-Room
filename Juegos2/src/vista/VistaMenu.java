@@ -116,13 +116,13 @@ public class VistaMenu {
 				m1.getD().getMapaClase()[m1.getD().getVertic()][m1.getD().getHoriz()] != '!') {
 			System.out.println("┌────────────────────┐\n"
 					+ 		   "│  [M] Instanciador  │\n"
-					+          "└────────────────────┘\n");
+					+          "└────────────────────┘\n"); //Imprime el botón M
 		}
 		if(m1.getD().getMapaClase()[m1.getD().getVertic()][m1.getD().getHoriz()] == '?' || 
 				m1.getD().getMapaClase()[m1.getD().getVertic()][m1.getD().getHoriz()] == '!') {
 			System.out.println("┌────────────────────┐ ┌────────────────────┐\n"
 					+ 		   "│  [I] Interactuar   │ │  [M] Instanciador  │\n"
-					+          "└────────────────────┘ └────────────────────┘\n");
+					+          "└────────────────────┘ └────────────────────┘\n");//Imprime el botón M y el botón I
 		}
 		//F ale
 	}

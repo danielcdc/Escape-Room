@@ -14,6 +14,7 @@ import utilidades.Leer;
 import vista.VistaIntroduccion;
 import vista.VistaMapas;
 import vista.VistaMenu;
+import crud.*;
 
 public class Ppal {
 	/* d.listaValores3Raya, d.listaJugadores3Raya */
@@ -69,6 +70,7 @@ public class Ppal {
 			
 			case 2:
 				System.out.println("Proximamente..\n\n");
+				CrudHerramientas.adquirirHerramienta(d, 0);
 				break;
 			
 			case 3:

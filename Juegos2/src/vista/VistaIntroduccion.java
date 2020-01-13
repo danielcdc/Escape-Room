@@ -6,11 +6,11 @@ import utilidades.*;
 
 public class VistaIntroduccion {
 
-	static int esperaLinea = 500;
+	static int esperaLinea = 500;//Atributo que se utiliza para fijar la espera entre una linea y otra
 	
-	public static void barraCarga() throws  InterruptedException{
+	public static void barraCarga() throws  InterruptedException{//Barra de carga rápida que se para mas tiempo en el 99%
 		int esperaMedia= 10;
-		int laEternaEspera = 1990;
+		int laEternaEspera = 1990;//Tiempo de espera para el 99%
 		for(int i=0; i<=100; i++) {
 			Limpiar.clear();
 			System.out.println("\t\t\t\t\t\tInicializando Ultimate Fantasy, sincronizando….");
@@ -23,7 +23,7 @@ public class VistaIntroduccion {
 		}
 		Thread.sleep(esperaLinea);
 	}
-	public static void mostrarIntroduccion () throws  InterruptedException{
+	public static void mostrarIntroduccion () throws  InterruptedException{//Muestra la introducción
 		//Párrafo 1
 		Limpiar.clear();
 		System.out.println("Después de un ardua semana de exámenes, proyectos y  soborn… entrega de dádivas a los profesores en forma de diversos alimentos,");
@@ -74,7 +74,7 @@ public class VistaIntroduccion {
 		EsperaDeLectura.esperaDeLectura();
 	}
 
-	public static void mostrarFase1 () throws  InterruptedException{
+	public static void mostrarFase1 () throws  InterruptedException{//Muestra la introduccion a la primera fase
 		//Párrafo 1
 		Limpiar.clear();
 		System.out.println("Te encuentras en el Aula 08, sentado en tu sitio (sí, en el tuyo, justo como diría tu madre), vestido con la misma ropa con la que");
@@ -115,7 +115,7 @@ public class VistaIntroduccion {
 				+ "blanco impecable, corbata negra y unas ridículas gafas de sol negras sin patillas mirándote impasible.");
 		EsperaDeLectura.esperaDeLectura();
 	}
-	public static void mostrarConversacion (String jugador) throws  InterruptedException{
+	public static void mostrarConversacion (String jugador) throws  InterruptedException{//Muestra la introduccion la conversación con Angel con el nombre personalizado asignado como "jugador"
 		Limpiar.clear();
 		System.out.println("- ¿?: Saludos " + jugador +", veo que estás un poco desorientado, por no decir que te has quedado como tonto.");
 		Thread.sleep(esperaLinea);

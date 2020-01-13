@@ -25,7 +25,7 @@ public class ControllerHistoria {
 		if (mapa[12][16] == 'P' && fase == 1) {//Ordenador cooper
 			mapa[12][16] = '?';
 		}
-		if (mapa[13][18] == 'P' && fase == 1) {//soplete
+		if (mapa[13][18] == 'P' && fase == 1) {//Soplete
 			mapa[13][18] = '?';
 		}
 		if (mapa[14][18] == 'P' && fase == 1) {//soplete
@@ -43,10 +43,10 @@ public class ControllerHistoria {
 		if (mapa[14][1] == 'P' && fase == 99) {//puerta hacia fuera abierta
 			mapa[14][1] = '?';
 		}
-		if (mapa[16][3] == 'P' && fase == 1) {//puerta hacia fuera 2º
+		if (mapa[16][3] == 'P' && fase == 1) {//puerta hacia 2º
 			mapa[16][3] = '?';
 		}
-		if (mapa[16][2] == 'P' && fase == 1) {//puerta hacia fuera 2º
+		if (mapa[16][2] == 'P' && fase == 1) {//puerta hacia 2º
 			mapa[16][2] = '?';
 		}
 		
@@ -113,10 +113,8 @@ public class ControllerHistoria {
 			}
 		}
 		//ale
-		if (mov.equalsIgnoreCase("M")) {
+		if (mov.equalsIgnoreCase("M")) {//M para abrir el inventario
 			VistaInventario.mostrarInventario(d);
-			System.out.println("Pulsa Enter para salir del menú.");
-			EsperaAlJugador.esperaAlJugador();
 		}
 		//f ale
 	}
