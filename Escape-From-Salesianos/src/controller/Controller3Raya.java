@@ -6,14 +6,14 @@ import model.Model3Raya;
 
 public class Controller3Raya {
 
-	public void cambiarPosicion(Model3Raya m1, int posicion, char inicial) { // Cambia la posicion que
-																				// digamos en el array para
-																				// después imprimirlo
+	// Cambia la posicion indicada en el array para después imprimirla.
+	public void cambiarPosicion(Model3Raya m1, int posicion, char inicial) {
 		m1.getD().setPosicionListaValores3Raya(inicial, posicion);
 	}
 
-	public boolean generarTurnoInicial() {// Genera un turno inicial si el numero aleatorio es mayor que 5
-		// empieza usuario sino el enemigo
+	// Genera el turno inicial: si el numero aleatorio es mayor que 5
+	// empieza usuario, en caso contrario, la IA enemiga. Devuelve un booleano.
+	public boolean generarTurnoInicial() {
 		boolean turno = false;
 		int num, hasta = 10, desde = 0, cinco = 5;
 		Random rnd = new Random(System.nanoTime());
@@ -24,13 +24,15 @@ public class Controller3Raya {
 		return turno;
 	}
 
-	public int generarTurnoRival() {// Genera la posición que el enemigo usará
+	// Genera la posición que la IA enemiga usará y la devuelve.
+	public int generarTurnoRival() {
 		int num, uno = 1, hasta = 9, desde = 1;
 		Random rnd = new Random(System.nanoTime());
 		num = rnd.nextInt(hasta - desde + uno) + desde;
 		return num;
 	}
-
+	
+	// Comprueba si el jugador ha ganado la partida.
 	public void comprobarGanador3Raya(Model3Raya mdr, int num) {
 		int uno = 1, dos = 2, tres = 3, cuatro = 4, cinco = 5, seis = 6, siete = 7, ocho = 8;
 		if ((mdr.devolverUnaposicion(num) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
@@ -61,7 +63,8 @@ public class Controller3Raya {
 			mdr.getD().getListaJugadores3Raya()[num].setVictoria(true);
 		}
 	}
-
+	
+	// Activa la felicitación al jugador al ganar.
 	public boolean felicitar(Model3Raya m1) {
 		boolean felicitar = false;
 
@@ -71,7 +74,7 @@ public class Controller3Raya {
 		}
 		return felicitar;
 	}
-
+	
 	public boolean comprobarRepetir(Model3Raya m1, int posicion, int numeroJugador) {
 		int numeroJugador1 = 0;
 

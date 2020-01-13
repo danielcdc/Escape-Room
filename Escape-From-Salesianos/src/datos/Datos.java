@@ -95,7 +95,18 @@ public class Datos {
 		new ModelHerramientas("CD-ROM", "El título impreso en la carcasa reza lo siguiente: “Juego de ajedrez sencillito para Dummies. Edad recomendada de 2 a 5 años mentales", false),
 		new ModelHerramientas("Lupa", "Para usarla presiona la tecla del logotipo de Windows (⊞ Win) + signo más (+)", false)};
 	
+	//Juego de las Botellas
 	
+	// Representa el contenido inicial de las botellas.
+	private int botella10 = 10;
+	private int botella7 = 0;
+	private int botella3 = 0;
+		
+	// Representa el volumen máximo de cad abotella.
+	private int limite10 = 10;
+	private int limite7 = 7;
+	private int limite3 = 3;
+		
 	// Getters and setters
 
 	public int getVertic() {
@@ -412,6 +423,54 @@ public class Datos {
 	public void setListaDeHerramientas(ModelHerramientas[] listaDeHerramientas) {
 		this.listaDeHerramientas = listaDeHerramientas;
 	}
+	
+	public int getBotella10() {
+		return botella10;
+	}
+
+	public void setBotella10(int botella10) {
+		this.botella10 = botella10;
+	}
+
+	public int getBotella7() {
+		return botella7;
+	}
+
+	public void setBotella7(int botella7) {
+		this.botella7 = botella7;
+	}
+
+	public int getBotella3() {
+		return botella3;
+	}
+
+	public void setBotella3(int botella3) {
+		this.botella3 = botella3;
+	}
+
+	public int getLimite10() {
+		return limite10;
+	}
+
+	public void setLimite10(int limite10) {
+		this.limite10 = limite10;
+	}
+
+	public int getLimite7() {
+		return limite7;
+	}
+
+	public void setLimite7(int limite7) {
+		this.limite7 = limite7;
+	}
+
+	public int getLimite3() {
+		return limite3;
+	}
+
+	public void setLimite3(int limite3) {
+		this.limite3 = limite3;
+	}
 
 	@Override
 	public String toString() {
@@ -428,10 +487,11 @@ public class Datos {
 				+ Arrays.toString(posicionY) + ", pul=" + pul + ", piezaEnX=" + piezaEnX + ", piezaEnY=" + piezaEnY
 				+ ", movimientoEnX=" + movimientoEnX + ", movimientoEnY=" + movimientoEnY + ", animal=" + animal
 				+ ", lobo=" + lobo + ", oveja=" + oveja + ", lechuga=" + lechuga + ", listaAnimales="
-				+ Arrays.toString(listaAnimales) + ", listaAnimales1=" + Arrays.toString(listaAnimales1) + ", turno="
-				+ turno + "]";
+				+ Arrays.toString(listaAnimales) + ", listaAnimales1=" + Arrays.toString(listaAnimales1)
+				+ ", victoriaAnimales=" + victoriaAnimales + ", turno=" + turno + ", listaDeHerramientas="
+				+ Arrays.toString(listaDeHerramientas) + ", botella10=" + botella10 + ", botella7=" + botella7
+				+ ", botella3=" + botella3 + ", limite10=" + limite10 + ", limite7=" + limite7 + ", limite3=" + limite3
+				+ "]";
 	}
-
 	
-
 }

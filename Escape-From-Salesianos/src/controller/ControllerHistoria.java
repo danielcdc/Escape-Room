@@ -13,7 +13,8 @@ import vista.VistaMenu;
 import vista.VistaPruebas;
 
 public class ControllerHistoria {
-
+	
+	// Comprueba si el jugador está en la fase y lugar correspondientes para activar un Huevo de Pascua.
 	public void comprobarPEasterEgg(char[][] mapa, int fase) {
 		if (mapa[6][6] == 'P' && fase == 1) {
 			mapa[6][6] = '?';
@@ -25,7 +26,8 @@ public class ControllerHistoria {
 			mapa[5][4] = '?';
 		}
 	}
-
+	
+	// Ejecuta un Huevo de Pascua.
 	public void ejecutarEasterEgg(String mov, char[][] mapa, int fase) {
 
 		comprobarPEasterEgg(mapa, fase);
@@ -43,6 +45,7 @@ public class ControllerHistoria {
 		}
 	}
 	
+	// Comprueba e indica al usuario la posibilidad de activar un minijuego/prueba.
 	public void comprobarPruebas(char[][] mapa, int fase) {
 		if ((mapa[2][17] == 'P' && fase == 1)) {
 			mapa[2][17] = '!';
@@ -60,6 +63,7 @@ public class ControllerHistoria {
 		
 	}
 	
+	// Inicia el juego principal Escape From Los Salesianos.
 	public void ejecutarPrueba (String mov, char[][] mapa, int fase, Datos d,
 								ControllerMapa cMapa, VistaMenu vMenu, VistaMapas vm, ModelMapa m1, ControllerJuegoPizarra cJP, String intro) throws InterruptedException {
 		ModelJuegoPizarra mPizarra= new ModelJuegoPizarra(d);
