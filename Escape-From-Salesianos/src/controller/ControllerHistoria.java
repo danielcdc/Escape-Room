@@ -114,9 +114,7 @@ public class ControllerHistoria {
 				
 			}
 			
-			
-			
-			if (mapa [4][4] == '!' && fase == d.getDos() ) {
+			if (mapa [4][4] == '!' && fase == d.getTres() ) {
 				mAnimal.empezarJuegoGranjero(crudG, cr1);
 				if(d.isVictoriaAnimales()) {
 					d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
@@ -124,14 +122,14 @@ public class ControllerHistoria {
 				}
 				
 			}
-			if (mapa[16][2]=='!' && fase == d.getTres()) {
+			if (mapa[16][2]=='!' && fase == d.getCuatro()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				Aj1.iniciarJuegoAjedrez(vp, c1, cj1);
 				d.setFase(d.getFase()+d.getUno());
 				
 			}
 			
-			if (mapa[4][4]=='!' && fase == d.getCuatro()) {
+			if (mapa[4][4]=='!' && fase == d.getCinco()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				mJb.ejecutarJuegoBotella(d, cJb, vp, crudB, mJb);
 				d.setFase(d.getFase()+d.getUno());

@@ -418,7 +418,7 @@ if(i == 2) {
 
 
 		public void printInstructions() {
-			System.out.println("\t\t\tINSTRUCCIONES");
+			System.out.println("\t\t     INSTRUCCIONES");
 			System.out.println(" __________________________________________________________");
 			System.out.println("| Usando dos botellas vacías de 7 y 3 litros de capacidad, |\n| reparte los 10 litros de una botella llena de agua,\t   |\n"
 					+ "| de manera que tanto en la de 7 litros como en la de 10,  |\n| queden 5 litros exactamente. ¡¡Mucha suerte!!\t\t   |");
@@ -427,9 +427,13 @@ if(i == 2) {
 		
 		// Imprime por pantalla el estado actual de las botellas.
 		public void showBottles(Datos d) {
-			System.out.println("[A] " + " [B] " + "[C] ");
+			System.out.println("\t▄▄▄▄▄\t\t▄▄▄▄▄\t\t▄▄▄▄▄\n"
+					+ 		   "\t ███\t\t ███\t\t ███\n"
+					+          "\t█████\t\t█████\t\t█████\n"
+					+          "\t█████\t\t█████\t\t█████\n");
+			System.out.println("\t [A]" + "\t\t [B] " + "\t\t [C] ");
 			System.out
-					.println("[" + d.getBotella10() + "] " + "[" + d.getBotella7() + "] " + "[" + d.getBotella3() + "]\n");
+					.println("\t [" + d.getBotella10() + "] " + "\t\t [" + d.getBotella7() + "] " + "\t\t [" + d.getBotella3() + "]\n");
 		}
 		
 		// Indica al usuario que botellas puede vaciar.
@@ -473,4 +477,40 @@ if(i == 2) {
 			System.out.println("\n\n[w] Delante, [s] Atras, [a] Izquierda, [d] Derecha");
 			
 		}
+		
+		public void imprimirEleccionAleatoria(){
+			System.out.println("Eligiendo aleatoriamente el primer turno");
+		}
+		public void imprimirMensajeTurno(Datos d){
+			int cont=0;
+			if(cont==d.getCero()) {
+			System.out.println("Comenzarás tú");
+			cont++;
+			}else {
+			System.out.println("Tu turno");
+			}
+		}
+		public void imprimirInstruccionesUsuario() {
+			System.out.println("Introduce una posicion del 1 al 9");
+		}
+		public void imprimirMensajeTurnoEnemigo() {
+			System.out.println("Le toca a tu contrincante");
+			System.out.println("El enemigo está eligiendo posición...");
+		}
+		public void imprimirMensajeComienzoEnemigo(Datos d) {
+			int turno=0;
+			if(turno==d.getCero()) {
+				System.out.println("Comenzará el enemigo");
+			}else {
+				System.out.println("Turno del enemigo");
+			}
+		}
+		public void imprimirTrampas() {
+			System.out.println("No hagas trampas debemos ganar limpiamente");
+		}
+		public void imprimirTrampasEnemigas() {
+			System.out.println("Has impedido que el enemigo haga trampas");
+		}
+		
+		
 }

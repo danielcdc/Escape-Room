@@ -10,38 +10,45 @@ public class ControllerJuegoBotella {
 
 	// Selecciona la botella que desea vaciar y la devuelve.
 	public int chooseBottle(ModelJuegoBotella m, VistaPruebas v) {
-		int op;
+		int op = 0;
+		String choose;
 		boolean out = false;
-		op = Leer.datoInt();
+		choose = Leer.dato();
 		do {
-			switch (op) {
-			case 1:// Elige vaciar la botella A
+			if(choose.equalsIgnoreCase("1")) {// Elige vaciar la botella A
 				if (checkIsEmpty(m.getD().getBotella10())) {
 					v.alreadyEmpty();
 					op = Leer.datoInt();
 				}	
 				else
+					op = 1;
 					out = true;
-				break;
-			case 2:// Elige vaciar la botella B
+			}
+			
+			if(choose.equalsIgnoreCase("2")) {
+			// Elige vaciar la botella B
 				if(checkIsEmpty(m.getD().getBotella7())){
 					v.alreadyEmpty();
 					op = Leer.datoInt();
 				}
 				else
-				out = true;
-				break;
-			case 3:// Elige vaciar la botella C
+					op = 2;
+					out = true;
+			}
+			if(choose.equalsIgnoreCase("3")) {
+			// Elige vaciar la botella C
 				if(checkIsEmpty(m.getD().getBotella3())){
 					v.alreadyEmpty();
 					op = Leer.datoInt();
 				}
 				else
-				out = true;
-				break;
-			default:
-				v.notValidValue();
+					op = 3;
+					out = true;
 			}
+			
+			if(!choose.equalsIgnoreCase("1") && !choose.equalsIgnoreCase("2") && !choose.equalsIgnoreCase("3"))
+				v.notValidValue();
+	
 		} while (!out);
 		return op;
 	}
@@ -57,56 +64,74 @@ public class ControllerJuegoBotella {
 	}
 	// Seleccionar la botella donde se desea verter el agua.
 		public void pourWater(int choice, VistaPruebas v, ModelJuegoBotella m, CrudJuegoBotella crud) {
-			int op;
+			String choose;
 			int uno = 1, dos = 2, tres = 3;
 			if (choice == uno) {
 				v.showEmptyBottleA();
-				op = Leer.datoInt();
-				switch (op) {
-				case 1:// Vertimos el contenido de la botella A en la botella B
+				choose = Leer.dato();
+			
+				if(choose.equalsIgnoreCase("1")) 
+			// Vertimos el contenido de la botella A en la botella B
 					crud.transferAToB(m);
-					break;
-				case 2: // Vertimos el contenido de la botella A en la botella C
+				
+				if(choose.equalsIgnoreCase("2"))
+			// Vertimos el contenido de la botella A en la botella C
 					crud.transferAToC(m);
-					break;
-				case 3:
-					break;
-				default:
+				
+				if(choose.equalsIgnoreCase("3")) {
+				
+				
+					}
+			
+				if(!choose.equalsIgnoreCase("1") && !choose.equalsIgnoreCase("2") && !choose.equalsIgnoreCase("3")) {
+					System.out.println("¡Introduzca una opción válida!");
 					v.notValidValue();
 				}
 			}
+			
 			if (choice == dos) {
 				v.showEmptyBottleB();
-				op = Leer.datoInt();
-				switch (op) {
-				case 1:
+				choose = Leer.dato();
+			
+				if(choose.equalsIgnoreCase("1")) 
+			// Vertimos el contenido de la botella A en la botella B
 					crud.transferBToA(m);
-					break;
-				case 2:
+				
+				if(choose.equalsIgnoreCase("2"))
+			// Vertimos el contenido de la botella A en la botella C
 					crud.transferBToC(m);
-					break;
-				case 3:
-					break;
-				default:
+				
+				if(choose.equalsIgnoreCase("3")) {
+				
+				
+				}
+			
+				if(!choose.equalsIgnoreCase("1") && !choose.equalsIgnoreCase("2") && !choose.equalsIgnoreCase("3")) {
+					System.out.println("¡Introduzca una opción válida!\n\n");
 					v.notValidValue();
-
 				}
 			}
+			
 			if (choice == tres) {
 				v.showEmptyBottleC();
-				op = Leer.datoInt();
-				switch (op) {
-				case 1:
+				choose = Leer.dato();
+			
+				if(choose.equalsIgnoreCase("1")) 
+			// Vertimos el contenido de la botella A en la botella B
 					crud.transferCToA(m);
-					break;
-				case 2:
+				
+				if(choose.equalsIgnoreCase("2"))
+			// Vertimos el contenido de la botella A en la botella C
 					crud.transferCToB(m);
-					break;
-				case 3:
-					break;
-				default:
+				
+				if(choose.equalsIgnoreCase("3")) {
+				
+				
+				}
+			
+				if(!choose.equalsIgnoreCase("1") && !choose.equalsIgnoreCase("2") && !choose.equalsIgnoreCase("3")) {
+					System.out.println("¡Introduzca una opción válida!\n\n");
 					v.notValidValue();
-
 				}
 			}
 
