@@ -1,4 +1,5 @@
 package juego;
+
 import datos.Datos;
 import model.ModelJCerradura;
 import vista.VistaJCerradura;
@@ -12,12 +13,10 @@ public class Pruebas {
 		Datos d = new Datos();
 		ModelJCerradura m = new ModelJCerradura();
 		CrudJCerradura c = new CrudJCerradura();
-		VistaJCerradura v= new VistaJCerradura();
-		ControllerJCerradura o= new ControllerJCerradura();
+		VistaJCerradura v = new VistaJCerradura();
+		ControllerJCerradura o = new ControllerJCerradura();
 		m.IniciarJuegoCerradura(d, c, v, o);
-		
-	
-		
+
 	}
 
 }

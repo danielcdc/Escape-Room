@@ -50,10 +50,6 @@ public void comprobado1a7(Datos d, VistaJCerradura v, CrudJCerradura c) {
 		c.borrarNumero(d, v);
 		break;
 		
-	case 3:
-		c.rendicion(d);
-		break;
-		
 	default:
 		break;
 	
