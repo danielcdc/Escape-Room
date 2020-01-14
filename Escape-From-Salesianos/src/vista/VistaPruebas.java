@@ -473,4 +473,37 @@ if(i == 2) {
 			System.out.println("\n\n[w] Delante, [s] Atras, [a] Izquierda, [d] Derecha");
 			
 		}
+		public void imprimirEleccionAleatoria(){
+			System.out.println("Eligiendo aleatoriamente el primer turno");
+		}
+		public void imprimirMensajeTurno(Datos d){
+			int cont=0;
+			if(cont==d.getCero()) {
+			System.out.println("Comenzarás tú");
+			cont++;
+			}else {
+			System.out.println("Tu turno");
+			}
+		}
+		public void imprimirInstruccionesUsuario() {
+			System.out.println("Introduce una posicion del 1 al 9");
+		}
+		public void imprimirMensajeTurnoEnemigo() {
+			System.out.println("Le toca a tu contrincante");
+			System.out.println("El enemigo está eligiendo posición...");
+		}
+		public void imprimirMensajeComienzoEnemigo(Datos d) {
+			int turno=0;
+			if(turno==d.getCero()) {
+				System.out.println("Comenzará el enemigo");
+			}else {
+				System.out.println("Turno del enemigo");
+			}
+		}
+		public void imprimirTrampas() {
+			System.out.println("No hagas trampas debemos ganar limpiamente");
+		}
+		public void imprimirTrampasEnemigas() {
+			System.out.println("Has impedido que el enemigo haga trampas");
+		}
 }

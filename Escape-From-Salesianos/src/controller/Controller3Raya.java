@@ -2,6 +2,7 @@ package controller;
 
 import java.util.Random;
 
+import datos.Datos;
 import model.Model3Raya;
 
 public class Controller3Raya {
@@ -65,14 +66,13 @@ public class Controller3Raya {
 	}
 	
 	// Activa la felicitación al jugador al ganar.
-	public boolean felicitar(Model3Raya m1) {
-		boolean felicitar = false;
-
-		int cero = 0;
-		if (m1.getD().getListaJugadores3Raya()[cero].getVictoria() == true) {
-			felicitar = true;
+	public void felicitar() {
+		Datos d=new Datos();
+		if (d.getListaJugadores3Raya()[d.getCero()].getVictoria() == true) {
+			System.out.println("Felicidades has ganado");
+		}else {
+			System.out.println("El mal no puede ganar...");
 		}
-		return felicitar;
 	}
 	
 	public boolean comprobarRepetir(Model3Raya m1, int posicion, int numeroJugador) {
