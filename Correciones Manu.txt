@@ -1,0 +1,11 @@
+1. Evitar asignación de variables del tipo
+ int num1 = 0;
+ num1 = Leer.DatoInt();	
+	Cuando sería más conveniente: int num1 = Leer.DatoInt();
+
+2. En un Switch, en la opción Default no hay que poner la sentencia break: 
+   es la última del switch y con esta termina.
+
+3. Dentro de las sentencias que realizan operaciones, incluidos getter y setters, NO 
+   SE METEN NÚMEROS A MANO.
+	int elec = d.getOp() - 1;
