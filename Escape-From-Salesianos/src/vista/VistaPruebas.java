@@ -477,7 +477,7 @@ if(i == 2) {
 			System.out.println("\n\n[w] Delante, [s] Atras, [a] Izquierda, [d] Derecha");
 			
 		}
-		
+
 		public void imprimirEleccionAleatoria(){
 			System.out.println("Eligiendo aleatoriamente el primer turno");
 		}
@@ -511,6 +511,4 @@ if(i == 2) {
 		public void imprimirTrampasEnemigas() {
 			System.out.println("Has impedido que el enemigo haga trampas");
 		}
-		
-		
-}
+

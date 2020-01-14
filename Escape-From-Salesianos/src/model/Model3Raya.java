@@ -193,4 +193,8 @@ public class Model3Raya {
 		vistaMapas.imprimirmapa3Raya(tresRaya);
 		c3Raya.felicitar();
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4adeaf061fdf13c92be9b53070c191e92595a141
