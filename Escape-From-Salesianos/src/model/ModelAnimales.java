@@ -4,6 +4,7 @@ import controller.ControllerJuegoGranjero;
 import crud.CrudGranjero;
 import datos.Datos;
 import utilidades.Leer;
+import vista.VistaPruebas;
 
 public class ModelAnimales {
 		
@@ -39,7 +40,8 @@ public class ModelAnimales {
 		return "ModelAnimales [nombre=" + nombre + ", mostrar=" + mostrar + "]";
 	}
 	
-	public void empezarJuegoGranjero(CrudGranjero crg, ControllerJuegoGranjero cAnimal) {
+	public void empezarJuegoGranjero(CrudGranjero crg, ControllerJuegoGranjero cAnimal, VistaPruebas vp) {
+		String opt = "0";
 		
 		for(int i = 0; i < d.getListaAnimales().length; i++) {
 			d.getListaAnimales()[i].setMostrar(true);
@@ -97,7 +99,10 @@ public class ModelAnimales {
 		if(d.isVictoriaAnimales()) {
 			System.out.println("\n\n\n\nFelicidades has ganado");
 			}else {
-				System.out.println("\n\n\n\nHas perdido");
+				do {
+				vp.imprimirLetreroPerderGranjero();
+				opt = Leer.dato();
+				}while(!opt.equalsIgnoreCase(""));
 			}
 	}
 	

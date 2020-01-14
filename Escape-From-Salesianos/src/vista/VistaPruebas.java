@@ -288,6 +288,19 @@ if(i == 2) {
 		
 	}
 	
+	public void imprimirLetreroPerderGranjero() {
+		System.out.println("--------------------\n"
+				+ 		   "|      DERROTA     |\n"
+				+          "--------------------\n");
+		System.out.println("\n\n\n"+
+				"\t\t\t┌────────────────────────────────────────────────────────┐");
+		System.out.println(		"\t\t\t|    Voz anónima:                                        |");
+		System.out.println(		"\t\t\t|                                                        |");
+		System.out.println(		"\t\t\t|       ~Pero si pensabas que este era el final, solo    |");
+		System.out.println(		"\t\t\t|        es el comienzo del juego~                       |");
+		System.out.println(     "\t\t\t└────────────────────────────────────────────────────────┘");
+	}
+	
 
 	public void numOrdenador1(Datos d) {
 		System.out.println("- - - - - - - - - - - - - - - - - - - - " + "-Don Bosco: Esta pantalla está encendida"
@@ -510,5 +523,6 @@ if(i == 2) {
 		}
 		public void imprimirTrampasEnemigas() {
 			System.out.println("Has impedido que el enemigo haga trampas");
+		}
 		}
 

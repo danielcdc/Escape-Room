@@ -99,37 +99,32 @@ public class ControllerHistoria {
 				vp.imprimirIntroPrueba1();
 				mPizarra.iniciarJuegoPizarra(m1, vm, vMenu, mov, cMapa, cJP, intro);
 				vp.imprimirFinPrueba1();
+				do {
+					mAnimal.empezarJuegoGranjero(crudG, cr1, vp);	
+				}while(!d.isVictoriaAnimales());
 				d.setFase(d.getFase()+d.getUno());
-				cIn.adquirirHerramienta(d, d.getCero());
+				
 			}
 			
 			if (mapa[4][2]=='!' && fase == d.getDos()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
-				
 				m3Raya.iniciarJuego3Raya();
-				if(d.isVictoria3Raya()!=true) {
+				if(d.getListaJugadores3Raya()[d.getCero()].getVictoria()==true) {
 				d.setFase(d.getFase()+d.getUno());
 				cIn.adquirirHerramienta(d, d.getDos());
 				}
 				
 			}
 			
-			if (mapa [4][4] == '!' && fase == d.getTres() ) {
-				mAnimal.empezarJuegoGranjero(crudG, cr1);
-				if(d.isVictoriaAnimales()) {
-					d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
-					d.setFase(d.getFase()+d.getUno());
-				}
-				
-			}
-			if (mapa[16][2]=='!' && fase == d.getCuatro()) {
+			
+			if (mapa[16][2]=='!' && fase == d.getTres()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				Aj1.iniciarJuegoAjedrez(vp, c1, cj1);
 				d.setFase(d.getFase()+d.getUno());
 				
 			}
 			
-			if (mapa[4][4]=='!' && fase == d.getCinco()) {
+			if (mapa[4][4]=='!' && fase == d.getCuatro()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				mJb.ejecutarJuegoBotella(d, cJb, vp, crudB, mJb);
 				d.setFase(d.getFase()+d.getUno());

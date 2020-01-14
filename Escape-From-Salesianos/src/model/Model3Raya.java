@@ -61,8 +61,9 @@ public class Model3Raya {
 		VistaPruebas vp=new VistaPruebas();
 		VistaMapas vistaMapas = new VistaMapas();
 		int turno = 0, cero = 0, uno = 1;
-		while (tresRaya.getD().getListaJugadores3Raya()[cero].getVictoria() == false
-				&& tresRaya.getD().getListaJugadores3Raya()[uno].getVictoria() == false) {//
+		while (!tresRaya.getD().getListaJugadores3Raya()[cero].getVictoria() 
+				&& !tresRaya.getD().getListaJugadores3Raya()[uno].getVictoria() 
+				&& !c3Raya.rellenoTablero(d)) {//
 			vistaMapas.imprimirmapa3Raya(tresRaya);
 
 			tresRaya.getD().setComprobacion(false);
@@ -120,7 +121,7 @@ public class Model3Raya {
 
 			}
 		} // while
-		c3Raya.felicitar();
+		c3Raya.felicitar(d);
 	}
 	public void comienzoEnemigo(){
 		Model3Raya tresRaya = new Model3Raya(d);
@@ -128,8 +129,9 @@ public class Model3Raya {
 		VistaPruebas vp=new VistaPruebas();
 		VistaMapas vistaMapas = new VistaMapas();
 		int turno = 0, cero = 0, uno = 1;
-		while (tresRaya.getD().getListaJugadores3Raya()[cero].getVictoria() == false
-				&& tresRaya.getD().getListaJugadores3Raya()[uno].getVictoria() == false) {//
+		while (!tresRaya.getD().getListaJugadores3Raya()[cero].getVictoria() 
+				&& !tresRaya.getD().getListaJugadores3Raya()[uno].getVictoria() 
+				&& !c3Raya.rellenoTablero(d)) {//
 			vistaMapas.imprimirmapa3Raya(tresRaya);
 
 			tresRaya.getD().setComprobacion(false);
@@ -153,7 +155,7 @@ public class Model3Raya {
 								tresRaya.getD().getListaJugadores3Raya()[uno].getfichas());// Se cambia la posicion
 																							// en
 																							// el array inicial
-						c3Raya.comprobarGanador3Raya(tresRaya, uno); // Comprueba si hemos ganado
+						c3Raya.comprobarGanador3Raya(tresRaya, uno);// Comprueba si hemos ganado
 						turno++;
 						tresRaya.getD().setComprobacion(true);// Si cumple las condiciones se pasa a true para que
 																// no se vuelva a repetir
@@ -191,10 +193,6 @@ public class Model3Raya {
 
 		}
 		vistaMapas.imprimirmapa3Raya(tresRaya);
-		c3Raya.felicitar();
+		c3Raya.felicitar(d);
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 4adeaf061fdf13c92be9b53070c191e92595a141

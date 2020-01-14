@@ -66,9 +66,9 @@ public class Controller3Raya {
 	}
 	
 	// Activa la felicitación al jugador al ganar.
-	public void felicitar() {
-		Datos d=new Datos();
-		if (d.getListaJugadores3Raya()[d.getCero()].getVictoria() == true) {
+	public void felicitar(Datos d) {
+		
+		if (d.getListaJugadores3Raya()[d.getCero()].getVictoria()) {
 			System.out.println("Felicidades has ganado");
 		}else {
 			System.out.println("El mal no puede ganar...");
@@ -94,6 +94,19 @@ public class Controller3Raya {
 			return false;
 		}
 
+	}
+	
+	public boolean rellenoTablero(Datos d) {
+		int cont=0;
+		boolean repetir=false;
+		for(int i=0;i<d.getListaJugadores3Raya().length;i++) {
+			if(d.getListaValores3Raya()[i]=='O' || d.getListaValores3Raya()[i]=='X');
+				cont++;
+		}
+		if(cont==9 && (d.getListaJugadores3Raya()[d.getCero()].getVictoria()==false || d.getListaJugadores3Raya()[d.getUno()].getVictoria()==false)) {
+			repetir=true;
+		}
+		return repetir;
 	}
 
 }

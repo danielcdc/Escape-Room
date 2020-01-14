@@ -22,9 +22,8 @@ public class Datos {
 	private int posTablero3Raya = 0;
 
 
-	private int cero = 0, uno = 1, dos=2, fase = 5, tres=3, cuatro=4, cinco=5, seis=6, siete=7, ocho=8, nueve=9;
+	private int cero = 0, uno = 1, dos=2, fase = 2, tres=3, cuatro=4, cinco=5, seis=6, siete=7, ocho=8, nueve=9;
 
-	private boolean victoria3Raya;
 	private boolean comprobacion = false;
 
 	ModelJugador jugador1 = new ModelJugador("Don Bosco", false);
@@ -92,9 +91,9 @@ public class Datos {
 	private int turno;
 	
 	//INVENTARIO
-	private ModelHerramientas listaDeHerramientas[] = {new ModelHerramientas("Soplete", "Un soplete normal y corriente. Tiene un conejo blanco impreso en él y una frase de advertencia: NO funde adamantiun. Inflamable significa flamable", true), 
-		new ModelHerramientas("CD-ROM", "Para usarla presiona la tecla del logotipo de Windows (⊞ Win) + signo más (+)" , true),
-		new ModelHerramientas("Lupa", "El título impreso en la carcasa reza lo siguiente: \"Juego de ajedrez sencillito para Dummies. Edad recomendada de 2 a 5 años mentales\"", true)};
+	private ModelHerramientas listaDeHerramientas[] = {new ModelHerramientas("Soplete", "Un soplete normal y corriente. Tiene un conejo blanco impreso en él y una frase de advertencia: NO funde adamantiun. Inflamable significa flamable", false), 
+		new ModelHerramientas("CD-ROM", "Para usarla presiona la tecla del logotipo de Windows (⊞ Win) + signo más (+)" , false),
+		new ModelHerramientas("Lupa", "El título impreso en la carcasa reza lo siguiente: \"Juego de ajedrez sencillito para Dummies. Edad recomendada de 2 a 5 años mentales\"", false)};
 	
 	//Juego de las Botellas
 	
@@ -473,15 +472,6 @@ public class Datos {
 		this.limite3 = limite3;
 	}
 	
-	
-	public boolean isVictoria3Raya() {
-		return victoria3Raya;
-	}
-
-	public void setVictoria3Raya(boolean victoria3Raya) {
-		this.victoria3Raya = victoria3Raya;
-	}
-
 	@Override
 	public String toString() {
 		return "Datos [vertic=" + vertic + ", horiz=" + horiz + ", listaValores3Raya="
