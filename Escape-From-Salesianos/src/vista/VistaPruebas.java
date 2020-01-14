@@ -468,4 +468,9 @@ if(i == 2) {
 		public void printVictory() {
 			System.out.println("¡¡Enhorabuena, has resuelto el enigma!!");
 		}
+		
+		public void imprimirMenuMapaPrueba() {
+			System.out.println("\n\n[w] Delante, [s] Atras, [a] Izquierda, [d] Derecha");
+			
+		}
 }

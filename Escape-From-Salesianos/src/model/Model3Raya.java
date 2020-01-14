@@ -51,10 +51,7 @@ public class Model3Raya {
 		VistaMapas vistaMapas = new VistaMapas();
 		int turno = 0, cero = 0, uno = 1;
 
-		System.out.println(tresRaya);
-
 		tresRaya.getD().setComprobacion(true);
-		System.out.println(tresRaya.getD().isComprobacion());
 
 		System.out.println("Eligiendo aleatoriamente el primer turno");
 
@@ -71,7 +68,7 @@ public class Model3Raya {
 					} else {// Este else se ejecutará cada vez que no sea la primera vez que se ejecuta
 						System.out.println("Tu turno");// Se indica al usuario que empieza el
 					}
-
+					
 					while (!tresRaya.getD().isComprobacion()) {// Hace que se repita si intentas superponer valores
 						System.out.println("Introduce una posicion del 1 al 9");// Se introduce donde debe ir la ficha
 						tresRaya.getD().setPosTablero3Raya(Leer.datoInt() - 1);
@@ -141,7 +138,7 @@ public class Model3Raya {
 					System.out.println("El enemigo está eligiendo posición...");
 
 					while (!tresRaya.getD().isComprobacion()) {// Hace que se repita si intentas superponer valores
-						tresRaya.getD().setPosTablero3Raya(c3Raya.generarTurnoRival());
+						tresRaya.getD().setPosTablero3Raya(c3Raya.generarTurnoRival()-1);
 						if (c3Raya.comprobarRepetir(tresRaya, tresRaya.getD().getPosTablero3Raya(), uno)) {// Se
 																											// comprueba
 																											// si ese
@@ -195,6 +192,7 @@ public class Model3Raya {
 		vistaMapas.imprimirmapa3Raya(tresRaya);
 		if (c3Raya.felicitar(tresRaya)) {
 			System.out.println("Felicidades has ganado");
+			d.setVictoria3Raya(true);
 		} else {
 			System.out.println("El mal no puede ganar...");
 		}

@@ -29,9 +29,17 @@ public class VistaMapas {
 		for (int i = 0; i < mapa.length; i++) {
 		    System.out.println();
 		    for (int j = 0; j < mapa[i].length; j++) {
-
+		    if(j == 0) {
+		    	System.out.print("\t   ");
+		    }
 			System.out.print(mapa[i][j]);
 		    }}
+	}
+	
+	public void imprimirLetreroMapa() {
+		System.out.println( "┌─── ─ ── ─ ─ ─ ─ ── ─ ───┐\n"
+				           +"|       AULA 1º DAM       |\n"
+						   +"└─────────────────────────┘\n");
 	}
 
 }

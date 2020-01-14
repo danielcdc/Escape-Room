@@ -4,6 +4,7 @@ public class ModelHerramientas {
 	private String nombre;
 	private String descripcion;
 	private boolean guardado;
+	
 	public ModelHerramientas(String nombre, String descripcion, boolean guardado) {
 		super();
 		this.nombre = nombre;
@@ -30,7 +31,7 @@ public class ModelHerramientas {
 	}
 	@Override
 	public String toString() {
-		return "║Nombre: " + nombre + "\n║Descripcion: " + descripcion + "\n";
+		return "├Nombre: " + nombre + "\n║\t " + descripcion;
 	}
 	
 	

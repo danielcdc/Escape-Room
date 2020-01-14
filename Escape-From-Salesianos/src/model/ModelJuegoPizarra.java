@@ -56,7 +56,7 @@ public class ModelJuegoPizarra {
 			vp.imprimirLetreroMapaPrueba();
 			vp.imprimirPista1();
 			vm.imprimirMapa(m1.getD().getMapaClase1());
-			vMenu.imprimirMenuMapa(m1);
+			vp.imprimirMenuMapaPrueba();
 			mov = Leer.dato();
 			cMapa.moverJugador(mov, m1.getD().getMapaClase1(), m1);
 			if (cJP.asignarNumeroConMesa(cont, m1, d, intro)) {

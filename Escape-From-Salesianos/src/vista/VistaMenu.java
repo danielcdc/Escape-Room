@@ -99,10 +99,10 @@ public class VistaMenu {
 	
 	public void imprimirMenu() {
 		System.out.println("\t\t| [1] Iniciar\t\t\t\t\t\t|"
-				+ "\n\t\t| [2] Más sobre Escape From Salesianos...\t\t|"
-				+ "\n\t\t| [3] Donativo\t\t\t\t\t\t|"
-				+ "\n\t\t| [0] Salir\t\t\t\t\t\t|\n"
-				+   "\t\t|_______________________________________________________|");
+				+ "\n\t\t│ [2] Más sobre Escape From Salesianos...\t\t│"
+				+ "\n\t\t│ [3] Donativo\t\t\t\t\t\t│"
+				+ "\n\t\t│ [0] Salir\t\t\t\t\t\t│\n"
+				+   "\t\t└───────────────────────────────────────────────────────┘");
 	}
 	
 	public void imprimirMenuMapa(ModelMapa m1) {
@@ -111,12 +111,20 @@ public class VistaMenu {
 		cm.encontrarP(m1.getD().getMapaClase(), m1);
 		
 		System.out.println("\n\n[w] Delante, [s] Atras, [a] Izquierda, [d] Derecha");
+		//ale
+		if(m1.getD().getMapaClase()[m1.getD().getVertic()][m1.getD().getHoriz()] != '?' && 
+				m1.getD().getMapaClase()[m1.getD().getVertic()][m1.getD().getHoriz()] != '!') {
+			System.out.println("┌────────────────────┐\n"
+					+ 		   "│  [M] Instanciador  │\n"
+					+          "└────────────────────┘\n"); //Imprime el botón M
+		}
 		if(m1.getD().getMapaClase()[m1.getD().getVertic()][m1.getD().getHoriz()] == '?' || 
 				m1.getD().getMapaClase()[m1.getD().getVertic()][m1.getD().getHoriz()] == '!') {
-			System.out.println("┌────────────────────┐\n"
-					+ 		   "|  [I] Interactuar   |\n"
-					+          "└────────────────────┘\n");
+			System.out.println("┌────────────────────┐ ┌────────────────────┐\n"
+					+ 		   "│  [I] Interactuar   │ │  [M] Instanciador  │\n"
+					+          "└────────────────────┘ └────────────────────┘\n");//Imprime el botón M y el botón I
 		}
+		//F ale
 	}
 
 }

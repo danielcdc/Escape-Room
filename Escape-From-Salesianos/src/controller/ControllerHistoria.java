@@ -2,6 +2,7 @@ package controller;
 
 import crud.CrudAjedrez;
 import crud.CrudGranjero;
+import crud.CrudHerramientas;
 import crud.CrudJuegoBotella;
 import datos.Datos;
 import model.Model3Raya;
@@ -53,20 +54,24 @@ public class ControllerHistoria {
 			mapa[2][17] = '!';
 		}
 		
-		if((mapa[4][4] == 'P' && fase == 2 )) {
-			mapa[4][4] = '!';
-		}
-		if(mapa[16][2] == 'P' && fase ==3) {
-			mapa[16][2]='!';
+		if(mapa[4][2]=='P' && fase == 2) {
+			mapa[4][2]='!';
 		}
 		
-		if(mapa[4][2]=='P' && fase == 4) {
-			mapa[4][2]='!';
+		if(mapa[4][4] == 'P' && fase == 3) {
+			mapa[4][4] = '!';
+		}
+		if(mapa[16][2] == 'P' && fase == 4) {
+			mapa[16][2]='!';
 		}
 		
 		if(mapa[4][4]=='P' && fase == 5) {
 			mapa[4][4]='!';
 		}
+		
+		
+		
+		
 		
 	}
 	
@@ -86,6 +91,7 @@ public class ControllerHistoria {
 		Model3Raya m3Raya = new Model3Raya(d);
 		ModelJuegoBotella mJb = new ModelJuegoBotella(d);
 		CrudJuegoBotella crudB = new CrudJuegoBotella();
+		CrudHerramientas cIn = new CrudHerramientas();
 		
 		if (mov.equalsIgnoreCase("I")) {// Si no coincide la letra, no hace nada.
 			if (mapa[2][17] == '!' && fase == d.getUno()) {
@@ -94,7 +100,22 @@ public class ControllerHistoria {
 				mPizarra.iniciarJuegoPizarra(m1, vm, vMenu, mov, cMapa, cJP, intro);
 				vp.imprimirFinPrueba1();
 				d.setFase(d.getFase()+d.getUno());
+				cIn.adquirirHerramienta(d, d.getCero());
 			}
+			
+			if (mapa[4][2]=='!' && fase == d.getDos()) {
+				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
+				
+				m3Raya.iniciarJuego3Raya();
+				if(d.isVictoria3Raya()!=true) {
+				d.setFase(d.getFase()+d.getUno());
+				cIn.adquirirHerramienta(d, d.getDos());
+				}
+				
+			}
+			
+			
+			
 			if (mapa [4][4] == '!' && fase == d.getDos() ) {
 				mAnimal.empezarJuegoGranjero(crudG, cr1);
 				if(d.isVictoriaAnimales()) {
@@ -107,18 +128,14 @@ public class ControllerHistoria {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				Aj1.iniciarJuegoAjedrez(vp, c1, cj1);
 				d.setFase(d.getFase()+d.getUno());
+				
 			}
 			
-			if (mapa[4][2]=='!' && fase == d.getCuatro()) {
-				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
-				m3Raya.iniciarJuego3Raya();
-				d.setFase(d.getFase()+d.getUno());
-			}
-			
-			if (mapa[4][4]=='!' && fase == d.getCinco()) {
+			if (mapa[4][4]=='!' && fase == d.getCuatro()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				mJb.ejecutarJuegoBotella(d, cJb, vp, crudB, mJb);
 				d.setFase(d.getFase()+d.getUno());
+				cIn.adquirirHerramienta(d, d.getUno());
 			}
 		
 		}

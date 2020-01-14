@@ -3,6 +3,7 @@ package escape_from_salesianos;
 import controller.Controller3Raya;
 import controller.ControllerAjedrez;
 import controller.ControllerHistoria;
+import controller.ControllerInventario;
 import controller.ControllerJuegoPizarra;
 import controller.ControllerMapa;
 import datos.Datos;
@@ -29,6 +30,7 @@ public class Ppal {
 		ControllerJuegoPizarra cJP = new ControllerJuegoPizarra();
 		ControllerAjedrez cAj = new ControllerAjedrez(); 
 		VistaPruebas vP = new VistaPruebas();
+		ControllerInventario cIn = new ControllerInventario();
 		
 		int opt = 0;
 		String mov= "";
@@ -46,8 +48,8 @@ public class Ppal {
 		do {
 			
 			/*vM.cargarBarra();
-			vM.imprimirPortada();
-			*/
+			vM.imprimirPortada();*/
+			
 			vM.imprimirMenu();
 			opt = Leer.datoInt();
 			switch(opt) {
@@ -55,9 +57,11 @@ public class Ppal {
 			case 1:
 				
 				do {
+					vMapa.imprimirLetreroMapa();
 					vMapa.imprimirMapa(mapaHistoria.getD().getMapaClase());
 					vM.imprimirMenuMapa(mapaHistoria);
 					mov = Leer.dato();
+					cIn.comprobarInventario(mov, d);
 					cMapa.moverJugador( mov, mapaHistoria.getD().getMapaClase(), mapaHistoria);
 					cHistory.ejecutarEasterEgg(mov, mapaHistoria.getD().getMapaClase(), mapaHistoria.getD().getFase());
 					cHistory.comprobarPruebas(mapaHistoria.getD().getMapaClase(), mapaHistoria.getD().getFase());
