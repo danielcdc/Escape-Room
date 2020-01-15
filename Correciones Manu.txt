@@ -1,4 +1,4 @@
-1. Evitar asignación de variables del tipo
+﻿1. Evitar asignación de variables del tipo
  int num1 = 0;
  num1 = Leer.DatoInt();	
 	Cuando sería más conveniente: int num1 = Leer.DatoInt();
@@ -9,3 +9,12 @@
 3. Dentro de las sentencias que realizan operaciones, incluidos getter y setters, NO 
    SE METEN NÚMEROS A MANO.
 	int elec = d.getOp() - 1;
+do
+1. Imprimir las instrucciones, cerradura y ejemlo.
+2.1. Elige una opción 
+2.2. Elegir el hueco
+3. Comprueba que el hueco está disponible
+	4. Elige el número a introducir o borrar
+	5. Comprueba que el número a introducir está disponible
+	6. Insertar el número
+while

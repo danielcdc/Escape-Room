@@ -8,7 +8,7 @@ public class Datos {
 	private int cerradura[] = new int[7];
 	private int numerador[] = new int[9];
 	private boolean comprobadores[] = new boolean[9];
-	private boolean derrota = false;
+
 	
 	public int getRes1() {
 		return res1;
@@ -58,13 +58,5 @@ public class Datos {
 	public void setComprobadores(boolean[] comprobadores) {
 		this.comprobadores = comprobadores;
 	}
-	public boolean isDerrota() {
-		return derrota;
-	}
-	public void setDerrota(boolean derrota) {
-		this.derrota = derrota;
-	}
-	
-	
 
 }

@@ -7,7 +7,7 @@ public class VistaJCerradura {
 
 	// Este metodo sirve para imprimir en pantalla el array cerradura
 
-	public void intruciones(Datos d) {
+	public void intruciones() {
 
 		System.out.println("Bienvenido a este juego.\nLas normas son mas simples que hacer"
 				+ " una variable y tu deber es abrir la siguiente cerradura, pero teniendo en cuenta lo siguiente:\n");
@@ -29,7 +29,7 @@ public class VistaJCerradura {
 	}
 
 //Este metodo imprime el menú principal del programa.
-	public void imprimirMenuPrincipal(Datos d) {
+	public void imprimirMenuPrincipal() {
 
 		System.out.println("¿Qué quieres hacer?");
 		System.out.println("1. Insertar un número");
@@ -69,34 +69,33 @@ public class VistaJCerradura {
 	}
 //Indica al usuario que números puede insertar.
 
-	public void insertarD1H9(Datos d) {
+	public void insertarD1H9() {
 
 		System.out.println("¿Qué número desea insertar? Introduzca un número del 1 al 9 y pulse Intro.");
 	}
 
 //este metodo te dice que no puedes poner un numero repetido
-	public void errorRepetirNumero(Datos d) {
+	public void errorRepetirNumero() {
 
 		System.out.println("No puedes colocar 2 veces el mismo número.");
 	}
 
-	public void errorNumeroNoValido(Datos d) {
+	public void errorNumeroNoValido() {
 
 		System.out.println("Número no válido.");
 	}
 
-	public void errorMismoHueco(Datos d) {
+	public void errorMismoHueco() {
 
 		System.out.println("Este hueco ya está ocupado.");
 	}
 
-	public void finalGanar(Datos d) {
+	public void finalGanar() {
 
 		System.out.println("¡Clic! ¡Has abierto la cerradura! ¡Felicidades máquina!");
 	}
 
-	public void finalPerder(Datos d) {
-
-		System.out.println("Perdiste");
+	public void opcionNoDisponible() {
+		System.out.println("Opción introducida no válida. Por favor, inserte otra y pulse Intro.");
 	}
 }

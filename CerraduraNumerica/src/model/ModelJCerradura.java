@@ -13,21 +13,18 @@ public class ModelJCerradura {
 	
 	// Método que inicia el juego.
 	public void IniciarJuegoCerradura(Datos d, CrudJCerradura c, VistaJCerradura v, ControllerJCerradura o) {
-
-		v.intruciones(d);
+		// Imprime las instrucciones y prepara el juego.
+		v.intruciones();
 		c.ponerAFalso(d);
 		c.rellenarNumerador(d);
-
+		// Ejecuta el juego propiamente.
 		do {
 			v.imprimirCerradura(d);
-			v.imprimirMenuPrincipal(d);
-			o.leerOperador(d, v, c, o);
+			v.imprimirMenuPrincipal();
+			o.elegirOpcion(d, o, c, v);
+			//o.evitarProductoNulo(d);
 
-			o.evitarProductoNulo(d);
-
-		} while (d.getRes1() != d.getRes2() && d.getRes1() != d.getRes3() && !d.isDerrota());
-
-		c.comprobarVictoria(d, v);
+		} while (d.getRes1() != d.getRes2() && d.getRes1() != d.getRes3());
 	}
 	
 	//Getters y Setters
@@ -51,7 +48,5 @@ public class ModelJCerradura {
 	public String toString() {
 		return "ModelJCerradura [d=" + d + ", victoria=" + victoria + "]";
 	}
-	
-	
-
+		
 }
