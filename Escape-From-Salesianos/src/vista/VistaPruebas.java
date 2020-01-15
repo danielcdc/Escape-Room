@@ -494,11 +494,11 @@ if(i == 2) {
 		public void imprimirEleccionAleatoria(){
 			System.out.println("Eligiendo aleatoriamente el primer turno");
 		}
-		public void imprimirMensajeTurno(Datos d){
-			int cont=0;
-			if(cont==d.getCero()) {
+		public void imprimirMensajeTurno(int turno){
+			int cero = 0;
+			
+			if(turno==cero) {
 			System.out.println("Comenzarás tú");
-			cont++;
 			}else {
 			System.out.println("Tu turno");
 			}
@@ -510,9 +510,10 @@ if(i == 2) {
 			System.out.println("Le toca a tu contrincante");
 			System.out.println("El enemigo está eligiendo posición...");
 		}
-		public void imprimirMensajeComienzoEnemigo(Datos d) {
-			int turno=0;
-			if(turno==d.getCero()) {
+		public void imprimirMensajeComienzoEnemigo(int turno) {
+			int cero=0;
+			
+			if(turno==cero) {
 				System.out.println("Comenzará el enemigo");
 			}else {
 				System.out.println("Turno del enemigo");
@@ -524,5 +525,64 @@ if(i == 2) {
 		public void imprimirTrampasEnemigas() {
 			System.out.println("Has impedido que el enemigo haga trampas");
 		}
+		
+		public void imprimirPerder3Raya() {
+			
+			System.out.println( "╔────────────────────────╗\n"+
+								"║El mal no puede ganar...║\n"
+							  + "╚────────────────────────╝");
+			
 		}
+		
+		public void imprimirGanar3Raya() {
+			
+			System.out.println( "╔────────────────────────╗\n"+
+								"║     FELICIDADES ...    ║\n"
+							  + "╚────────────────────────╝");
+			
+		}
+		
+		public void imprimirEmpatar3Raya() {
+			
+			System.out.println( "╔─────────────────────────────╗\n"+
+								"║Te has quedado a nada campeón║\n"
+							  + "╚─────────────────────────────╝");
+			
+		}
+		
+	public void imprimirPersonajes(int i) {
+		
+		int cero = 0, uno = 1;
+		if(i == cero) {
+		System.out.println("\n                              ( oo|\r\n" + 
+				"                         O    _\\=/_\r\n" + 
+				"                         #   /  _  \\                 ______________\r\n" + 
+				"                          \\\\//|/.\\|\\\\              /\r\n" + 
+				"                           \\/_ \\_/ _||__________ /\r\n" + 
+				" ______                   /   |\\ /| ||\r\n" + 
+				"        \\_______________/     \\_ _/ #\r\n" + 
+				"                              | | |\r\n" + 
+				"                              | | |\r\n" + 
+				"                              []|[]\r\n" + 
+				"                              | | |\r\n" + 
+				"_____________________________/_]_[_\\_______________________________");
+		}
+		
+		if(i == uno) {
+		System.out.println("\n                              ( oo|\r\n" + 
+				"                         X    _\\=/_\r\n" + 
+				"                         #   /  _  \\                 ______________\r\n" + 
+				"                          \\\\//|/.\\|\\\\              /\r\n" + 
+				"                           \\/_ \\_/ _||__________ /\r\n" + 
+				" ______                   /   |\\ /| ||\r\n" + 
+				"        \\_______________/     \\_ _/ #\r\n" + 
+				"                              | | |\r\n" + 
+				"                              | | |\r\n" + 
+				"                              []|[]\r\n" + 
+				"                              | | |\r\n" + 
+				"_____________________________/_]_[_\\_______________________________");
+		}
+	}	
+	}
+
 

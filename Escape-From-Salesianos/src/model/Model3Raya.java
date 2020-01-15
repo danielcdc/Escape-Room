@@ -48,16 +48,41 @@ public class Model3Raya {
 	
 	public void iniciarJuego3Raya() {
 		Datos d1 = new Datos ();
+		Controller3Raya c3Raya = new Controller3Raya();
+		
 		//IMPORTANTE CAMBIAR
 		d.setListaValores3Raya(d1.getListaValores3Raya());
 		d.setListaJugadores3Raya(d1.getListaJugadores3Raya());
 		
-		Controller3Raya c3Raya = new Controller3Raya();
-		if (c3Raya.generarTurnoInicial()) { // LLama al metodo para comprobar quien empieza
-			comienzoJugador();
-		} else {
-			comienzoEnemigo();
+		System.out.println("  ____  _                          __   _____   _                                   \r\n" + 
+				" / ___|| |_ __ _ _ __ ___    ___  / _| |___ /  (_)_ __     __ _   _ __ _____      __\r\n" + 
+				" \\___ \\| __/ _` | '__/ __|  / _ \\| |_    |_ \\  | | '_ \\   / _` | | '__/ _ \\ \\ /\\ / /\r\n" + 
+				"  ___) | || (_| | |  \\__ \\ | (_) |  _|  ___) | | | | | | | (_| | | | | (_) \\ V  V / \r\n" + 
+				" |____/ \\__\\__,_|_|  |___/  \\___/|_|   |____/  |_|_| |_|  \\__,_| |_|  \\___/ \\_/\\_/  \r\n" + 
+				"                                                                                    ");
+		
+		System.out.println("[1] Comenzar\n[2] Instrucciones");
+		d1.setPul(Leer.datoInt());
+		switch(d1.getPul()) {
+			
+		case 1:
+			
+			if (c3Raya.generarTurnoInicial()) { // LLama al metodo para comprobar quien empieza
+				comienzoJugador();
+			} else {
+				comienzoEnemigo();
+			}
+			break;
+		
+		case 2:
+			System.out.println(" El juego trata de ir marcando los espacios del tablero alternadamente hasta queuno de los jugadores consiga hacer tres en raya."
+			+ " La línea puede ser horizontal, diagonal overtical. Un jugador será el símbolo X y el otro O.");
+			break;
 		}
+		
+		
+		
+		
 	}
 	
 	public void comienzoJugador() {
@@ -65,7 +90,7 @@ public class Model3Raya {
 		Controller3Raya c3Raya = new Controller3Raya();
 		VistaPruebas vp=new VistaPruebas();
 		VistaMapas vistaMapas = new VistaMapas();
-		int turno = 0, cero = 0, uno = 1;
+		int turno = 0, turno1 = 0, cero = 0, uno = 1;
 		while (!tresRaya.getD().getListaJugadores3Raya()[cero].getVictoria() 
 				&& !tresRaya.getD().getListaJugadores3Raya()[uno].getVictoria() 
 				&& !c3Raya.rellenoTablero(d)) {//
@@ -74,10 +99,13 @@ public class Model3Raya {
 			tresRaya.getD().setComprobacion(false);
 
 			if (turno % 2 == cero) {// Si comenzamos nosotros tendremos los turnos pares
-				
-					vp.imprimirMensajeTurno(d);// La primera vez sale un mensaje diferente al resto de las veces
-				
+					
+				vp.imprimirPersonajes(d.getCero());
+				vp.imprimirMensajeTurno(turno1);// La primera vez sale un mensaje diferente al resto de las veces
+				turno1++;
+					
 				while (!tresRaya.getD().isComprobacion()) {// Hace que se repita si intentas superponer valores
+					
 					vp.imprimirInstruccionesUsuario();// Se introduce donde debe ir la ficha
 					tresRaya.getD().setPosTablero3Raya(Leer.datoInt() - 1);
 					if(  !c3Raya.rellenoTablero(d)) {
@@ -100,12 +128,13 @@ public class Model3Raya {
 					}
 					
 					}else {
-						d.getListaJugadores3Raya()[cero].setVictoria(true);
+						d.getListaJugadores3Raya()[uno].setVictoria(true);
 						tresRaya.getD().setComprobacion(true);
 					}
 				}
 			} else {
 				
+				vp.imprimirPersonajes(d.getUno());
 				vp.imprimirMensajeTurnoEnemigo();
 
 				while (!tresRaya.getD().isComprobacion() ) {// Hace que se repita si intentas superponer valores
@@ -138,14 +167,14 @@ public class Model3Raya {
 
 			}
 		} // while
-		c3Raya.felicitar(d, c3Raya.rellenoTablero(d));
+		c3Raya.felicitar(d, c3Raya.rellenoTablero(d), vp);
 	}
 	public void comienzoEnemigo(){
 		Model3Raya tresRaya = new Model3Raya(d);
 		Controller3Raya c3Raya = new Controller3Raya();
 		VistaPruebas vp=new VistaPruebas();
 		VistaMapas vistaMapas = new VistaMapas();
-		int turno = 0, cero = 0, uno = 1;
+		int turno = 0, turno1 = 0, cero = 0, uno = 1;
 		while (!tresRaya.getD().getListaJugadores3Raya()[cero].getVictoria() 
 				&& !tresRaya.getD().getListaJugadores3Raya()[uno].getVictoria() 
 				&& !c3Raya.rellenoTablero(d)) {//
@@ -154,9 +183,9 @@ public class Model3Raya {
 			tresRaya.getD().setComprobacion(false);
 
 			if (turno % 2 == cero) {// Si comenzamos nosotros tendremos los turnos pares
-				
-					vp.imprimirMensajeComienzoEnemigo(d);// La primera vez sale un mensaje diferente
-				
+				vp.imprimirPersonajes(d.getUno());
+				vp.imprimirMensajeComienzoEnemigo(turno1);// La primera vez sale un mensaje diferente
+				turno1++;
 
 				vp.imprimirMensajeTurnoEnemigo();
 
@@ -191,6 +220,7 @@ public class Model3Raya {
 			} else {
 
 				while (!tresRaya.getD().isComprobacion() ) {// Hace que se repita si intentas superponer valores
+					vp.imprimirPersonajes(d.getCero());
 					vp.imprimirInstruccionesUsuario();// Se introduce donde debe ir la ficha
 					tresRaya.getD().setPosTablero3Raya(Leer.datoInt() - 1);
 					if(!c3Raya.rellenoTablero(d)) {
@@ -222,6 +252,6 @@ public class Model3Raya {
 
 		}
 		vistaMapas.imprimirmapa3Raya(tresRaya);
-		c3Raya.felicitar(d, c3Raya.rellenoTablero(d));
+		c3Raya.felicitar(d, c3Raya.rellenoTablero(d), vp);
 	}
 }

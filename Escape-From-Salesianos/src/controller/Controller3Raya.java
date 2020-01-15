@@ -4,6 +4,7 @@ import java.util.Random;
 
 import datos.Datos;
 import model.Model3Raya;
+import vista.VistaPruebas;
 
 public class Controller3Raya {
 
@@ -65,15 +66,15 @@ public class Controller3Raya {
 	}
 	
 	// Activa la felicitación al jugador al ganar.
-	public void felicitar(Datos d, boolean repetir) {
+	public void felicitar(Datos d, boolean repetir, VistaPruebas vp) {
 		
 		if (d.getListaJugadores3Raya()[d.getCero()].getVictoria()) {
-			System.out.println("Felicidades has ganado");
+			vp.imprimirGanar3Raya();
 		}else {
 			if(repetir) {
-				System.out.println("Te has quedado a nada campeón");
+				vp.imprimirEmpatar3Raya();
 			} else {
-			System.out.println("El mal no puede ganar...");
+				vp.imprimirPerder3Raya();
 			}
 		}
 	}
@@ -102,13 +103,13 @@ public class Controller3Raya {
 	public boolean rellenoTablero(Datos d) {
 		int cont=0;
 		boolean repetir=false;
-		for(int i=0;i<d.getListaJugadores3Raya().length;i++) {
-			if(d.getListaValores3Raya()[i]=='O' || d.getListaValores3Raya()[i]=='X');
+		for(int i=0;i<d.getListaValores3Raya().length;i++) {
+			if(d.getListaValores3Raya()[i]=='O' || d.getListaValores3Raya()[i]=='X') {
 				cont++;
+			}
 		}
 		if(cont==9 && ((d.getListaJugadores3Raya()[d.getCero()].getVictoria()==false) || (d.getListaJugadores3Raya()[d.getUno()].getVictoria()==false))) {
 			repetir=true;
-			d.getListaJugadores3Raya()[d.getUno()].setVictoria(true);
 		}
 		
 		return repetir;
