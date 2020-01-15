@@ -4,7 +4,8 @@ public class Datos {
 	
 	//Datos del juego Cerradura
 	private int res1 = 0, res2 = 0, res3 = 0;
-	private int op = 0, elec = 0;
+	int op = 0;
+	private int elec = 0;
 	private int cerradura[] = new int[7];
 	private int numerador[] = new int[9];
 	private boolean comprobadores[] = new boolean[9];

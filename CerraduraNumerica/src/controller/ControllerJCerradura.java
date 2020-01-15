@@ -8,9 +8,8 @@ import utilidades.Leer;
 public class ControllerJCerradura {
 
 	// Este método se ejecuta tras la comprobacion de si es entre 1 y 7 y da
-	// positivo,
-	// sirve de enlace.
-	public void comprobado1a7(Datos d, VistaJCerradura v, CrudJCerradura c) {
+	// positivo. Sirve de enlace.
+	public void comprobarHuecoVacio(Datos d, VistaJCerradura v, CrudJCerradura c) {
 		int uno = 1;
 		int elec = d.getOp() - uno;
 		v.imprimirValorOp(d);
@@ -22,16 +21,17 @@ public class ControllerJCerradura {
 	// Controla el primer menú con dos opciones: insertar un número en un hueco, o
 	// borrarlo.
 	public void elegirOpcion(Datos d, ControllerJCerradura o, CrudJCerradura c, VistaJCerradura v) {
+		
 		boolean out = false;
 		do {
-			int op = Leer.datoInt();
-			switch (op) {
-			case 1:
+			String choose = Leer.dato();
+			switch (choose) {
+			case "1":
 				v.imprimirEjemplo(d);
-				c.insertarNumero(d, o, c, v);
+				c.elegirHueco(d, o, c, v);
 				break;
 
-			case 2:
+			case "2":
 				v.imprimirMenuBorrar(d);
 				c.borrarNumero(d, v);
 				break;
