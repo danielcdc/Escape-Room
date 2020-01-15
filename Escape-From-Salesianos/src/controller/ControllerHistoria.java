@@ -54,18 +54,14 @@ public class ControllerHistoria {
 			mapa[2][17] = '!';
 		}
 		
-		if(mapa[4][2]=='P' && fase == 2) {
-			mapa[4][2]='!';
-		}
-		
-		if(mapa[4][4] == 'P' && fase == 3) {
+		if(mapa[4][4] == 'P' && fase == 2) {
 			mapa[4][4] = '!';
 		}
-		if(mapa[16][2] == 'P' && fase == 4) {
+		if(mapa[16][2] == 'P' && fase == 3) {
 			mapa[16][2]='!';
 		}
 		
-		if(mapa[4][4]=='P' && fase == 5) {
+		if(mapa[4][4]=='P' && fase == 4) {
 			mapa[4][4]='!';
 		}
 		
@@ -106,7 +102,7 @@ public class ControllerHistoria {
 				
 			}
 			
-			if (mapa[4][2]=='!' && fase == d.getDos()) {
+			if (mapa[4][4]=='!' && fase == d.getDos()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				m3Raya.iniciarJuego3Raya();
 				if(d.getListaJugadores3Raya()[d.getCero()].getVictoria()==true) {

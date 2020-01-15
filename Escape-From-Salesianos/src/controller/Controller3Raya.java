@@ -34,44 +34,47 @@ public class Controller3Raya {
 	}
 	
 	// Comprueba si el jugador ha ganado la partida.
-	public void comprobarGanador3Raya(Model3Raya mdr, int num) {
-		int uno = 1, dos = 2, tres = 3, cuatro = 4, cinco = 5, seis = 6, siete = 7, ocho = 8;
-		if ((mdr.devolverUnaposicion(num) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-				&& mdr.devolverUnaposicion(uno) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-				&& mdr.devolverUnaposicion(dos) == mdr.getD().getListaJugadores3Raya()[num].getfichas())
-				|| (mdr.devolverUnaposicion(tres) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(cuatro) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(cinco) == mdr.getD().getListaJugadores3Raya()[num].getfichas())
-				|| (mdr.devolverUnaposicion(seis) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(siete) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(ocho) == mdr.getD().getListaJugadores3Raya()[num].getfichas())
-				|| (mdr.devolverUnaposicion(num) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(tres) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(seis) == mdr.getD().getListaJugadores3Raya()[num].getfichas())
-				|| (mdr.devolverUnaposicion(uno) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(cuatro) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(siete) == mdr.getD().getListaJugadores3Raya()[num].getfichas())
-				|| (mdr.devolverUnaposicion(dos) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(cinco) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(ocho) == mdr.getD().getListaJugadores3Raya()[num].getfichas())
-				|| (mdr.devolverUnaposicion(num) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(cuatro) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(ocho) == mdr.getD().getListaJugadores3Raya()[num].getfichas())
-				|| (mdr.devolverUnaposicion(seis) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(cuatro) == mdr.getD().getListaJugadores3Raya()[num].getfichas()
-						&& mdr.devolverUnaposicion(dos) == mdr.getD().getListaJugadores3Raya()[num].getfichas())) {
-
-			mdr.getD().getListaJugadores3Raya()[num].setVictoria(true);
+	public void comprobarGanador3Raya(int num,Datos d) {
+		if(d.getListaValores3Raya()[d.getCero()]==d.getListaJugadores3Raya()[num].getfichas() 
+					&& d.getListaValores3Raya()[d.getUno()]==d.getListaJugadores3Raya()[num].getfichas()
+					&& d.getListaValores3Raya()[d.getDos()]==d.getListaJugadores3Raya()[num].getfichas()	
+			|| d.getListaValores3Raya()[d.getTres()]==d.getListaJugadores3Raya()[num].getfichas() 
+					&& d.getListaValores3Raya()[d.getCuatro()]==d.getListaJugadores3Raya()[num].getfichas()
+					&& d.getListaValores3Raya()[d.getCinco()]==d.getListaJugadores3Raya()[num].getfichas()
+			|| d.getListaValores3Raya()[d.getSeis()]==d.getListaJugadores3Raya()[num].getfichas() 
+					&& d.getListaValores3Raya()[d.getSiete()]==d.getListaJugadores3Raya()[num].getfichas()
+					&& d.getListaValores3Raya()[d.getOcho()]==d.getListaJugadores3Raya()[num].getfichas()	
+			|| d.getListaValores3Raya()[d.getCero()]==d.getListaJugadores3Raya()[num].getfichas() 
+					&& d.getListaValores3Raya()[d.getCuatro()]==d.getListaJugadores3Raya()[num].getfichas()
+					&& d.getListaValores3Raya()[d.getOcho()]==d.getListaJugadores3Raya()[num].getfichas()	
+			||d.getListaValores3Raya()[d.getSeis()]==d.getListaJugadores3Raya()[num].getfichas() 
+					&& d.getListaValores3Raya()[d.getCuatro()]==d.getListaJugadores3Raya()[num].getfichas()
+					&& d.getListaValores3Raya()[d.getDos()]==d.getListaJugadores3Raya()[num].getfichas()
+			||d.getListaValores3Raya()[d.getCero()]==d.getListaJugadores3Raya()[num].getfichas() 
+					&& d.getListaValores3Raya()[d.getTres()]==d.getListaJugadores3Raya()[num].getfichas()
+					&& d.getListaValores3Raya()[d.getSeis()]==d.getListaJugadores3Raya()[num].getfichas()		
+			||d.getListaValores3Raya()[d.getUno()]==d.getListaJugadores3Raya()[num].getfichas() 
+					&& d.getListaValores3Raya()[d.getCuatro()]==d.getListaJugadores3Raya()[num].getfichas()
+					&& d.getListaValores3Raya()[d.getSiete()]==d.getListaJugadores3Raya()[num].getfichas()		
+			||d.getListaValores3Raya()[d.getDos()]==d.getListaJugadores3Raya()[num].getfichas() 
+					&& d.getListaValores3Raya()[d.getCinco()]==d.getListaJugadores3Raya()[num].getfichas()
+					&& d.getListaValores3Raya()[d.getOcho()]==d.getListaJugadores3Raya()[num].getfichas()		
+				) {
+			d.getListaJugadores3Raya()[num].setVictoria(true);
 		}
 	}
 	
 	// Activa la felicitación al jugador al ganar.
-	public void felicitar(Datos d) {
+	public void felicitar(Datos d, boolean repetir) {
 		
 		if (d.getListaJugadores3Raya()[d.getCero()].getVictoria()) {
 			System.out.println("Felicidades has ganado");
 		}else {
+			if(repetir) {
+				System.out.println("Te has quedado a nada campeón");
+			} else {
 			System.out.println("El mal no puede ganar...");
+			}
 		}
 	}
 	
@@ -103,9 +106,11 @@ public class Controller3Raya {
 			if(d.getListaValores3Raya()[i]=='O' || d.getListaValores3Raya()[i]=='X');
 				cont++;
 		}
-		if(cont==9 && (d.getListaJugadores3Raya()[d.getCero()].getVictoria()==false || d.getListaJugadores3Raya()[d.getUno()].getVictoria()==false)) {
+		if(cont==9 && ((d.getListaJugadores3Raya()[d.getCero()].getVictoria()==false) || (d.getListaJugadores3Raya()[d.getUno()].getVictoria()==false))) {
 			repetir=true;
+			d.getListaJugadores3Raya()[d.getUno()].setVictoria(true);
 		}
+		
 		return repetir;
 	}
 
