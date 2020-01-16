@@ -170,7 +170,8 @@ public class VistaIntroduccion {
 		EsperaDeLectura.esperaDeLectura();
 		
 		Limpiar.clear();
-		System.out.println("- ¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”");
+		System.out.println("- ¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”\n"
+				+ "de todo lo que ocurre en este lugar. Pero no sufras, estoy aquí para echarte un cable a salir de aquí para que… puedas volver con tu madre (deja entrever");
 		Thread.sleep(esperaLinea);
 		Limpiar.clear();
 		System.out.println("- ¿?: ¿Ángel? ¿Con qué así se llama esta representación? Yo no son Ángel, yo soy El Ángel, guardián de este programa, el “Master and Commander”\n"
@@ -199,7 +200,8 @@ public class VistaIntroduccion {
 		Thread.sleep(esperaLinea);
 		EsperaDeLectura.esperaDeLectura();
 		Limpiar.clear();
-		System.out.println("- El Ángel: Es un Instanciador. Crea instancias u objetos de aquellos elementos que hayas escaneado con la cámara que viene detrás.\nCuándo ");
+		System.out.println("- El Ángel: Es un Instanciador. Crea instancias u objetos de aquellos elementos que hayas escaneado con la cámara que viene detrás.\nCuándo "
+				+ "encuentres algo que consideres de interés, prueba a intentar escanearlo: quizás obtengas un código que te permita instanciar.");
 		Thread.sleep(esperaLinea);
 		Limpiar.clear();
 		System.out.println("- El Ángel: Es un Instanciador. Crea instancias u objetos de aquellos elementos que hayas escaneado con la cámara que viene detrás.\nCuándo "
