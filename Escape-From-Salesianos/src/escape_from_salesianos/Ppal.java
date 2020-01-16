@@ -45,10 +45,10 @@ public class Ppal {
 			System.out.println("chupala");
 		}*/
 		
+		vM.cargarBarra();
+		vM.imprimirPortada();
+		
 		do {
-			
-			/*vM.cargarBarra();
-			vM.imprimirPortada();*/
 			
 			vM.imprimirMenu();
 			opt = Leer.datoInt();

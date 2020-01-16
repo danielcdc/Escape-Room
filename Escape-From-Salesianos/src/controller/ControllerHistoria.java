@@ -98,6 +98,7 @@ public class ControllerHistoria {
 				do {
 					mAnimal.empezarJuegoGranjero(crudG, cr1, vp);	
 				}while(!d.isVictoriaAnimales());
+				d.getListaDeHerramientas()[d.getCero()].setGuardado(true);
 				d.setFase(d.getFase()+d.getUno());
 				
 			}
@@ -115,7 +116,9 @@ public class ControllerHistoria {
 			
 			if (mapa[16][2]=='!' && fase == d.getTres()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
+				while(d.isVictoriaAjedrez()) {
 				Aj1.iniciarJuegoAjedrez(vp, c1, cj1);
+				}
 				d.setFase(d.getFase()+d.getUno());
 				
 			}

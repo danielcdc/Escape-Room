@@ -11,6 +11,41 @@ public class VistaPruebas {
 								" en 10110 encontró una zanahoria y en 11011 se encontró con el zorro");
 	}
 	
+	public void imprimirIntro1() {
+		
+		System.out.println(
+				"        ██████████████\r\n" + 
+				"       ████████████████\r\n" + 
+				"      █                █\r\n" + 
+				"     █                  █\r\n" + 
+				"    █                    █\r\n" + 
+				"    █   ▄▄▄▄▄    ▄▄▄▄▄   █\r\n" + 
+				"    █   █   █    █   █   █\r\n" + 
+				"    █   █████    █████   █\r\n" + 
+				"    █                    █\r\n" + 
+				"     █                  █\r\n" + 
+				"     ████████████████████\r\n" + 
+				"     █  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄  █\r\n" + 
+				"      █ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄ █\r\n" + 
+				"      ██████████████████\r\n" + 
+				"            ███████\r\n" + 
+				"            ███████\r\n" + 
+				"          ███████████\r\n" + 
+				"         █████████████\r\n" + 
+				"       █████████████████\r\n" + 
+				" █████████████████████████████\r\n" + 
+				" ███████████████████████ █████\r\n" + 
+				" █████ ██  TITO BOSCO  █ █████\r\n" + 
+				" █████ █████████████████ █████\r\n" + 
+				" █████ █████████████████ █████\r\n" + 
+				" █████ █████████████████ █████");
+		
+		System.out.println("╔──────────────────────────────────────────╗"
+						 + "║                                          ║ "
+						 + "║                                          ║ "
+						 + "║                                          ║ ");
+	}
+	
 	public void imprimirCodigo(int [] num, int i) {
 		
 		if(i == 0) {
@@ -583,6 +618,33 @@ if(i == 2) {
 				"_____________________________/_]_[_\\_______________________________");
 		}
 	}	
+	public void imprimirIntroAjedrez() {
+		System.out.println("\n\n╔═╗ ┬┌─┐┌┬┐┬─┐┌─┐┌─┐\r\n" + 
+				"╠═╣ │├┤  ││├┬┘├┤ ┌─┘\r\n" + 
+				"╩ ╩└┘└─┘─┴┘┴└─└─┘└─┘");
+		System.out.println("[1] Intrucciones\n[2] Enfrentarse");
 	}
+	public void imprimirEjeX() {
+		System.out.println("¿En que posición del eje X está la pieza a mover?");
+	}
+	public void imprimirEjeY() {
+		System.out.println("¿En que posición del eje Y está la pieza a mover?");
+	}
+	public void ejerHorizontal() {
+		System.out.println("A que casilla del eje horizontal debe moverse");
+	}
+	public void ejeVertical() {
+		System.out.println("A que casilla del eje vertical debe moverse");
+	}
+	public void felicitacionesAjedrez() {
+		System.out.println("Felicidades has pasado la prueba");
+	}
+	public void derrotaAjedrez() {
+		System.out.println("Como siga así nos quedaremos atrapados para siempre...");
+	}
+	public void opcionvalida() {
+		System.out.println("¡Introduzca una opción válida!");
+	}
+}
 
 

@@ -10,7 +10,7 @@ public class ControllerAjedrez {
 	}
 	// Devuelve las letras que representan las piezas de la IA enemiga.
 	public char devolverInicialEnemiga(int posicion, Datos d) {
-		return d.getIniciales()[posicion];
+		return d.getInicialesEnemigas()[posicion];
 	}
 	// Devuelve la posición en las coordenadas del eje X del tablero.
 	public char devolverPosicionX(int posicion, Datos d) {

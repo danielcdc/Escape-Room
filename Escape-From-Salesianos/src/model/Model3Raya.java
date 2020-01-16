@@ -49,10 +49,12 @@ public class Model3Raya {
 	public void iniciarJuego3Raya() {
 		Datos d1 = new Datos ();
 		Controller3Raya c3Raya = new Controller3Raya();
-		
+		 
+		do {
 		//IMPORTANTE CAMBIAR
 		d.setListaValores3Raya(d1.getListaValores3Raya());
 		d.setListaJugadores3Raya(d1.getListaJugadores3Raya());
+		
 		
 		System.out.println("  ____  _                          __   _____   _                                   \r\n" + 
 				" / ___|| |_ __ _ _ __ ___    ___  / _| |___ /  (_)_ __     __ _   _ __ _____      __\r\n" + 
@@ -72,13 +74,16 @@ public class Model3Raya {
 			} else {
 				comienzoEnemigo();
 			}
+			d1.setPul(d1.getCero());
 			break;
 		
 		case 2:
-			System.out.println(" El juego trata de ir marcando los espacios del tablero alternadamente hasta queuno de los jugadores consiga hacer tres en raya."
+			System.out.println(" El juego trata de ir marcando los espacios del tablero alternadamente hasta que uno de los jugadores consiga hacer tres en raya.\n"
 			+ " La línea puede ser horizontal, diagonal overtical. Un jugador será el símbolo X y el otro O.");
 			break;
+			
 		}
+		}while(d1.getPul()!=0);
 		
 		
 		

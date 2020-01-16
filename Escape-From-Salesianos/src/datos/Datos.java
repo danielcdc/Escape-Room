@@ -22,7 +22,7 @@ public class Datos {
 	private int posTablero3Raya = 0;
 
 
-	private int cero = 0, uno = 1, dos=2, fase = 2, tres=3, cuatro=4, cinco=5, seis=6, siete=7, ocho=8, nueve=9;
+	private int cero = 0, uno = 1, dos=2, fase = 3, tres=3, cuatro=4, cinco=5, seis=6, siete=7, ocho=8, nueve=9;
 
 	private boolean comprobacion = false;
 
@@ -79,6 +79,7 @@ public class Datos {
 	private char posicionY[]= {'1','2','3','4','5','6','7','8'};
 	private int pul;
 	private char piezaEnX,piezaEnY,movimientoEnX,movimientoEnY;
+	private boolean victoriaAjedrez=false;
 	
 	//Para juego granjero
 	private String animal;
@@ -472,6 +473,15 @@ public class Datos {
 		this.limite3 = limite3;
 	}
 	
+	
+	public boolean isVictoriaAjedrez() {
+		return victoriaAjedrez;
+	}
+
+	public void setVictoriaAjedrez(boolean victoriaAjedrez) {
+		this.victoriaAjedrez = victoriaAjedrez;
+	}
+
 	@Override
 	public String toString() {
 		return "Datos [vertic=" + vertic + ", horiz=" + horiz + ", listaValores3Raya="

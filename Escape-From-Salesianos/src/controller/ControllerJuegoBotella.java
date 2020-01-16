@@ -84,7 +84,7 @@ public class ControllerJuegoBotella {
 					}
 			
 				if(!choose.equalsIgnoreCase("1") && !choose.equalsIgnoreCase("2") && !choose.equalsIgnoreCase("3")) {
-					System.out.println("¡Introduzca una opción válida!");
+					v.opcionvalida();
 					v.notValidValue();
 				}
 			}
@@ -107,7 +107,7 @@ public class ControllerJuegoBotella {
 				}
 			
 				if(!choose.equalsIgnoreCase("1") && !choose.equalsIgnoreCase("2") && !choose.equalsIgnoreCase("3")) {
-					System.out.println("¡Introduzca una opción válida!\n\n");
+					v.opcionvalida();
 					v.notValidValue();
 				}
 			}
@@ -130,7 +130,7 @@ public class ControllerJuegoBotella {
 				}
 			
 				if(!choose.equalsIgnoreCase("1") && !choose.equalsIgnoreCase("2") && !choose.equalsIgnoreCase("3")) {
-					System.out.println("¡Introduzca una opción válida!\n\n");
+					v.opcionvalida();
 					v.notValidValue();
 				}
 			}

@@ -30,10 +30,7 @@ public class ModelAjedrez {
 	
 	public void iniciarJuegoAjedrez(VistaPruebas vP,CrudAjedrez c1,ControllerAjedrez cj1) {
 		do {
-			System.out.println("\n\n╔═╗ ┬┌─┐┌┬┐┬─┐┌─┐┌─┐\r\n" + 
-					"╠═╣ │├┤  ││├┬┘├┤ ┌─┘\r\n" + 
-					"╩ ╩└┘└─┘─┴┘┴└─└─┘└─┘");
-			System.out.println("[1] Intrucciones\n[2] Enfrentarse");
+			vP.imprimirIntroAjedrez();
 			d.setPul(Leer.datoInt());
 			switch(d.getPul()) {
 				case 1:
@@ -44,21 +41,22 @@ public class ModelAjedrez {
 					for(int i=0;i<d.getPosicionX().length;i++) {
 						System.out.print(cj1.devolverPosicionX(i,d)+"  ");
 					}
-					System.out.println("¿En que posición del eje X está la pieza a mover?");
+					vP.imprimirEjeX();
 					c1.guardarX(d);
 					for(int i=0;i<d.getPosicionY().length;i++) {
 						System.out.print(cj1.devolverPosicionY(i,d)+"  ");
 					}
-					System.out.println("¿En que posición del eje Y está la pieza a mover?");
+					vP.imprimirEjeY();
 					c1.guardarY(d);
-					System.out.println("A que casilla del eje horizontal debe moverse");
+					vP.ejerHorizontal();
 					c1.guardarMovX(d);
-					System.out.println("A que casilla del eje vertical debe moverse");
+					vP.ejeVertical();
 					c1.guardarMovY(d);
 					if((d.getPiezaEnX()=='F' && d.getPiezaEnY()=='2') && d.getMovimientoEnX()=='E'&& d.getMovimientoEnY()=='1') {
-						System.out.println("Felicidades has pasado la prueba");
+						vP.felicitacionesAjedrez();
+						d.setVictoriaAjedrez(true);
 					}else {
-						System.out.println("Como siga así nos quedaremos atrapados para siempre...");
+						vP.derrotaAjedrez();
 					}
 					break;
 			}//cierre switch menu instrucciones y jugar 
