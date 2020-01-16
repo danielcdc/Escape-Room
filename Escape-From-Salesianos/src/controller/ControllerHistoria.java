@@ -116,9 +116,9 @@ public class ControllerHistoria {
 			
 			if (mapa[16][2]=='!' && fase == d.getTres()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
-				while(d.isVictoriaAjedrez()) {
+				do {
 				Aj1.iniciarJuegoAjedrez(vp, c1, cj1);
-				}
+				} while(!d.isVictoriaAjedrez());
 				d.setFase(d.getFase()+d.getUno());
 				
 			}

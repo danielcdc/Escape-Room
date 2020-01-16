@@ -52,15 +52,15 @@ public class ModelAjedrez {
 					c1.guardarMovX(d);
 					vP.ejeVertical();
 					c1.guardarMovY(d);
-					if((d.getPiezaEnX()=='F' && d.getPiezaEnY()=='2') && d.getMovimientoEnX()=='E'&& d.getMovimientoEnY()=='1') {
-						vP.felicitacionesAjedrez();
+					if(((d.getPiezaEnX("F") && d.getPiezaEnY("2")) && (d.getMovimientoEnX("E") && d.getMovimientoEnY("1")))) {
+						vP.imprimirGanar();
 						d.setVictoriaAjedrez(true);
 					}else {
-						vP.derrotaAjedrez();
+						vP.imprimirPerder();;
 					}
 					break;
 			}//cierre switch menu instrucciones y jugar 
-		}while(!(d.getPiezaEnX()=='F' && d.getPiezaEnY()=='2') && !(d.getMovimientoEnX()=='E'&& d.getMovimientoEnY()=='1')); //Cierre del do de jugar e instrucciones
+		}while(!((d.getPiezaEnX("F") && d.getPiezaEnY("2")) && (d.getMovimientoEnX("E") && d.getMovimientoEnY("1")))); //Cierre del do de jugar e instrucciones
 		
 	}
 

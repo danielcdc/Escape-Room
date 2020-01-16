@@ -69,12 +69,12 @@ public class Controller3Raya {
 	public void felicitar(Datos d, boolean repetir, VistaPruebas vp) {
 		
 		if (d.getListaJugadores3Raya()[d.getCero()].getVictoria()) {
-			vp.imprimirGanar3Raya();
+			vp.imprimirGanar();
 		}else {
 			if(repetir) {
 				vp.imprimirEmpatar3Raya();
 			} else {
-				vp.imprimirPerder3Raya();
+				vp.imprimirPerder();
 			}
 		}
 	}

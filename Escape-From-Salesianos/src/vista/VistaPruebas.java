@@ -434,8 +434,8 @@ if(i == 2) {
 	}
 	
 	public void imprimirTableroAjedrez(ControllerAjedrez d1, Datos d) {
-		String lineaCierre="\n\n-----------------------------------------";
-		String lineaInter="|---------------------------------------|";
+		String lineaCierre="─────────────────────────────────────────";
+		String lineaInter= "├───────────────────────────────────────┤";
 		String lineaMedio="|    |    |    |    |    |    |    |    |";
 		
 		System.out.println(lineaCierre+"\n"
@@ -561,7 +561,7 @@ if(i == 2) {
 			System.out.println("Has impedido que el enemigo haga trampas");
 		}
 		
-		public void imprimirPerder3Raya() {
+		public void imprimirPerder() {
 			
 			System.out.println( "╔────────────────────────╗\n"+
 								"║El mal no puede ganar...║\n"
@@ -569,7 +569,7 @@ if(i == 2) {
 			
 		}
 		
-		public void imprimirGanar3Raya() {
+		public void imprimirGanar() {
 			
 			System.out.println( "╔────────────────────────╗\n"+
 								"║     FELICIDADES ...    ║\n"

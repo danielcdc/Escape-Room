@@ -78,7 +78,7 @@ public class Datos {
 	private char posicionX[]= {'A','B','C','D','E','F','G','H'};
 	private char posicionY[]= {'1','2','3','4','5','6','7','8'};
 	private int pul;
-	private char piezaEnX,piezaEnY,movimientoEnX,movimientoEnY;
+	private String piezaEnX,piezaEnY,movimientoEnX,movimientoEnY;
 	private boolean victoriaAjedrez=false;
 	
 	//Para juego granjero
@@ -232,28 +232,28 @@ public class Datos {
 	public void setPul(int pul) {
 		this.pul = pul;
 	}
-	public char getPiezaEnX() {
-		return piezaEnX;
+	public boolean getPiezaEnX(String pieza) {
+		return piezaEnX.equalsIgnoreCase(pieza);
 	}
-	public void setPiezaEnX(char piezaEnX) {
+	public void setPiezaEnX(String piezaEnX) {
 		this.piezaEnX = piezaEnX;
 	}
-	public char getPiezaEnY() {
-		return piezaEnY;
+	public boolean getPiezaEnY(String pieza) {
+		return piezaEnY.equalsIgnoreCase(pieza);
 	}
-	public void setPiezaEnY(char piezaEnY) {
+	public void setPiezaEnY(String piezaEnY) {
 		this.piezaEnY = piezaEnY;
 	}
-	public char getMovimientoEnX() {
-		return movimientoEnX;
+	public boolean getMovimientoEnX(String mov) {
+		return movimientoEnX.equalsIgnoreCase(mov);
 	}
-	public void setMovimientoEnX(char movimientoEnX) {
+	public void setMovimientoEnX(String movimientoEnX) {
 		this.movimientoEnX = movimientoEnX;
 	}
-	public char getMovimientoEnY() {
-		return movimientoEnY;
+	public boolean getMovimientoEnY(String mov) {
+		return movimientoEnY.equalsIgnoreCase(mov);
 	}
-	public void setMovimientoEnY(char movimientoEnY) {
+	public void setMovimientoEnY(String movimientoEnY) {
 		this.movimientoEnY = movimientoEnY;
 	}
 	
