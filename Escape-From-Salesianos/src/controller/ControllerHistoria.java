@@ -14,6 +14,7 @@ import model.ModelMapa;
 import vista.VistaMapas;
 import vista.VistaMenu;
 import vista.VistaPruebas;
+import vista.VistaDialogos;
 
 public class ControllerHistoria {
 	
@@ -88,16 +89,20 @@ public class ControllerHistoria {
 		ModelJuegoBotella mJb = new ModelJuegoBotella(d);
 		CrudJuegoBotella crudB = new CrudJuegoBotella();
 		CrudHerramientas cIn = new CrudHerramientas();
-		
+		// Introducido por Dani el 16/01/20120
+		VistaDialogos vd = new VistaDialogos();
+
 		if (mov.equalsIgnoreCase("I")) {// Si no coincide la letra, no hace nada.
 			if (mapa[2][17] == '!' && fase == d.getUno()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				vp.imprimirIntroPrueba1();
 				mPizarra.iniciarJuegoPizarra(m1, vm, vMenu, mov, cMapa, cJP, intro);
 				vp.imprimirFinPrueba1();
+				vd.colarJuegoGranjero(d.getJugador1());// Diálogo 1
 				do {
 					mAnimal.empezarJuegoGranjero(crudG, cr1, vp);	
 				}while(!d.isVictoriaAnimales());
+				vd.obtenerSoplete(d.getJugador1());// Diálogo 2
 				d.getListaDeHerramientas()[d.getCero()].setGuardado(true);
 				d.setFase(d.getFase()+d.getUno());
 				
@@ -105,10 +110,12 @@ public class ControllerHistoria {
 			
 			if (mapa[4][4]=='!' && fase == d.getDos()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
+				vd.comentarioSoplete(d.getJugador1());// Diálogo 3
 				m3Raya.iniciarJuego3Raya();
 				if(d.getListaJugadores3Raya()[d.getCero()].getVictoria()==true) {
-				d.setFase(d.getFase()+d.getUno());
-				cIn.adquirirHerramienta(d, d.getDos());
+					vd.obtenerCD(d.getJugador1());// Diálogo 4
+					d.setFase(d.getFase()+d.getUno());
+					cIn.adquirirHerramienta(d, d.getDos());
 				}
 				
 			}
@@ -117,17 +124,25 @@ public class ControllerHistoria {
 			if (mapa[16][2]=='!' && fase == d.getTres()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
 				do {
+					vd.comentarioCdRom(d.getJugador1());// Diálogo 5
 				Aj1.iniciarJuegoAjedrez(vp, c1, cj1);
 				} while(!d.isVictoriaAjedrez());
+				vd.victoriaAjedrez(d.getJugador1());// Diálogo 6
 				d.setFase(d.getFase()+d.getUno());
 				
 			}
 			
 			if (mapa[4][4]=='!' && fase == d.getCuatro()) {
 				d.getMapaClase()[d.getVertic()][d.getHoriz()] = 'P';
+				vd.comienzoJuegoBotella(d.getJugador1());// Diálogo 7
 				mJb.ejecutarJuegoBotella(d, cJb, vp, crudB, mJb);
 				d.setFase(d.getFase()+d.getUno());
+				vd.obtenerLupa(d.getJugador1());// Diálogo 8
 				cIn.adquirirHerramienta(d, d.getUno());
+				d.setFase(d.getFase()+d.getUno());
+			}
+			if ((mapa[2][14]=='!' || mapa[2][15]== '!') && fase == d.getCinco()) {// Posiciones del mapa que dan a la puerta de salida
+				vd.endGame(d.getJugador1());
 			}
 		
 		}

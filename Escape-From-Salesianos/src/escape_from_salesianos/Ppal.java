@@ -11,6 +11,7 @@ import model.Model3Raya;
 import model.ModelJugador;
 import model.ModelMapa;
 import utilidades.Leer;
+import vista.VistaIntroduccion;
 import vista.VistaMapas;
 import vista.VistaMenu;
 import vista.VistaPruebas;
@@ -57,6 +58,11 @@ public class Ppal {
 			case 1:
 				
 				do {
+					//Introducción del juego.
+					VistaIntroduccion.mostrarIntroduccion();
+					VistaIntroduccion.mostrarFase1();
+					VistaIntroduccion.mostrarConversacion(d.getJugador1());
+					// Comienza el juego propiamente.
 					vMapa.imprimirLetreroMapa();
 					vMapa.imprimirMapa(mapaHistoria.getD().getMapaClase());
 					vM.imprimirMenuMapa(mapaHistoria);
