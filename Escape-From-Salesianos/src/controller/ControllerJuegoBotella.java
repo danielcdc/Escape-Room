@@ -13,8 +13,9 @@ public class ControllerJuegoBotella {
 		int op = 0;
 		String choose;
 		boolean out = false;
-		choose = Leer.dato();
+		
 		do {
+			choose = Leer.dato();
 			if(choose.equalsIgnoreCase("1")) {// Elige vaciar la botella A
 				if (checkIsEmpty(m.getD().getBotella10())) {
 					v.alreadyEmpty();
