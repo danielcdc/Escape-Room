@@ -1,20 +1,10 @@
 package escape_from_salesianos;
 
-import controller.Controller3Raya;
-import controller.ControllerAjedrez;
-import controller.ControllerHistoria;
-import controller.ControllerInventario;
-import controller.ControllerJuegoPizarra;
-import controller.ControllerMapa;
+import controller.*;
 import datos.Datos;
-import model.Model3Raya;
-import model.ModelJugador;
-import model.ModelMapa;
+import model.*;
 import utilidades.Leer;
-import vista.VistaIntroduccion;
-import vista.VistaMapas;
-import vista.VistaMenu;
-import vista.VistaPruebas;
+import vista.*;
 
 public class Ppal {
 	/* d.listaValores3Raya, d.listaJugadores3Raya */
@@ -29,24 +19,15 @@ public class Ppal {
 		ModelMapa mapaHistoria = new ModelMapa(d);
 		ControllerMapa cMapa = new ControllerMapa();
 		ControllerJuegoPizarra cJP = new ControllerJuegoPizarra();
-		ControllerAjedrez cAj = new ControllerAjedrez(); 
-		VistaPruebas vP = new VistaPruebas();
 		ControllerInventario cIn = new ControllerInventario();
 		
 		int opt = 0;
 		String mov= "";
-		String opt1 = "";
 		String intro= "";
 		ControllerHistoria cHistory = new ControllerHistoria();
-		/*VA CON ESTO LA OPT1 COMO PRUEBA PARA LEER SOLO DANDO INTRO
-		 * opt1 = Leer.dato();
-		if(opt1.equalsIgnoreCase("")) {
-			System.out.println("Funciona");
-		} else {
-			System.out.println("chupala");
-		}*/
 		
-		/*vM.cargarBarra();*/
+		
+		vM.cargarBarra();
 		
 		
 		do {
@@ -57,9 +38,9 @@ public class Ppal {
 			
 			case 1:
 				//Introducción del juego.
-				/*VistaIntroduccion.mostrarIntroduccion();
+				VistaIntroduccion.mostrarIntroduccion();
 				VistaIntroduccion.mostrarFase1();
-				VistaIntroduccion.mostrarConversacion(d.getJugador1().getNombre());*/
+				VistaIntroduccion.mostrarConversacion(d.getJugador1().getNombre());
 				
 				do {
 					// Comienza el juego propiamente.

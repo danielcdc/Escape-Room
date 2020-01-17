@@ -2,9 +2,23 @@ package vista;
 
 import controller.ControllerAjedrez;
 import datos.Datos;
-import model.ModelAjedrez;
 
 public class VistaPruebas {
+	
+	public void imprimirInstrucc3Raya() {
+		System.out.println(" El juego trata de ir marcando los espacios del tablero alternadamente hasta que uno de los \njugadores consiga hacer tres en raya.\n"
+				+ " La línea puede ser horizontal, diagonal o vertical. Un jugador será el símbolo X y el otro O.");
+	}
+	
+	public void imprimirTitu3Raya() {
+		System.out.println("  ____  _                          __   _____   _                                   \r\n" + 
+				" / ___|| |_ __ _ _ __ ___    ___  / _| |___ /  (_)_ __     __ _   _ __ _____      __\r\n" + 
+				" \\___ \\| __/ _` | '__/ __|  / _ \\| |_    |_ \\  | | '_ \\   / _` | | '__/ _ \\ \\ /\\ / /\r\n" + 
+				"  ___) | || (_| | |  \\__ \\ | (_) |  _|  ___) | | | | | | | (_| | | | | (_) \\ V  V / \r\n" + 
+				" |____/ \\__\\__,_|_|  |___/  \\___/|_|   |____/  |_|_| |_|  \\__,_| |_|  \\___/ \\_/\\_/  \r\n" + 
+				"                                                                                    \n");
+		System.out.println("[1] Comenzar\n[2] Instrucciones");
+	}
 	
 	public void imprimirPista1() {
 		System.out.println("El conejo blanco saltó a la colina 100," + 
@@ -48,7 +62,9 @@ public class VistaPruebas {
 	
 	public void imprimirCodigo(int [] num, int i) {
 		
-		if(i == 0) {
+		int diez = 10, cero = 0, uno = 1, dos = 2;
+		
+		if(i == cero) {
 			
 		
 			System.out.print(" ┌────────────────────────────────────────────────┐\r\n" + 
@@ -56,7 +72,7 @@ public class VistaPruebas {
 					" ||                                              ||\r\n" + 
 					" ||           " +num[0]);
 		
-		if(num[i] < 10 && num[i] >= 0){
+		if(num[i] < diez && num[i] >= cero){
 			System.out.print("    ");
 		}
 						
@@ -91,7 +107,7 @@ public class VistaPruebas {
 				" |                                                |\r\n" + 
 				" └────────────────────────────────────────────────┘\n\n\n");
 	}
-		if(i == 1) {
+		if(i == uno) {
 			
 			
 			System.out.print(" ┌────────────────────────────────────────────────┐\r\n" + 
@@ -99,14 +115,14 @@ public class VistaPruebas {
 					" ||                                              ||\r\n" + 
 					" ||           " +num[i-1]);
 			
-			if(num[i-1] < 10 && num[i-1] >= 0){
+			if(num[i-uno] < diez && num[i-uno] >= cero){
 				System.out.print(" ");
 			}
 							
 							
 			System.out.print("    |    " +num[i]); 
 					
-			if(num[i] < 10 && num[i] >= 0){
+			if(num[i] < diez && num[i] >= cero){
 				System.out.print(" ");
 			}		
 							
@@ -142,29 +158,29 @@ public class VistaPruebas {
 					" └────────────────────────────────────────────────┘\n\n\n");
 		}
 		
-if(i == 2) {
+if(i == dos) {
 			
 			
 			System.out.print(" ┌────────────────────────────────────────────────┐\r\n" + 
 					" |┌──────────────────────────────────────────────┐|\r\n" + 
 					" ||                                              ||\r\n" + 
-					" ||           " +num[i-2]);
+					" ||           " +num[i-dos]);
 			
-			if(num[i-2] < 10 && num[i-2] >= 0){
+			if(num[i-dos] < diez && num[i-2] >= cero){
 				System.out.print(" ");
 			}
 							
 							
 			System.out.print("    |    " +num[i-1]); 
 					
-			if(num[i-1] < 10 && num[i-1] >= 0){
+			if(num[i-1] < diez && num[i-1] >= cero){
 				System.out.print(" ");
 			}		
 							
 					
 			System.out.print("    |    " +num[i]);
 					
-			if(num[i] < 10 && num[i] >= 0){
+			if(num[i] < diez && num[i] >= cero){
 				System.out.print(" ");
 			}		
 					
@@ -333,11 +349,13 @@ if(i == 2) {
 		System.out.println(		"\t\t\t|                                                        |");
 		System.out.println(		"\t\t\t|       ~Pero si pensabas que este era el final, solo    |");
 		System.out.println(		"\t\t\t|        es el comienzo del juego~                       |");
-		System.out.println(     "\t\t\t└────────────────────────────────────────────────────────┘");
+		System.out.println(     "\t\t\t└────────────────────────────────────────────────────────┘"
+							  + "                                                   [Intro]");
 	}
 	
 
 	public void numOrdenador1(Datos d) {
+		
 		System.out.println("- - - - - - - - - - - - - - - - - - - - " + "-Don Bosco: Esta pantalla está encendida"
 				+ "- - - - - - - - - - - - - - - - - - - - ");
 		System.out.println("- - - - - - - - - - - - - - - - - - - - " + "-Don Bosco: Es el primer número, lo apuntaré"
@@ -348,9 +366,9 @@ if(i == 2) {
 				+ "                                                 \n"
 				+ "║                                               ║\n"
 				+ "                                                 \n" + "║                       "
-				+ d.getNumeroSecreto()[0]);
+				+ d.getNumeroSecreto()[d.getCero()]);
 		
-		if(d.getNumeroSecreto()[0] < 10 && d.getNumeroSecreto()[0] >= 0 ) {
+		if(d.getNumeroSecreto()[d.getCero()] < d.getDiez() && d.getNumeroSecreto()[d.getDiez()] >= d.getCero() ) {
 			System.out.print(" ");
 		}
 		
@@ -363,7 +381,7 @@ if(i == 2) {
 				+ "                      	▓▓▓                      \n"
 				+ "                    ▓▓▓▓▓▓▓▓▓▓▓                  \n");
 
-		System.out.println("A: " + d.getNumeroSecreto()[0]);
+		System.out.println("A: " + d.getNumeroSecreto()[d.getCero()]);
 
 	}
 
@@ -379,7 +397,7 @@ if(i == 2) {
 				+ "                                                 \n"
 				+ "║                                               ║\n"
 				+ "                                                 \n" + "║                        "
-				+ d.getNumeroSecreto()[1]);
+				+ d.getNumeroSecreto()[d.getUno()]);
 				
 		System.out.println("                      ║\n"
 				+ "                    ----------                   \n"
@@ -390,7 +408,7 @@ if(i == 2) {
 				+ "                      	▓▓▓                      \n"
 				+ "                    ▓▓▓▓▓▓▓▓▓▓▓                  \n");
 
-		System.out.println("B: " + d.getNumeroSecreto()[1]);
+		System.out.println("B: " + d.getNumeroSecreto()[d.getUno()]);
 
 	}
 
@@ -404,9 +422,9 @@ if(i == 2) {
 				+ "                                                 \n"
 				+ "║                                               ║\n"
 				+ "                                                 \n" + "║                       "
-				+ d.getNumeroSecreto()[2]);
+				+ d.getNumeroSecreto()[d.getDos()]);
 		
-		if(d.getNumeroSecreto()[2] < 10 && d.getNumeroSecreto()[2] >= 0 ) {
+		if(d.getNumeroSecreto()[d.getDos()] < d.getDiez() && d.getNumeroSecreto()[d.getDos()] >= d.getCero() ) {
 			System.out.print(" ");
 		}
 		
@@ -419,7 +437,7 @@ if(i == 2) {
 				+ "                      	▓▓▓                      \n"
 				+ "                    ▓▓▓▓▓▓▓▓▓▓▓                  \n");
 
-		System.out.println("C: " + d.getNumeroSecreto()[2]);
+		System.out.println("C: " + d.getNumeroSecreto()[d.getDos()]);
 
 	}
 	
@@ -427,7 +445,7 @@ if(i == 2) {
 		
 		System.out.println("\nBienvenidos en esta prueba encontrarás un tablero de ajedrez que se divide de A-H en la horizontal y de 1-8 en la vertical");
 		System.out.println("Usted deverá elegir en que posicion se encuentra la pieza que a de mover y hacia donde ha de moverse");
-		System.out.println("Ten en cuenta que las piesas que se muestran en mayúsculas son las tuyas y en minúsculas la del enemigo");
+		System.out.println("Ten en cuenta que las piezas que se muestran en mayúsculas son las tuyas y en minúsculas la del enemigo");
 		System.out.println("\nP: Peon\nT: Torre\nA: Alfil\nC: Caballo\nY: Reina\nR: Rey\n\n");
 		System.out.println("Solo tiene un movimiento, Buena suerte\n\n");
 		
@@ -644,6 +662,18 @@ if(i == 2) {
 	}
 	public void opcionvalida() {
 		System.out.println("¡Introduzca una opción válida!");
+	}
+	
+	public void imprimirLetreroOrillaDerecha() {
+		System.out.println("Estamos en la orilla derecha:");
+	}
+	
+	public void imprimirLetreroOrillaIzq() {
+		System.out.println("Estamos en la orilla izquierda:");
+	}
+	
+	public void imprimirMoverOrilla() {
+		System.out.println("¿Qué quieres mover a la otra orilla?");
 	}
 }
 

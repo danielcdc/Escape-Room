@@ -56,13 +56,13 @@ public class ModelAnimales {
 
 		while(d.getListaAnimales()[d.getCero()].isMostrar() || d.getListaAnimales()[d.getUno()].isMostrar() || d.getListaAnimales()[d.getDos()].isMostrar()) {
 			if(d.getTurno() % d.getDos()==d.getCero()) {
-				System.out.println("Estamos en la orilla derecha:");
+				vp.imprimirLetreroOrillaDerecha();
 				for(int i=0;i<d.getTres();i++) {
 					if(d.getListaAnimales()[i].isMostrar()){
 						System.out.println(d.getListaAnimales()[i].getNombre());
 					}
 				}//Cierre for
-				System.out.println("¿Qué quieres mover a la otra orilla?");
+				vp.imprimirMoverOrilla();
 				d.setAnimal(Leer.dato());
 				crg.movimientoDerAIzq(d.getAnimal());
 				if(!cAnimal.comprobarDerrotaDer(d)) {
@@ -75,19 +75,19 @@ public class ModelAnimales {
 				}
 				d.setTurno(d.getTurno()+d.getUno());
 			}else {//Cierre turno
-				System.out.println("Estamos en la orilla izquierda");
+				
 				for(int i=0;i<d.getTres();i++) {
 					if(d.getListaAnimales1()[i].isMostrar()){
 						System.out.println(d.getListaAnimales1()[i].getNombre());
 					}
 				}//Cierre for
-				System.out.println("¿Qué quieres mover a la otra orilla?");
+				vp.imprimirMoverOrilla();
 				d.setAnimal(Leer.dato());
 				crg.movimientoIzqADer(d.getAnimal());
 				if(!cAnimal.comprobarDerrotaIzq(d)) {
-					d.getListaAnimales1()[d.getCero()].setMostrar(false);
-					d.getListaAnimales1()[d.getUno()].setMostrar(false);
-					d.getListaAnimales1()[d.getDos()].setMostrar(false);
+					d.getListaAnimales()[d.getCero()].setMostrar(false);
+					d.getListaAnimales()[d.getUno()].setMostrar(false);
+					d.getListaAnimales()[d.getDos()].setMostrar(false);
 					d.setVictoriaAnimales(false);
 				}else {
 					d.setVictoriaAnimales(true);
@@ -97,7 +97,7 @@ public class ModelAnimales {
 			
 		}
 		if(d.isVictoriaAnimales()) {
-			System.out.println("\n\n\n\nFelicidades has ganado");
+			vp.imprimirGanar();
 			}else {
 				do {
 				vp.imprimirLetreroPerderGranjero();

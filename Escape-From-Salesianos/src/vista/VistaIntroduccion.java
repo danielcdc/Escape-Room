@@ -1,7 +1,5 @@
 package vista;
 
-import datos.Datos;
-import model.ModelJugador;
 import utilidades.*;
 
 public class VistaIntroduccion {

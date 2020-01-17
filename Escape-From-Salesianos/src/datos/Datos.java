@@ -2,10 +2,7 @@ package datos;
 
 import java.util.Arrays;
 
-import model.ModelAnimales;
-import model.ModelHerramientas;
-import model.ModelJugador;
-import model.ModelJugador3Raya;
+import model.*;
 
 
 public class Datos {
@@ -22,7 +19,7 @@ public class Datos {
 	private int posTablero3Raya = 0;
 
 
-	private int cero = 0, uno = 1, dos=2, fase = 1, tres=3, cuatro=4, cinco=5, seis=6, siete=7, ocho=8, nueve=9;
+	private int cero = 0, uno = 1, dos=2, fase = 1, tres=3, cuatro=4, cinco=5, seis=6, siete=7, ocho=8, nueve=9, diecisiete = 17, catorce = 14, quince = 15, dieciseis = 16, diez = 10;
 
 	private boolean comprobacion = false;
 
@@ -78,7 +75,7 @@ public class Datos {
 	private char posicionX[]= {'A','B','C','D','E','F','G','H'};
 	private char posicionY[]= {'1','2','3','4','5','6','7','8'};
 	private int pul;
-	private String piezaEnX,piezaEnY,movimientoEnX,movimientoEnY;
+	private String piezaEnX = "",piezaEnY = "",movimientoEnX = "",movimientoEnY = "";
 	private boolean victoriaAjedrez=false;
 	
 	//Para juego granjero
@@ -480,6 +477,50 @@ public class Datos {
 
 	public void setVictoriaAjedrez(boolean victoriaAjedrez) {
 		this.victoriaAjedrez = victoriaAjedrez;
+	}
+
+	public int getDiecisiete() {
+		return diecisiete;
+	}
+
+	public void setDiecisiete(int diecisiete) {
+		this.diecisiete = diecisiete;	
+	}
+	
+	
+
+	public int getCatorce() {
+		return catorce;
+	}
+
+	public void setCatorce(int catorce) {
+		this.catorce = catorce;
+	}
+
+	public int getQuince() {
+		return quince;
+	}
+
+	public void setQuince(int quince) {
+		this.quince = quince;
+	}
+
+	public int getDieciseis() {
+		return dieciseis;
+	}
+
+	public void setDieciseis(int dieciseis) {
+		this.dieciseis = dieciseis;
+	}
+	
+	
+
+	public int getDiez() {
+		return diez;
+	}
+
+	public void setDiez(int diez) {
+		this.diez = diez;
 	}
 
 	@Override

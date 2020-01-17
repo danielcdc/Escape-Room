@@ -56,11 +56,11 @@ public class ModelAjedrez {
 						vP.imprimirGanar();
 						d.setVictoriaAjedrez(true);
 					}else {
-						vP.imprimirPerder();;
+						vP.imprimirPerder();
 					}
 					break;
 			}//cierre switch menu instrucciones y jugar 
-		}while(!((d.getPiezaEnX("F") && d.getPiezaEnY("2")) && (d.getMovimientoEnX("E") && d.getMovimientoEnY("1")))); //Cierre del do de jugar e instrucciones
+		}while(!((d.getPiezaEnX("F") && d.getPiezaEnY("2")) && !(d.getMovimientoEnX("E") && d.getMovimientoEnY("1")))); //Cierre del do de jugar e instrucciones
 		
 	}
 

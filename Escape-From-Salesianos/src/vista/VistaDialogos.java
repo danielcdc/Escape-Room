@@ -57,7 +57,7 @@ public class VistaDialogos {
 		Thread.sleep(esperaLinea);
 		System.out.println(j.getNombre() + " - Grrr, supongo que tiene razón el pelón. El CD-ROM tiene un código QR, voy a escanearlo...\n");
 		Thread.sleep(esperaLinea);
-		System.out.println("Instanciador - CD-ROM añadido al instanciador. Recuerde que debe colocar la parte brillante hacia abajo, a ser posible, si pringarla con los dedos.\n");
+		System.out.println("Instanciador - CD-ROM añadido al instanciador. Recuerde que debe colocar la parte brillante hacia abajo, a ser posible, sin pringarla con los dedos.\n");
 		Thread.sleep(esperaLinea);
 		System.out.println(j.getNombre() + " - Hasta el Instanciador se recochinea de mí. No tiene maldad este juego ni ná...\nEn fin, voy a continuar, debe de haber algún ordenador"+
 		" que pueda leer esto.\n");

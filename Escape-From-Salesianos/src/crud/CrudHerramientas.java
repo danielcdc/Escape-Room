@@ -1,5 +1,4 @@
 package crud;
-import model.ModelHerramientas;
 import datos.*;
 public class CrudHerramientas {
 	//Índice 0 Soplete

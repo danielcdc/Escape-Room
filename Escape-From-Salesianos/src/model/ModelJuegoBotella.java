@@ -3,8 +3,7 @@ package model;
 import controller.ControllerJuegoBotella;
 import crud.CrudJuegoBotella;
 import datos.Datos;
-import vista.VistaJuegoBotella;
-import vista.VistaPruebas;
+import vista.*;
 
 public class ModelJuegoBotella {
 	// Atributos
