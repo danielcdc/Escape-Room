@@ -22,7 +22,7 @@ public class Datos {
 	private int posTablero3Raya = 0;
 
 
-	private int cero = 0, uno = 1, dos=2, fase = 3, tres=3, cuatro=4, cinco=5, seis=6, siete=7, ocho=8, nueve=9;
+	private int cero = 0, uno = 1, dos=2, fase = 1, tres=3, cuatro=4, cinco=5, seis=6, siete=7, ocho=8, nueve=9;
 
 	private boolean comprobacion = false;
 
@@ -93,8 +93,8 @@ public class Datos {
 	
 	//INVENTARIO
 	private ModelHerramientas listaDeHerramientas[] = {new ModelHerramientas("Soplete", "Un soplete normal y corriente. Tiene un conejo blanco impreso en él y una frase de advertencia: NO funde adamantiun. Inflamable significa flamable", false), 
-		new ModelHerramientas("CD-ROM", "Para usarla presiona la tecla del logotipo de Windows (⊞ Win) + signo más (+)" , false),
-		new ModelHerramientas("Lupa", "El título impreso en la carcasa reza lo siguiente: \"Juego de ajedrez sencillito para Dummies. Edad recomendada de 2 a 5 años mentales\"", false)};
+		new ModelHerramientas("CD-ROM", "El título impreso en la carcasa reza lo siguiente: \"Juego de ajedrez sencillito para Dummies. Edad recomendada de 2 a 5 años mentales\"" , false),
+		new ModelHerramientas("Lupa", "Para usarla presiona la tecla del logotipo de Windows (⊞ Win) + signo más (+)", false)};
 	
 	//Juego de las Botellas
 	

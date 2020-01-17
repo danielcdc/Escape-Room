@@ -79,10 +79,7 @@ public class ControllerJuegoBotella {
 			// Vertimos el contenido de la botella A en la botella C
 					crud.transferAToC(m);
 				
-				if(choose.equalsIgnoreCase("3")) {
-				
-				
-					}
+				if(choose.equalsIgnoreCase("3"));
 			
 				if(!choose.equalsIgnoreCase("1") && !choose.equalsIgnoreCase("2") && !choose.equalsIgnoreCase("3")) {
 					v.opcionvalida();
@@ -125,10 +122,7 @@ public class ControllerJuegoBotella {
 			// Vertimos el contenido de la botella A en la botella C
 					crud.transferCToB(m);
 				
-				if(choose.equalsIgnoreCase("3")) {
-				
-				
-				}
+				if(choose.equalsIgnoreCase("3"));
 			
 				if(!choose.equalsIgnoreCase("1") && !choose.equalsIgnoreCase("2") && !choose.equalsIgnoreCase("3")) {
 					v.opcionvalida();

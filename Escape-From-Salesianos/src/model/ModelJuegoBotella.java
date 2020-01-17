@@ -32,7 +32,7 @@ public class ModelJuegoBotella {
 			v.showEmpty();
 			int choice = c.chooseBottle(m, v);
 			c.pourWater(choice, v, m, crud);
-		} while (d.getBotella10() != 5 && d.getBotella7() != 5);// Condición para ganar la partida
+		} while (d.getBotella10() != 5 || d.getBotella7() != 5);// Condición para ganar la partida
 		v.printVictory();
 		//Datos.fase += 1;// Pasa a la siguiente fase.
 	}

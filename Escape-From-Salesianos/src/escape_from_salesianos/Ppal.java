@@ -46,20 +46,20 @@ public class Ppal {
 			System.out.println("chupala");
 		}*/
 		
-		vM.cargarBarra();
-		vM.imprimirPortada();
+		/*vM.cargarBarra();*/
+		
 		
 		do {
-			
+			vM.imprimirPortada();
 			vM.imprimirMenu();
 			opt = Leer.datoInt();
 			switch(opt) {
 			
 			case 1:
 				//Introducción del juego.
-				VistaIntroduccion.mostrarIntroduccion();
+				/*VistaIntroduccion.mostrarIntroduccion();
 				VistaIntroduccion.mostrarFase1();
-				VistaIntroduccion.mostrarConversacion(d.getJugador1());
+				VistaIntroduccion.mostrarConversacion(d.getJugador1().getNombre());*/
 				
 				do {
 					// Comienza el juego propiamente.
@@ -89,7 +89,8 @@ public class Ppal {
 				System.out.println("¡Hasta luego!");
 				break;
 			
-			
+			default:
+				break;
 			
 			
 			}

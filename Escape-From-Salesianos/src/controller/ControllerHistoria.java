@@ -141,8 +141,9 @@ public class ControllerHistoria {
 				cIn.adquirirHerramienta(d, d.getUno());
 				d.setFase(d.getFase()+d.getUno());
 			}
-			if ((mapa[2][14]=='!' || mapa[2][15]== '!') && fase == d.getCinco()) {// Posiciones del mapa que dan a la puerta de salida
+			if ((mapa[14][2]=='!' || mapa[15][2]== '!') && fase == d.getCinco()) {// Posiciones del mapa que dan a la puerta de salida
 				vd.endGame(d.getJugador1());
+				d.getJugador1().setVictoria(true);
 			}
 		
 		}
