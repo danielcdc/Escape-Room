@@ -56,12 +56,12 @@ public class Ppal {
 			switch(opt) {
 			
 			case 1:
+				//Introducción del juego.
+				VistaIntroduccion.mostrarIntroduccion();
+				VistaIntroduccion.mostrarFase1();
+				VistaIntroduccion.mostrarConversacion(d.getJugador1());
 				
 				do {
-					//Introducción del juego.
-					VistaIntroduccion.mostrarIntroduccion();
-					VistaIntroduccion.mostrarFase1();
-					VistaIntroduccion.mostrarConversacion(d.getJugador1());
 					// Comienza el juego propiamente.
 					vMapa.imprimirLetreroMapa();
 					vMapa.imprimirMapa(mapaHistoria.getD().getMapaClase());
